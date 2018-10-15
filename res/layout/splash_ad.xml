@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/ad_image" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="fitXY" />
+    <Button android:textSize="14.0sp" android:textColor="@android:color/white" android:gravity="center" android:id="@id/skip_btn" android:background="@drawable/ad_skip_btn_bg" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="25.0dip" android:layout_marginRight="18.0dip" android:text="@string/splash_ad_skip" android:layout_alignParentRight="true" />
+    <View android:id="@id/view_blank" android:layout_width="fill_parent" android:layout_height="16.0dip" android:layout_alignParentBottom="true" />
+    <TextView android:textSize="14.0sp" android:textColor="@android:color/white" android:id="@id/advert_text" android:background="@drawable/ad_skip_btn_bg" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="16.0dip" android:text="@string/splash_ad_text" android:layout_above="@id/view_blank" android:layout_alignParentRight="true" />
+</RelativeLayout>

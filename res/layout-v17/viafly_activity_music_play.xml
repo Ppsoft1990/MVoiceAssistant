@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:orientation="vertical" android:id="@id/music_player" android:background="@drawable/transparent" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center|top" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ImageView android:id="@id/music_player_bg" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="fitStart" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/music_player_layout" android:background="@drawable/music_bg_v6" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:paddingLeft="14.0dip" android:paddingTop="6.0dip" android:paddingRight="14.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ImageView android:id="@id/music_player_back" android:paddingTop="4.0dip" android:paddingRight="4.0dip" android:paddingBottom="4.0dip" android:layout_width="28.0dip" android:layout_height="32.0dip" android:src="@drawable/ic_music_back" />
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <TextView android:textSize="@dimen/text_standard_size_t1" android:textColor="@color/color_standard_c4_v5" android:ellipsize="marquee" android:gravity="center" android:id="@id/music_player_song" android:paddingLeft="20.0dip" android:paddingRight="20.0dip" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" android:layout_weight="1.0" android:marqueeRepeatLimit="marquee_forever" />
+            </LinearLayout>
+            <ImageView android:id="@id/music_player_share" android:padding="4.0dip" android:layout_width="32.0dip" android:layout_height="32.0dip" android:src="@drawable/ic_music_share_nor" />
+        </LinearLayout>
+        <TextView android:textSize="@dimen/text_standard_size_t4" android:textColor="#88ffffff" android:ellipsize="end" android:gravity="center" android:id="@id/music_player_singer" android:paddingLeft="34.0dip" android:paddingRight="34.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" />
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:paddingLeft="12.0dip" android:paddingRight="12.0dip" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/music_player_margin_mid">
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginRight="@dimen/music_player_seek_bar_margin_max" android:src="@drawable/ic_music_zero" />
+            <SeekBar android:id="@id/music_player_volume" android:focusable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxHeight="2.0dip" android:progressDrawable="@drawable/seek_bar_sound_enable_bg" android:minHeight="2.0dip" android:thumb="@drawable/ic_slider_seekbar_volume" android:thumbOffset="0.0dip" android:layout_weight="1.0" android:paddingStart="0.0dip" android:paddingEnd="0.0dip" />
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/music_player_seek_bar_margin_max" android:layout_marginRight="5.0dip" android:src="@drawable/ic_music_max" />
+        </LinearLayout>
+        <FrameLayout android:id="@id/music_player_cover_layout" android:paddingLeft="14.0dip" android:paddingRight="14.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <ImageView android:layout_gravity="center" android:id="@id/music_player_cover" android:layout_width="@dimen/music_player_cover_width" android:layout_height="@dimen/music_player_cover_width" />
+        </FrameLayout>
+        <FrameLayout android:id="@id/music_player_lrc_layout" android:paddingLeft="14.0dip" android:paddingRight="14.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+            <ListView android:id="@id/music_player_lrc" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:scrollbars="none" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:divider="@null" android:fastScrollEnabled="false" android:overScrollMode="never" />
+            <TextView android:gravity="center" android:id="@id/music_player_lrc_empty" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="暂无歌词" />
+        </FrameLayout>
+        <RelativeLayout android:paddingLeft="14.0dip" android:paddingRight="14.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/music_player_margin_min" android:layout_marginBottom="@dimen/music_player_margin_max">
+            <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true">
+                <ImageView android:id="@id/music_player_favor_img" android:padding="4.0dip" android:clickable="false" android:layout_width="30.0dip" android:layout_height="30.0dip" android:layout_marginRight="56.0dip" android:src="@drawable/ic_music_collect_nor" />
+                <ImageView android:id="@id/music_player_lrc_img" android:padding="4.0dip" android:layout_width="30.0dip" android:layout_height="30.0dip" android:src="@drawable/ic_music_lrc_nor" />
+            </LinearLayout>
+        </RelativeLayout>
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:paddingLeft="12.0dip" android:paddingRight="12.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="@dimen/text_standard_size_t6" android:textColor="@color/color_standard_c4_v5" android:id="@id/music_player_progress_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/music_player_seek_bar_margin_min" android:text="00:00" />
+            <SeekBar android:id="@id/music_player_progress" android:focusable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxHeight="2.0dip" android:progressDrawable="@drawable/seek_bar_music_bg" android:minHeight="2.0dip" android:thumb="@drawable/ic_slider_seekbar_music" android:thumbOffset="0.0dip" android:layout_weight="1.0" android:paddingStart="0.0dip" android:paddingEnd="0.0dip" />
+            <TextView android:textSize="@dimen/text_standard_size_t6" android:textColor="@color/color_standard_c4_v5" android:id="@id/music_player_total_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/music_player_seek_bar_margin_min" android:text="00:00" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:paddingLeft="14.0dip" android:paddingRight="14.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/music_player_margin_max" android:layout_marginBottom="@dimen/music_player_margin_min">
+            <ImageView android:id="@id/music_player_model" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_music_sequential" android:layout_weight="1.0" />
+            <ImageView android:id="@id/music_player_prev" android:layout_width="wrap_content" android:layout_height="48.0dip" android:layout_marginRight="10.0dip" android:src="@drawable/ic_music_prev" android:layout_weight="1.0" />
+            <FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <ImageView android:layout_gravity="center" android:id="@id/music_player_play_pause" android:layout_width="64.0dip" android:layout_height="64.0dip" android:src="@drawable/ic_music_play" android:layout_weight="1.0" />
+                <ImageView android:layout_gravity="center" android:id="@id/music_loading_image" android:visibility="gone" android:layout_width="32.0dip" android:layout_height="32.0dip" android:src="@drawable/ic_music_loading" />
+            </FrameLayout>
+            <ImageView android:id="@id/music_player_next" android:layout_width="wrap_content" android:layout_height="48.0dip" android:layout_marginLeft="10.0dip" android:src="@drawable/ic_music_next" android:layout_weight="1.0" />
+            <ImageView android:id="@id/music_player_list_img" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_music_list_nor" android:layout_weight="1.0" />
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

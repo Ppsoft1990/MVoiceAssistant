@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="#fff7f7f7" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/verify_layout" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <TextView android:textSize="@dimen/text_standard_size_t5" android:textColor="@color/color_standard_c3" android:id="@id/tip_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="44.0dip" android:text="请按住按钮,匀速读出数字!" android:layout_centerHorizontal="true" />
+        <TextView android:textSize="36.0sp" android:textColor="@color/color_standard_c1" android:id="@id/password_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:layout_below="@id/tip_text" android:layout_centerHorizontal="true" />
+        <include android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" layout="@layout/viafly_voice_print_mic_layout" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/verify_suc_layout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/my_voice_layout" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="50.0dip" android:layout_marginTop="20.0dip" android:layout_centerHorizontal="true">
+            <TextView android:textSize="@dimen/text_standard_size_t3" android:textColor="@color/color_standard_c3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:text="我的声纹" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/reset_layout" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="50.0dip" android:layout_marginTop="20.0dip" android:layout_below="@id/my_voice_layout" android:layout_centerHorizontal="true">
+            <TextView android:textSize="@dimen/text_standard_size_t3" android:textColor="@color/color_standard_c7" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="重新录入" />
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

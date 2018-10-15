@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.iflytek.base.skin.customView.XRelativeLayout android:background="#fffff4ce" android:layout_width="fill_parent" android:layout_height="40.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:skin="http://schemas.android.com/apk/res-auto">
+    <com.iflytek.base.skin.customView.XTextView android:textSize="14.0sp" android:textColor="#ff333333" android:ellipsize="end" android:gravity="center|left" android:id="@id/tv_home_permission_text" android:paddingLeft="10.0dip" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="提醒功能需开启权限，点击进入权限管理，" android:singleLine="true" android:layout_toLeftOf="@id/btn_home_permission_close" android:layout_alignParentLeft="true" />
+    <com.iflytek.base.skin.customView.XImageView android:gravity="center" android:id="@id/btn_home_permission_close" android:paddingRight="10.0dip" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_alignParentRight="true" android:layout_centerVertical="true" skin:src="image.ic_reminde_close" />
+</com.iflytek.base.skin.customView.XRelativeLayout>

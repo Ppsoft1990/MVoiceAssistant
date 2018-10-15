@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.iflytek.base.skin.customView.XRelativeLayout android:background="@drawable/user_center_card_content_bg" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:skin="http://schemas.android.com/apk/res-auto">
+    <com.iflytek.base.skin.customView.XImageView android:id="@id/user_view_logo" android:layout_width="24.0dip" android:layout_height="24.0dip" android:layout_marginLeft="@dimen/user_center_icon_left" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+    <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_toRightOf="@id/user_view_logo" android:layout_centerVertical="true">
+        <TextView android:textSize="@dimen/text_standard_size_t3" android:textColor="#ff212325" android:id="@id/user_view_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" />
+        <com.iflytek.base.skin.customView.XImageView android:id="@id/user_view_star" android:visibility="invisible" android:layout_width="20.0dip" android:layout_height="20.0dip" android:layout_marginLeft="4.0dip" android:layout_toRightOf="@id/user_view_name" skin:src="image.ico_install_network" />
+        <TextView android:textSize="@dimen/text_standard_size_t5" android:textColor="@color/color_standard_c3" android:id="@id/user_view_info" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layout_below="@id/user_view_name" android:layout_alignLeft="@id/user_view_name" />
+    </RelativeLayout>
+    <com.iflytek.base.skin.customView.XImageView android:id="@id/user_view_arrow" android:layout_width="18.0dip" android:layout_height="18.0dip" android:layout_marginRight="18.0dip" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    <View android:id="@id/user_view_line" android:background="#fff6f6f6" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginLeft="@dimen/user_center_icon_left" android:layout_marginRight="16.0dip" android:layout_alignParentBottom="true" />
+</com.iflytek.base.skin.customView.XRelativeLayout>

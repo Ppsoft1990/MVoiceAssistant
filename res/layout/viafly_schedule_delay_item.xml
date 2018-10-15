@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.iflytek.base.skin.customView.XLinearLayout android:orientation="vertical" android:background="@drawable/viafly_schedule_item" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:skin="http://schemas.android.com/apk/res-auto">
+    <com.iflytek.base.skin.customView.XLinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="50.0dip">
+        <com.iflytek.base.skin.customView.XImageView android:id="@id/schedule_delay_select_img" android:paddingLeft="15.0dip" android:paddingRight="15.0dip" android:layout_width="50.0dip" android:layout_height="fill_parent" android:scaleType="center" android:layout_alignParentLeft="true" android:layout_centerVertical="true" skin:src="image.remind_manage_checkbox_unselected" />
+        <com.iflytek.base.skin.customView.XTextView android:textColor="#ff000000" android:gravity="center_vertical" android:layout_gravity="center_vertical" android:id="@id/delay_select_list_item_value" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </com.iflytek.base.skin.customView.XLinearLayout>
+    <View android:id="@id/delay_time_divider" android:background="#1f000000" android:layout_width="fill_parent" android:layout_height="1.0px" />
+</com.iflytek.base.skin.customView.XLinearLayout>

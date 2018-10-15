@@ -1,0 +1,22 @@
+.class interface abstract Lbc$c;
+.super Ljava/lang/Object;
+.source "VelocityTrackerCompat.java"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lbc;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x608
+    name = "c"
+.end annotation
+
+
+# virtual methods
+.method public abstract a(Landroid/view/VelocityTracker;I)F
+.end method
+
+.method public abstract b(Landroid/view/VelocityTracker;I)F
+.end method

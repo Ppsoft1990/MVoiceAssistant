@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:descendantFocusability="blocksDescendants" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:skin="http://schemas.android.com/apk/res-auto">
+    <com.iflytek.base.skin.customView.XLinearLayout android:gravity="center" android:orientation="horizontal" android:paddingTop="@dimen/mms_contact_select_listitem_padding_top" android:paddingBottom="@dimen/mms_contact_select_listitem_padding_top" android:layout_width="fill_parent" android:layout_height="fill_parent" android:minHeight="@dimen/mms_contact_select_listitem_min_height" skin:background="stateList.sms_number_choose_item_bg">
+        <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/mms_contact_select_listitem_margin_left" android:layout_weight="1.0">
+            <com.iflytek.base.skin.customView.XTextView android:ellipsize="end" android:id="@id/contact_select_list_item_number" android:paddingRight="@dimen/mms_contact_select_listitem_textview_padding_right" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" skin:style="style_contact_select_dialog_phonenumber" />
+            <com.iflytek.base.skin.customView.XTextView android:ellipsize="end" android:gravity="center_vertical" android:id="@id/contact_select_list_item_location" android:paddingRight="@dimen/mms_contact_select_listitem_textview_padding_right" android:focusable="false" android:focusableInTouchMode="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" skin:style="style_contact_select_dialog_location" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:layout_width="@dimen/mms_contact_select_listitem_checkbox_width" android:layout_height="@dimen/mms_contact_select_listitem_checkbox_width" android:layout_marginRight="@dimen/mms_contact_select_listitem_checkbox_margin_right">
+            <com.iflytek.base.skin.customView.XCheckBox android:id="@id/contact_select_list_item_checkbox" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_centerVertical="true" skin:buttonDrawable="stateList.sms_number_choose_checkbox_states" />
+        </LinearLayout>
+    </com.iflytek.base.skin.customView.XLinearLayout>
+</LinearLayout>

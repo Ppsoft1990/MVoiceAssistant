@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:id="@id/movies_layout" android:paddingLeft="14.0dip" android:paddingTop="14.0dip" android:paddingRight="14.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@id/food_img" android:background="@drawable/home_shape_square_bg" android:padding="1.0dip" android:layout_width="87.0dip" android:layout_height="87.0dip" android:scaleType="fitXY" />
+        <LinearLayout android:orientation="vertical" android:paddingLeft="14.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <TextView android:textSize="@dimen/text_standard_size_t3" android:textColor="@color/food_title_color" android:ellipsize="end" android:id="@id/food_name" android:background="#ffeeeff1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" />
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <RatingBar android:id="@id/star" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="14.0dip" android:numStars="5" android:rating="0.0" style="@style/custom_ratingbar_style" />
+                <TextView android:textSize="@dimen/text_standard_size_t5" android:textColor="@color/food_income_color" android:ellipsize="end" android:id="@id/food_no_score" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="13.0dip" android:text="暂无评分" android:singleLine="true" />
+                <TextView android:textSize="@dimen/text_standard_size_t5" android:textColor="@color/food_income_color" android:ellipsize="end" android:id="@id/food_src_income" android:background="#ffeeeff1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="13.0dip" android:text="" android:singleLine="true" />
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dip">
+                <TextView android:textSize="@dimen/text_standard_size_t5" android:textColor="@color/food_income_color" android:ellipsize="end" android:id="@id/distance" android:background="#ffeeeff1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

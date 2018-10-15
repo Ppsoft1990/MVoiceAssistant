@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:skin="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:id="@id/smarthome_scan_top_layout" android:background="@drawable/smarthome_scanview_bg" android:layout_width="fill_parent" android:layout_height="@dimen/smarthome_scanview_top_hight">
+        <com.iflytek.base.skin.customView.XTextView android:textSize="17.0sp" android:textColor="#ffffffff" android:gravity="center_vertical" android:id="@id/smarthome_scanview_cancel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="11.0dip" android:text="返回" android:drawableLeft="@drawable/smarthome_title_back" />
+        <com.iflytek.base.skin.customView.XTextView android:textSize="20.0sp" android:textColor="#ffffffff" android:gravity="center" android:id="@id/smarthome_scan_tips1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="80.0dip" android:text="语音点亮生活" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+    <RelativeLayout android:orientation="vertical" android:id="@id/scan_container" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.iflytek.base.skin.customView.XTextView android:textSize="14.0sp" android:textColor="#ff686c75" android:gravity="center" android:id="@id/smarthome_scan_tips2" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:text="正在搜索附近的智能家居设备..." />
+        <com.iflytek.base.skin.customView.XRelativeLayout android:id="@id/smarthome_scan_bg" android:layout_width="127.0dip" android:layout_height="127.0dip" android:layout_marginTop="30.0dip" android:layout_below="@id/smarthome_scan_tips2" android:layout_centerHorizontal="true" skin:background="image.radar_bg">
+            <com.iflytek.base.skin.customView.XImageView android:id="@id/smarthome_scanview_rotation" android:layout_width="127.0dip" android:layout_height="127.0dip" android:layout_centerInParent="true" android:layout_centerHorizontal="true" skin:background="image.radar_pointer" />
+        </com.iflytek.base.skin.customView.XRelativeLayout>
+    </RelativeLayout>
+    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/logo_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/smarthome_scan_top_layout">
+        <com.iflytek.base.skin.customView.XTextView android:textSize="14.0sp" android:textColor="#ff686c75" android:gravity="center" android:id="@id/XTextView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:text="请选择品牌智能设备" />
+        <Button android:id="@id/btn_login_jd" android:background="@drawable/smarthome_jd_login_bg" android:visibility="gone" android:layout_width="@dimen/smarthome_scanview_jd_login_width" android:layout_height="wrap_content" android:layout_marginTop="30.0dip" style="@style/smarthome_device_type_btn" />
+        <LinearLayout android:gravity="center_horizontal" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="20.0dip">
+            <Button android:gravity="center" android:id="@id/btn_login_midea" android:background="@android:color/transparent" android:layout_width="wrap_content" android:layout_height="50.0dip" android:layout_marginRight="30.0dip" android:text="美的品牌" android:drawableRight="@drawable/smart_brand_arr" style="@style/smarthome_device_type_btn" />
+            <View android:layout_gravity="center_vertical" android:background="#ffd8d8d8" android:layout_width="1.0dip" android:layout_height="16.0dip" />
+            <Button android:id="@id/btn_logo_other" android:background="@android:color/transparent" android:layout_width="wrap_content" android:layout_height="50.0dip" android:layout_marginLeft="30.0dip" android:text="其他品牌" android:drawableRight="@drawable/smart_brand_arr" style="@style/smarthome_device_type_btn" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

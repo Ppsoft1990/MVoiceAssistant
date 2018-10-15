@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:paddingLeft="@dimen/common_chat_message_margin" android:paddingTop="@dimen/common_chat_message_margin_top" android:paddingRight="@dimen/common_chat_message_margin" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:background="@drawable/viafly_shape_cornor_home_card_bg" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/layout_contaner" android:paddingLeft="13.0dip" android:paddingRight="24.0dip" android:layout_width="fill_parent" android:layout_height="79.0dip">
+            <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <TextView android:id="@id/name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="4.0dip" style="@style/chatMainText" />
+                <TextView android:id="@id/number" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/chatSubText" />
+            </LinearLayout>
+            <ImageView android:id="@id/sms_btn" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="28.0dip" android:src="@drawable/chat_sms_btn_bg" android:layout_weight="0.0" />
+            <ImageView android:id="@id/dial_btn" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/chat_dial_btn_bg" android:layout_weight="0.0" />
+        </LinearLayout>
+        <View android:background="@color/common_message_text_color" android:layout_width="fill_parent" android:layout_height="1.0px" android:alpha="0.1" />
+        <LinearLayout android:orientation="vertical" android:id="@id/share_layout" android:paddingTop="18.0dip" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="150.0dip">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:layout_marginBottom="18.0dip" android:text="这么好的功能，快告诉给好友吧！" style="@style/chatSubText" />
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/share_wx" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0">
+                    <ImageView android:id="@id/share_wx_img" android:layout_width="50.0dip" android:layout_height="50.0dip" android:src="@drawable/ic_share_wx" />
+                    <TextView android:textSize="12.0sp" android:textColor="@color/chat_message_sum_text_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12.0dip" android:text="微信好友" />
+                </LinearLayout>
+                <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/share_timeline" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0">
+                    <ImageView android:id="@id/share_timeline_img" android:layout_width="50.0dip" android:layout_height="50.0dip" android:src="@drawable/ic_share_timeline" />
+                    <TextView android:textSize="12.0sp" android:textColor="@color/chat_message_sum_text_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12.0dip" android:text="微信朋友圈" />
+                </LinearLayout>
+                <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/share_weibo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0">
+                    <ImageView android:id="@id/share_weibo_img" android:layout_width="50.0dip" android:layout_height="50.0dip" android:src="@drawable/ic_share_weibo" />
+                    <TextView android:textSize="12.0sp" android:textColor="@color/chat_message_sum_text_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12.0dip" android:text="新浪微博" />
+                </LinearLayout>
+                <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/share_qqzone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0">
+                    <ImageView android:id="@id/share_qqzone_img" android:layout_width="50.0dip" android:layout_height="50.0dip" android:src="@drawable/ic_share_qqzone" />
+                    <TextView android:textSize="12.0sp" android:textColor="@color/chat_message_sum_text_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12.0dip" android:text="QQ空间" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

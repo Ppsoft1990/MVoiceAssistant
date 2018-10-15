@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/color_standard_c9" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:skin="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:background="@drawable/home_title_gradient_bg" android:layout_width="fill_parent" android:layout_height="@dimen/home_titlebar_layout_height">
+        <ImageView android:id="@id/voicenote_title_back" android:background="@drawable/comm_top_back_state" android:layout_width="@dimen/title_image_size" android:layout_height="@dimen/title_image_size" android:layout_marginLeft="14.0dip" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+        <TextView android:textSize="@dimen/title_size" android:textColor="#ffe8eaf4" android:id="@id/voicenote_title_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="速记" android:layout_centerHorizontal="true" android:layout_centerVertical="true" />
+        <ImageView android:id="@id/voicenote_add" android:background="@drawable/comm_top_add_state" android:layout_width="@dimen/title_image_size" android:layout_height="@dimen/title_image_size" android:layout_marginRight="14.0dip" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        <ImageView android:id="@id/voicenote_finish" android:background="@drawable/note_save_state" android:visibility="gone" android:layout_width="24.0dip" android:layout_height="24.0dip" android:layout_marginRight="14.0dip" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        <LinearLayout android:orientation="horizontal" android:id="@id/voicenote_title_detail" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_centerVertical="true">
+            <ImageView android:id="@id/voicenote_delete" android:background="@drawable/note_delete_state" android:layout_width="24.0dip" android:layout_height="24.0dip" android:layout_marginRight="12.0dip" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+            <ImageView android:id="@id/voicenote_tts" android:background="@drawable/note_tts_state" android:layout_width="24.0dip" android:layout_height="24.0dip" android:layout_marginRight="12.0dip" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+            <ImageView android:id="@id/voicenote_share" android:background="@drawable/note_share_state" android:layout_width="24.0dip" android:layout_height="24.0dip" android:layout_marginRight="14.0dip" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        </LinearLayout>
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/voicenote_list" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ListView android:id="@id/voicenote_list_view" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="14.0dip" android:layout_marginTop="14.0dip" android:layout_marginRight="14.0dip" android:divider="#00000000" android:dividerHeight="4.0dip" android:fastScrollEnabled="false" android:smoothScrollbar="true" />
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/voicenote_mic_tip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true">
+            <TextView android:textSize="@dimen/text_standard_size_t5" android:textColor="@color/color_standard_c4" android:gravity="center" android:id="@id/voicenote_input_speak_tip" android:background="@drawable/note_mic_tip_bg" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="点击新建记录" />
+            <ImageView android:id="@id/voicenote_input_speak" android:background="@drawable/note_mic_nor" android:layout_width="65.0dip" android:layout_height="65.0dip" />
+        </LinearLayout>
+    </RelativeLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/voicenote_detail_edit" android:background="#ffffffff" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <ScrollView android:id="@id/voicenote_edit_scroll" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="14.0dip" android:layout_marginRight="14.0dip">
+                <LinearLayout android:gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="28.0dip">
+                    <TextView android:textSize="@dimen/text_standard_size_t5" android:textColor="@color/color_standard_c3" android:id="@id/voicenote_input_time" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                    <TextView android:textSize="@dimen/text_standard_size_t5" android:textColor="@color/color_standard_c3" android:id="@id/voicenote_input_number" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" />
+                </LinearLayout>
+                <EditText android:textSize="@dimen/text_standard_size_t3" android:textColor="@color/color_standard_c1" android:id="@id/voicenote_item_content" android:background="@null" android:focusableInTouchMode="false" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLength="2048" android:textCursorDrawable="@drawable/voicenote_cursor" />
+            </LinearLayout>
+        </ScrollView>
+        <LinearLayout android:orientation="vertical" android:id="@id/voicenote_bottom_tool" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <View android:background="@color/color_standard_c9" android:layout_width="fill_parent" android:layout_height="1.0px" />
+            <LinearLayout android:layout_width="fill_parent" android:layout_height="40.0dip" android:baselineAligned="false">
+                <ImageView android:id="@id/voicenote_edit_key" android:layout_width="0.0dip" android:layout_height="fill_parent" android:src="@drawable/note_mini_txt_nor" android:scaleType="center" android:layout_weight="1.0" />
+                <ImageView android:id="@id/voicenote_edit_mic" android:layout_width="0.0dip" android:layout_height="fill_parent" android:src="@drawable/note_mini_mic_nor" android:scaleType="center" android:layout_weight="1.0" />
+            </LinearLayout>
+            <com.iflytek.viafly.voicenote.VoiceNoteMicView android:id="@id/voicenote_mic_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

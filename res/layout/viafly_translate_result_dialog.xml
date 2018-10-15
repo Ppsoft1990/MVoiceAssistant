@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@drawable/viafly_translate_radius_shape" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:layout_width="fill_parent" android:layout_height="9.0dip" />
+    <FrameLayout android:id="@id/enterEditActivity" android:background="@drawable/change_background_color_selector" android:layout_width="fill_parent" android:layout_height="@dimen/translate_result_dialog_item_height">
+        <TextView android:textSize="@dimen/text_standard_size_t3" android:textColor="@color/color_standard_c2" android:layout_gravity="center_vertical" android:paddingLeft="@dimen/translate_result_text_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="编辑" />
+    </FrameLayout>
+    <FrameLayout android:id="@id/enterFullScreen" android:background="@drawable/change_background_color_selector" android:layout_width="fill_parent" android:layout_height="@dimen/translate_result_dialog_item_height">
+        <TextView android:textSize="@dimen/text_standard_size_t3" android:textColor="@color/color_standard_c2" android:layout_gravity="center_vertical" android:paddingLeft="@dimen/translate_result_text_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="全屏" />
+    </FrameLayout>
+    <FrameLayout android:id="@id/copyAllText" android:background="@drawable/change_background_color_selector" android:layout_width="fill_parent" android:layout_height="@dimen/translate_result_dialog_item_height">
+        <TextView android:textSize="@dimen/text_standard_size_t3" android:textColor="@color/color_standard_c2" android:layout_gravity="center_vertical" android:paddingLeft="@dimen/translate_result_text_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="复制" />
+    </FrameLayout>
+    <FrameLayout android:id="@id/shareTranslate" android:background="@drawable/change_background_color_selector" android:layout_width="fill_parent" android:layout_height="@dimen/translate_result_dialog_item_height">
+        <TextView android:textSize="@dimen/text_standard_size_t3" android:textColor="@color/color_standard_c2" android:layout_gravity="center_vertical" android:paddingLeft="@dimen/translate_result_text_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="分享" />
+    </FrameLayout>
+    <View android:layout_width="fill_parent" android:layout_height="9.0dip" />
+</LinearLayout>

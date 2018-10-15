@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:paddingLeft="@dimen/common_chat_message_margin" android:paddingTop="@dimen/common_chat_message_margin_top" android:paddingRight="@dimen/common_chat_message_margin" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:background="@drawable/viafly_shape_cornor_home_card_bg" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:paddingLeft="@dimen/chat_message_margin" android:paddingRight="14.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:paddingTop="@dimen/dial_message_margin_ver" android:paddingBottom="@dimen/dial_message_margin_ver" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <TextView android:id="@id/name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="4.0dip" style="@style/chatMainText" />
+                <TextView android:id="@id/number" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/chatSubText" />
+            </LinearLayout>
+            <Button android:id="@id/sms_btn" android:visibility="gone" android:layout_width="wrap_content" android:text="卡一" android:layout_weight="0.0" style="@style/chatBtnUnselect" />
+            <Button android:id="@id/dial_btn" android:visibility="gone" android:layout_width="wrap_content" android:layout_marginLeft="20.0dip" android:text="卡二" android:layout_weight="0.0" style="@style/chatBtnUnselect" />
+        </LinearLayout>
+        <ProgressBar android:id="@id/progress_bar" android:layout_width="fill_parent" android:layout_height="1.0dip" android:max="100" style="@style/ChatProgressBar" />
+        <Button android:textSize="@dimen/chat_message_btn_text_size" android:textColor="@color/chat_message_blue_text_color" android:id="@id/cancel_btn" android:background="@null" android:layout_width="fill_parent" android:layout_height="40.0dip" android:text="取消" />
+    </LinearLayout>
+</LinearLayout>

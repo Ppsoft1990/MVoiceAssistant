@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.iflytek.base.skin.customView.XLinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:layout_width="fill_parent" android:layout_height="48.0dip" layout="@layout/viafly_service_manage_topview" />
+    <com.iflytek.base.skin.customView.XRelativeLayout android:orientation="horizontal" android:id="@id/remind_hint" android:background="@color/service_manage_hint_background" android:layout_width="fill_parent" android:layout_height="40.0dip">
+        <TextView android:textSize="13.0sp" android:textColor="@color/service_manage_hint_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="14.0dip" android:text="修改排序后，首页栏目的推荐顺序会随之变化" android:layout_centerVertical="true" />
+        <ImageView android:id="@id/remind_delete" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/service_manage_hint_close" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    </com.iflytek.base.skin.customView.XRelativeLayout>
+    <ListView android:id="@id/service_manage_list_tool" android:layout_width="fill_parent" android:layout_height="wrap_content" android:divider="@null" android:dividerHeight="0.0dip" />
+    <com.iflytek.viafly.homepage.servicemanage.DragSortListView android:id="@id/service_manage_draglist" android:paddingTop="0.0dip" android:paddingBottom="0.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:divider="#00000000" dslv:collapsed_height="2.0dip" dslv:drag_scroll_start="0.33" dslv:max_drag_scroll_speed="0.5" dslv:remove_mode="flingRemove" dslv:track_drag_sort="false" dslv:float_alpha="0.6" dslv:slide_shuffle_speed="0.3" dslv:drag_enabled="true" dslv:sort_enabled="true" dslv:remove_enabled="false" dslv:drag_start_mode="onDown" dslv:drag_handle_id="@id/drag_handle" dslv:use_default_controller="true"
+      xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:dslv="http://schemas.android.com/apk/res/com.iflytek.cmcc" />
+</com.iflytek.base.skin.customView.XLinearLayout>

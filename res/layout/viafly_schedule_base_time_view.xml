@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:skin="http://schemas.android.com/apk/res-auto">
+    <com.iflytek.base.skin.customView.XLinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.iflytek.base.skin.customView.XLinearLayout android:gravity="center" android:id="@id/clock_edit_layout_time_select" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.iflytek.viafly.ui.customtimepicker.CustomTimePicker android:id="@id/clock_edit_layout_timePicker" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </com.iflytek.base.skin.customView.XLinearLayout>
+        <View android:layout_width="fill_parent" android:layout_height="8.0dip" />
+        <com.iflytek.base.skin.customView.XLinearLayout android:orientation="vertical" android:id="@id/r_edit_layout_day" android:layout_width="fill_parent" android:layout_height="wrap_content" skin:background="statelist.setting_item_background_states">
+            <com.iflytek.base.skin.customView.XLinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="50.0dip">
+                <com.iflytek.base.skin.customView.XTextView android:id="@id/r_edit_tv_day_tip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:layout_marginRight="12.0dip" android:text="@string/schedule_date" skin:style="style_reminder_edit_title_text" />
+                <com.iflytek.base.skin.customView.XTextView android:gravity="right" android:id="@id/r_edit_tv_day" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0" skin:style="style_reminder_edit_summary_text" />
+                <com.iflytek.base.skin.customView.XImageView android:layout_gravity="center|right" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:layout_marginRight="14.0dip" skin:src="image.remind_fold" />
+            </com.iflytek.base.skin.customView.XLinearLayout>
+        </com.iflytek.base.skin.customView.XLinearLayout>
+        <com.iflytek.base.skin.customView.XLinearLayout android:orientation="vertical" android:id="@id/r_edit_layout_repeat" android:layout_width="fill_parent" android:layout_height="wrap_content" skin:background="statelist.setting_item_background_states">
+            <View android:background="#1f000000" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_marginLeft="15.0dip" android:layout_marginRight="15.0dip" />
+            <LinearLayout android:gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="50.0dip">
+                <com.iflytek.base.skin.customView.XTextView android:id="@id/r_edit_tv_repeat_tip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:layout_marginRight="12.0dip" android:text="重复" skin:style="style_reminder_edit_title_text" />
+                <com.iflytek.base.skin.customView.XTextView android:ellipsize="end" android:gravity="right" android:id="@id/r_edit_tv_repeat" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:layout_weight="1.0" skin:style="style_reminder_edit_summary_text" />
+                <com.iflytek.base.skin.customView.XImageView android:layout_gravity="center|right" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:layout_marginRight="14.0dip" skin:src="image.remind_fold" />
+            </LinearLayout>
+        </com.iflytek.base.skin.customView.XLinearLayout>
+        <View android:background="#1f000000" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_marginLeft="15.0dip" android:layout_marginRight="15.0dip" />
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/r_edit_et_content_layout" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="50.0dip">
+            <com.iflytek.base.skin.customView.XTextView android:id="@id/r_edit_tv_title_tip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:text="标题" skin:style="style_reminder_edit_title_text" />
+            <com.iflytek.base.skin.customView.XEditText android:textSize="@dimen/text_standard_size_t3" android:textColor="@color/color_standard_c3" android:textColorHint="#ffb0b0b0" android:gravity="center|right" android:layout_gravity="center_vertical" android:id="@id/r_edit_et_content" android:background="@null" android:layout_width="wrap_content" android:layout_height="40.0dip" android:layout_marginLeft="10.0dip" android:layout_marginRight="14.0dip" android:hint="@string/r_schedule_content_hint" android:maxLength="30" android:layout_weight="1.0" />
+            <ImageView android:id="@id/delete_btn" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="14.0dip" android:src="@drawable/btn_schedule_mark_close_nor" />
+        </LinearLayout>
+        <com.iflytek.base.skin.customView.XLinearLayout android:gravity="center_vertical" android:id="@id/r_edit_layout_record" android:background="#ffffffff" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="50.0dip">
+            <View android:background="#1f000000" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_marginLeft="15.0dip" android:layout_marginRight="15.0dip" />
+            <LinearLayout android:gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="50.0dip">
+                <com.iflytek.base.skin.customView.XTextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:text="@string/schedule_record_voice" skin:style="style_reminder_edit_title_text" />
+                <com.iflytek.base.skin.customView.XTextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0" />
+                <com.iflytek.base.skin.customView.XImageView android:layout_gravity="center|right" android:id="@id/r_edit_iv_record" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:layout_marginRight="15.0dip" skin:background="statelist.btn_broadcast_broadcast_wave" />
+            </LinearLayout>
+        </com.iflytek.base.skin.customView.XLinearLayout>
+        <LinearLayout android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="1.0px">
+            <View android:background="#1f000000" android:layout_width="fill_parent" android:layout_height="1.0px" />
+        </LinearLayout>
+        <View android:layout_width="fill_parent" android:layout_height="8.0dip" />
+    </com.iflytek.base.skin.customView.XLinearLayout>
+</merge>

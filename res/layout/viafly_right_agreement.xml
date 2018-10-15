@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@drawable/viafly_main_init_bg" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textColor="@android:color/black" android:gravity="center" android:id="@id/right_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/right_title" />
+    <ImageView android:background="@drawable/mainpage_title_shadow" android:layout_width="fill_parent" android:layout_height="2.0px" />
+    <LinearLayout android:orientation="vertical" android:id="@id/webview_root" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0" />
+    <ImageView android:background="@drawable/mainpage_title_shadow" android:layout_width="fill_parent" android:layout_height="2.0px" />
+    <CheckBox android:textSize="12.0sp" android:textColor="@android:color/black" android:id="@id/right_checkbox" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="5.0dip" android:checked="true" android:button="@drawable/right_checkbox" android:text="知道了,以后不再提示" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/foot_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginTop="5.0dip" android:layout_marginRight="5.0dip" android:layout_marginBottom="5.0dip">
+        <Button android:textColor="#ffffffff" android:gravity="center" android:layout_gravity="center_vertical" android:id="@id/button_right_cancel" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginRight="5.0dip" android:text="取消" android:layout_weight="1.0" />
+        <Button android:textColor="#ffffffff" android:gravity="center" android:layout_gravity="center_vertical" android:id="@id/button_right_agree" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:text="开始使用" android:layout_weight="1.0" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/translate_layout" android:background="@drawable/viafly_shape_conor_translate_text" android:padding="@dimen/dimen_14dp" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="@dimen/text_standard_size_t3" android:textColor="@color/color_standard_c1" android:id="@id/original_result_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10.0dip" android:text="翻译原文" android:layout_weight="1.0" />
+        <ImageView android:id="@id/translate_result_menu" android:layout_width="22.0dip" android:layout_height="22.0dip" android:src="@drawable/translate_more_but" android:layout_alignParentRight="true" />
+    </LinearLayout>
+    <View android:id="@id/view_divide" android:background="#ffc1c8ce" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_marginTop="11.0dip" />
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="11.0dip">
+        <TextView android:textSize="@dimen/text_standard_size_t3" android:textColor="@color/color_standard_c1" android:id="@id/translate_result_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10.0dip" android:layout_weight="1.0" />
+        <ImageView android:layout_gravity="bottom" android:id="@id/translate_result_broadcast" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="8.0dip" android:src="@drawable/translate_speak_button" />
+        <ImageView android:layout_gravity="bottom" android:id="@id/translate_share" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="4.0dip" android:src="@drawable/ic_share" />
+    </LinearLayout>
+</LinearLayout>

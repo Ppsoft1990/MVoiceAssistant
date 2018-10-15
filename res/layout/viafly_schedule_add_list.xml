@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.iflytek.base.skin.customView.XLinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:skin="http://schemas.android.com/apk/res-auto">
+    <com.iflytek.base.skin.customView.XRelativeLayout android:orientation="horizontal" android:id="@id/remind_activity_title_bar" android:background="@drawable/home_title_gradient_bg" android:layout_width="fill_parent" android:layout_height="@dimen/home_titlebar_layout_height">
+        <com.iflytek.base.skin.customView.XLinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/remind_activity_title_left_button" android:layout_width="@dimen/hometitle_normal_back_btn_width" android:layout_height="@dimen/home_titlebar_layout_height" android:layout_alignParentLeft="true" android:layout_centerVertical="true" skin:background="statelist.fluepage_title_btn_states">
+            <com.iflytek.base.skin.customView.XImageView android:gravity="center" android:layout_gravity="center" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentLeft="true" android:layout_centerVertical="true" skin:src="statelist.fluepage_title_back_btn_states" />
+        </com.iflytek.base.skin.customView.XLinearLayout>
+        <com.iflytek.base.skin.customView.XImageView android:id="@id/operation_page_left_separator" android:visibility="gone" android:layout_width="1.0dip" android:layout_height="fill_parent" android:layout_toRightOf="@id/remind_activity_title_left_button" skin:src="image.browser_title_line" />
+        <com.iflytek.base.skin.customView.XTextView android:ellipsize="end" android:gravity="center" android:id="@id/remind_activity_title_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="添加提醒" android:singleLine="true" android:layout_centerInParent="true" skin:style="style_title_white" />
+        <com.iflytek.base.skin.customView.XImageView android:gravity="center" android:id="@id/home_page_layout_done" android:paddingRight="10.0dip" android:visibility="gone" android:layout_width="46.0dip" android:layout_height="46.0dip" android:scaleType="center" android:layout_alignParentRight="true" android:layout_centerVertical="true" skin:background="statelist.fluepage_title_btn_states" skin:src="image.ic_browser_reminder_history_new" />
+    </com.iflytek.base.skin.customView.XRelativeLayout>
+    <LinearLayout android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/remind_activity_title_bar">
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <TextView android:textSize="@dimen/text_standard_size_t3" android:textColor="@color/color_standard_c1" android:gravity="center" android:id="@id/viafly_schedule_togger_text" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="生活提醒" />
+            <View android:id="@id/viafly_schedule_togger_bottom" android:background="@color/color_standard_c5" android:layout_width="fill_parent" android:layout_height="2.0dip" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <TextView android:textSize="@dimen/text_standard_size_t3" android:textColor="@color/color_standard_c3" android:gravity="center" android:id="@id/viafly_smart_schedule_togger_text" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="个性提醒" />
+            <View android:id="@id/viafly_smart_schedule_togger_bottom" android:background="@color/color_standard_c5" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="2.0dip" />
+        </LinearLayout>
+    </LinearLayout>
+    <ScrollView android:id="@id/viafly_schedule_list_layout" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/choice_layout">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <LinearLayout android:orientation="vertical" android:id="@id/viafly_schedule_list_content" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            <TextView android:textSize="@dimen/text_standard_size_t3" android:textColor="@color/color_standard_c4" android:gravity="center" android:id="@id/viafly_schedule_add" android:background="@drawable/button_submit_selector" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="40.0dip" android:layout_marginTop="44.0dip" android:layout_marginRight="40.0dip" android:text="添加生活提醒" />
+        </LinearLayout>
+    </ScrollView>
+    <ScrollView android:id="@id/viafly_smart_schedule_list_layout" android:visibility="gone" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/choice_layout">
+        <LinearLayout android:orientation="vertical" android:id="@id/viafly_smart_schedule_list_content" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </ScrollView>
+</com.iflytek.base.skin.customView.XLinearLayout>

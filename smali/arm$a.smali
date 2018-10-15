@@ -1,0 +1,31 @@
+.class interface abstract Larm$a;
+.super Ljava/lang/Object;
+.source "PluginDownloadHelper.java"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Larm;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x608
+    name = "a"
+.end annotation
+
+
+# virtual methods
+.method public abstract a(I)V
+.end method
+
+.method public abstract a(IDD)V
+.end method
+
+.method public abstract a(II)V
+.end method
+
+.method public abstract b(I)V
+.end method
+
+.method public abstract c(I)V
+.end method

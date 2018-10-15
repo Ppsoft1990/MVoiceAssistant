@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="PreferenceItemTextHighTitle" parent="@android:style/TextAppearance">
+        <item name="android:textSize">16.0sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@drawable/setting_high_text_color</item>
+    </style>
+    <style name="PreferenceItemTextTitle" parent="@android:style/TextAppearance">
+        <item name="android:textSize">16.0sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@drawable/white</item>
+    </style>
+    <style name="PreferenceTitle" parent="@android:style/TextAppearance">
+        <item name="android:textSize">16.0sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@drawable/white</item>
+    </style>
+    <style name="Theme.HazeBackground" parent="@android:style/Theme">
+        <item name="android:windowNoTitle">true</item>
+    </style>
+</resources>

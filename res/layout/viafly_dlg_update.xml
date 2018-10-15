@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="vertical" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:skin="http://schemas.android.com/apk/res-auto">
+    <com.iflytek.base.skin.customView.XTextView android:gravity="left" android:id="@id/update_text_prompt" android:scrollbars="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="false" skin:style="style_dialog_content_text" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/checkbox_container" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="10.0dip" android:layout_alignParentBottom="true">
+        <com.iflytek.base.skin.customView.XCheckBox android:id="@id/update_prompt_ckeckbox" android:layout_width="21.0dip" android:layout_height="21.0dip" skin:buttonDrawable="stateList.download_delete_checkbox_states" />
+        <com.iflytek.base.skin.customView.XTextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:text="@string/tip_update_no_prompt" skin:style="style_download_delete_dialog_tip" />
+    </LinearLayout>
+    <com.iflytek.base.skin.customView.XProgressBar android:id="@id/update_progress_get" android:visibility="gone" android:layout_width="60.0dip" android:layout_height="60.0dip" skin:cycleDrawable="image.dlg_recognizing_progress" style="?android:attr/progressBarStyleLarge" />
+    <LinearLayout android:orientation="vertical" android:id="@id/update_layout_download" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="20.0dip">
+        <com.iflytek.base.skin.customView.XTextView android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/tip_updateing" skin:style="style_dialog_content_text" />
+        <com.iflytek.base.skin.customView.XRelativeLayout android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layout_marginBottom="10.0dip">
+            <com.iflytek.base.skin.customView.XImageView android:id="@id/update_progressbar_background" android:layout_width="wrap_content" android:layout_height="wrap_content" skin:background="image.progress_bar_bg" />
+            <com.iflytek.base.skin.customView.XImageView android:id="@id/update_progress" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" skin:background="image.second_progress_bar_bg" />
+        </com.iflytek.base.skin.customView.XRelativeLayout>
+        <com.iflytek.base.skin.customView.XTextView android:gravity="center" android:id="@id/update_text_download_len" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" skin:style="style_dialog_content_text" />
+    </LinearLayout>
+</LinearLayout>

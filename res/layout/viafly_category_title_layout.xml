@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="@color/color_standard_c4" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <View android:background="@color/color_standard_c5" android:layout_width="4.0dip" android:layout_height="fill_parent" android:layout_margin="12.0dip" />
+        <TextView android:textSize="@dimen/text_standard_size_t3" android:textColor="@color/color_standard_c1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12.0dip" android:layout_marginBottom="12.0dip" android:text="个性分类" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:id="@id/type_layout" android:background="@color/color_standard_c4" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="40.0dip">
+        <RelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <TextView android:textSize="@dimen/text_standard_size_t4" android:textColor="@color/color_standard_c5" android:gravity="center" android:id="@id/voice_one_type" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            <View android:id="@id/voice_one_select" android:background="@color/color_standard_c5" android:layout_width="30.0dip" android:layout_height="2.0dip" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
+        </RelativeLayout>
+        <RelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <TextView android:textSize="@dimen/text_standard_size_t4" android:textColor="@color/color_standard_c2" android:gravity="center" android:id="@id/voice_two_type" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            <View android:id="@id/voice_two_select" android:background="@color/color_standard_c5" android:visibility="gone" android:layout_width="30.0dip" android:layout_height="2.0dip" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
+        </RelativeLayout>
+        <RelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <TextView android:textSize="@dimen/text_standard_size_t4" android:textColor="@color/color_standard_c2" android:gravity="center" android:id="@id/voice_three_type" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            <View android:id="@id/voice_three_select" android:background="@color/color_standard_c5" android:visibility="gone" android:layout_width="30.0dip" android:layout_height="2.0dip" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
+        </RelativeLayout>
+        <RelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <TextView android:textSize="@dimen/text_standard_size_t4" android:textColor="@color/color_standard_c2" android:gravity="center" android:id="@id/voice_four_type" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            <View android:id="@id/voice_four_select" android:background="@color/color_standard_c5" android:visibility="gone" android:layout_width="30.0dip" android:layout_height="2.0dip" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
+        </RelativeLayout>
+    </LinearLayout>
+    <View android:background="@color/color_standard_c9" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+</LinearLayout>

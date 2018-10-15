@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/caf_noti_img_margin_left" android:layout_marginRight="12.0dip">
+            <ImageView android:id="@id/caf_noti_image" android:layout_width="@dimen/caf_noti_image_size" android:layout_height="@dimen/caf_noti_image_size" android:src="@drawable/ico_notification" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:id="@id/seeDetail" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="15.0">
+            <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="fill_parent">
+                <LinearLayout android:layout_width="wrap_content" android:layout_height="25.0dip">
+                    <TextView android:textSize="16.0sp" android:textColor="#ff656566" android:id="@id/callfeesTextView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="7000" />
+                    <TextView android:textSize="16.0sp" android:textColor="#ff656566" android:id="@id/callfeesExtraView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text=".35元" />
+                </LinearLayout>
+                <TextView android:textSize="11.0sp" android:textColor="#ff479ad9" android:id="@id/callfeesHintView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2.5dip" android:text="剩余话费" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="16.0dip">
+                <LinearLayout android:layout_width="wrap_content" android:layout_height="25.0dip">
+                    <TextView android:textSize="16.0sp" android:textColor="#ff656566" android:id="@id/flowTextView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="1011" />
+                    <TextView android:textSize="16.0sp" android:textColor="#ff656566" android:id="@id/flowExtraView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text=".78M" />
+                </LinearLayout>
+                <TextView android:textSize="11.0sp" android:textColor="#ff479ad9" android:id="@id/flowHintView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2.5dip" android:text="剩余流量" />
+            </LinearLayout>
+        </LinearLayout>
+        <TextView android:id="@id/spliter" android:background="#ffc8c8c8" android:layout_width="1.0px" android:layout_height="36.0dip" />
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/updateData" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/caf_noti_refresh_margin_left" android:layout_marginRight="@dimen/caf_noti_refresh_margin_right">
+            <ImageView android:id="@id/updateImg" android:layout_width="20.0dip" android:layout_height="20.0dip" android:src="@drawable/ic_notification_refresh_dark" />
+            <TextView android:textSize="12.0sp" android:textColor="#ff656566" android:id="@id/updateStatusText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:text="几天前更新" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

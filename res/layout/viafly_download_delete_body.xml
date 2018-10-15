@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:skin="http://schemas.android.com/apk/res-auto">
+    <com.iflytek.base.skin.customView.XTextView android:paddingLeft="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:text="确定删除选中的下载记录吗?" skin:style="style_dlg_text_tip" />
+    <LinearLayout android:orientation="horizontal" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="10.0dip" android:layout_alignParentBottom="true">
+        <com.iflytek.base.skin.customView.XCheckBox android:id="@id/download_delete_checkBox" android:layout_width="21.0dip" android:layout_height="21.0dip" skin:buttonDrawable="stateList.download_delete_checkbox_states" />
+        <com.iflytek.base.skin.customView.XTextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:text="同时删除本地文件" skin:style="style_download_delete_dialog_tip" />
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.iflytek.base.skin.customView.XLinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:skin="http://schemas.android.com/apk/res-auto">
+    <com.iflytek.base.skin.customView.XTextView android:gravity="center" android:id="@id/list_dialog_item" android:layout_width="fill_parent" android:layout_height="@dimen/cmbusiness_dialog_item_height" skin:background="statelist.mainpage_list_mid_state" skin:style="style_list_dialog_show_text" />
+</com.iflytek.base.skin.customView.XLinearLayout>

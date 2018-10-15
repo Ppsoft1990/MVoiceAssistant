@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/status_bar_view" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <View android:id="@id/status_bar" android:background="#00ffffff" android:layout_width="fill_parent" android:layout_height="56.0dip" />
+        <LinearLayout android:orientation="vertical" android:background="#99000000" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/status_bar">
+            <TextView android:textSize="@dimen/guide_message_text_size" android:textColor="#ffffffff" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/guide_status_message_margin_left" android:layout_marginTop="42.0dip" android:text="双击标题栏，回到顶部~" />
+            <Button android:textSize="14.0sp" android:textColor="#ffffffff" android:id="@id/status_bar_ok" android:background="@drawable/viafly_shape_guide_confrim" android:paddingLeft="17.0dip" android:paddingTop="8.0dip" android:paddingRight="17.0dip" android:paddingBottom="8.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/guide_status_message_margin_left" android:layout_marginTop="20.0dip" android:text="我知道了" />
+        </LinearLayout>
+        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/guide_status_arrow_margin_left" android:layout_marginTop="-20.0dip" android:src="@drawable/user_guide_arrow_1" android:layout_below="@id/status_bar" />
+    </RelativeLayout>
+    <RelativeLayout android:orientation="vertical" android:id="@id/voice_package_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <ImageView android:id="@id/voice_package" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="-8.0dip" android:layout_marginTop="-9.0dip" android:src="@drawable/user_guide_voice" android:scaleType="fitXY" />
+                <TextView android:background="#99000000" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_marginTop="-9.0dip" android:layout_weight="1.0" />
+            </LinearLayout>
+            <View android:background="#99000000" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        </LinearLayout>
+        <TextView android:textSize="@dimen/guide_message_text_size" android:textColor="#ffffffff" android:id="@id/voice_package_message" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/guide_voice_message_margin_left" android:layout_marginTop="94.0dip" android:text="快来领取你的专属\n灵犀语音包~" />
+        <Button android:textSize="14.0sp" android:textColor="#ffffffff" android:id="@id/voice_package_ok" android:background="@drawable/viafly_shape_guide_confrim" android:paddingLeft="17.0dip" android:paddingTop="8.0dip" android:paddingRight="17.0dip" android:paddingBottom="8.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/guide_voice_message_margin_left" android:layout_marginTop="20.0dip" android:text="我知道了" android:layout_below="@id/voice_package_message" />
+        <ImageView android:id="@id/novice_guide_arrow" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/guide_voice_arrow_margin_left" android:layout_marginTop="70.0dip" android:src="@drawable/user_guide_arrow_2" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/mic_view" android:background="#99000000" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="horizontal" android:id="@id/mic_view_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+            <View android:layout_width="51.0dip" android:layout_height="fill_parent" />
+            <ImageView android:background="@drawable/user_guide_mic" android:layout_width="0.0dip" android:layout_height="58.0dip" android:scaleType="fitXY" android:adjustViewBounds="true" android:layout_weight="1.0" />
+            <View android:layout_width="52.0dip" android:layout_height="fill_parent" />
+        </LinearLayout>
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/mic_view_layout">
+            <Button android:textSize="14.0sp" android:textColor="#ffffffff" android:id="@id/mic_ok" android:background="@drawable/viafly_shape_guide_confrim" android:paddingLeft="17.0dip" android:paddingTop="8.0dip" android:paddingRight="17.0dip" android:paddingBottom="8.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/guide_mic_message_margin_left" android:layout_marginBottom="@dimen/guide_mic_ok_margin_bottom" android:text="我知道了" android:layout_alignParentBottom="true" />
+            <TextView android:textSize="@dimen/guide_message_text_size" android:textColor="#ffffffff" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/guide_mic_message_margin_left" android:layout_marginBottom="20.0dip" android:text="想问什么，跟灵犀说哦~" android:layout_above="@id/mic_ok" />
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/guide_mic_arrow_margin_left" android:layout_marginBottom="2.0dip" android:src="@drawable/user_guide_arrow_3" android:layout_alignParentBottom="true" />
+        </RelativeLayout>
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/tool_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="horizontal" android:id="@id/tool_view_layout" android:layout_width="fill_parent" android:layout_height="66.0dip" android:layout_alignParentBottom="true">
+            <View android:background="#99000000" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" />
+            <ImageView android:layout_gravity="right" android:id="@id/tool_view_img" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="-8.0dip" android:layout_marginBottom="-12.0dip" android:src="@drawable/user_guide_voice" android:rotation="180.0" />
+        </LinearLayout>
+        <RelativeLayout android:background="#99000000" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/tool_view_layout">
+            <Button android:textSize="14.0sp" android:textColor="#ffffffff" android:id="@id/tool_ok" android:background="@drawable/viafly_shape_guide_confrim" android:paddingLeft="17.0dip" android:paddingTop="8.0dip" android:paddingRight="17.0dip" android:paddingBottom="8.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="57.0dip" android:layout_marginBottom="66.0dip" android:text="我知道了" android:layout_alignParentBottom="true" />
+            <TextView android:textSize="@dimen/guide_message_text_size" android:textColor="#ffffffff" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="57.0dip" android:layout_marginBottom="20.0dip" android:text="翻译、提醒、速记搬到这里来啦~" android:layout_above="@id/tool_ok" />
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="43.0dip" android:layout_marginBottom="1.0dip" android:src="@drawable/user_guide_arrow_4" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" />
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

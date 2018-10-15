@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:background="@color/color_standard_c4" android:layout_width="78.0dip" android:layout_height="42.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/text_standard_size_t4" android:textColor="@color/food_title_color" android:ellipsize="end" android:gravity="center" android:id="@id/day_traffic_item_text" android:background="@drawable/gridview_textview_border" android:layout_width="70.0dip" android:layout_height="34.0dip" android:singleLine="true" android:layout_centerInParent="true" />
+</LinearLayout>

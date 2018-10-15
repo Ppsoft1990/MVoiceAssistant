@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:skin="http://schemas.android.com/apk/res-auto">
+    <com.iflytek.base.skin.customView.XRelativeLayout android:orientation="horizontal" android:id="@id/remind_activity_title_bar" android:background="@drawable/home_title_gradient_bg" android:layout_width="fill_parent" android:layout_height="@dimen/home_titlebar_layout_height">
+        <com.iflytek.base.skin.customView.XLinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/remind_activity_title_left_button" android:layout_width="@dimen/hometitle_normal_back_btn_width" android:layout_height="@dimen/home_titlebar_layout_height" android:layout_alignParentLeft="true" android:layout_centerVertical="true" skin:background="statelist.fluepage_title_btn_states">
+            <com.iflytek.base.skin.customView.XImageView android:gravity="center" android:layout_gravity="center" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentLeft="true" android:layout_centerVertical="true" skin:src="statelist.fluepage_title_back_btn_states" />
+        </com.iflytek.base.skin.customView.XLinearLayout>
+        <com.iflytek.base.skin.customView.XImageView android:id="@id/operation_page_left_separator" android:visibility="gone" android:layout_width="1.0dip" android:layout_height="fill_parent" android:layout_toRightOf="@id/remind_activity_title_left_button" skin:src="image.browser_title_line" />
+        <com.iflytek.base.skin.customView.XTextView android:ellipsize="end" android:gravity="center" android:id="@id/remind_activity_title_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="编辑闹钟" android:singleLine="true" android:layout_centerInParent="true" skin:style="style_title_white" />
+        <com.iflytek.base.skin.customView.XTextView android:textSize="@dimen/text_standard_size_t3" android:textColor="@color/color_standard_c4_v5" android:gravity="center" android:id="@id/r_edit_title_bar_right_button" android:paddingRight="17.5dip" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="保存" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    </com.iflytek.base.skin.customView.XRelativeLayout>
+    <ScrollView android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <com.iflytek.base.skin.customView.XLinearLayout android:id="@id/viafly_schedule_manage_content" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <com.iflytek.base.skin.customView.XLinearLayout android:gravity="center_vertical" android:orientation="vertical" android:id="@id/remind_manager_bottom_layout" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="44.0dip" android:layout_marginBottom="44.0dip">
+                <com.iflytek.base.skin.customView.XButton android:textSize="@dimen/text_standard_size_t3" android:textColor="@color/color_standard_c7" android:gravity="center" android:id="@id/remind_activity_bottom_delete_button" android:background="@drawable/viafly_schedule_item" android:layout_width="fill_parent" android:layout_height="50.0dip" android:text="删除" skin:style="style_delete_button_text" />
+                <com.iflytek.base.skin.customView.XButton android:textSize="@dimen/text_standard_size_t3" android:textColor="@color/color_standard_c5_v5" android:gravity="center" android:id="@id/remind_activity_bottom_add_button" android:background="@drawable/viafly_schedule_item" android:layout_width="fill_parent" android:layout_height="50.0dip" android:text="添加" />
+            </com.iflytek.base.skin.customView.XLinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

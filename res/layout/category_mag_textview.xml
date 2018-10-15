@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/category_root_view" android:background="@color/color_standard_c4" android:layout_width="78.0dip" android:layout_height="42.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/text_standard_size_t4" android:textColor="@color/food_title_color" android:ellipsize="end" android:gravity="center" android:id="@id/name_category" android:background="@drawable/gridview_textview_border" android:layout_width="70.0dip" android:layout_height="34.0dip" android:singleLine="true" android:layout_centerInParent="true" />
+    <ImageView android:id="@id/img_top" android:layout_width="13.0dip" android:layout_height="13.0dip" android:layout_alignParentTop="true" android:layout_alignParentRight="true" />
+</RelativeLayout>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:background="@color/color_standard_c9" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_marginBottom="38.0dip" />
+    <RelativeLayout android:id="@id/animContainer" android:layout_width="fill_parent" android:layout_height="44.0dip">
+        <com.iflytek.viafly.ui.view.MicrophoneView android:id="@id/defaultAnim" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_centerHorizontal="true" />
+        <com.iflytek.base.skin.customView.XImageView android:id="@id/defaultAnimImg" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+    <TextView android:textSize="@dimen/text_standard_size_t4" android:textColor="@color/color_standard_c5" android:gravity="center" android:id="@id/voicenote_input_mic_tip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="38.0dip" android:layout_marginBottom="4.0dip" android:text="点击或长按说话" android:drawableBottom="@drawable/ico_jiantou" android:drawablePadding="7.0dip" />
+    <ImageView android:id="@id/voicenote_input_mic_btn" android:background="@drawable/note_mic_state" android:layout_width="65.0dip" android:layout_height="65.0dip" />
+</LinearLayout>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:skin="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+    <com.iflytek.base.skin.customView.XLinearLayout android:orientation="vertical" android:id="@id/viafly_sim_card_select_visible_content" android:layout_width="fill_parent" android:layout_height="wrap_content" skin:background="image.new_comer_guide_title_bg">
+        <com.iflytek.base.skin.customView.XTextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginBottom="15.0dip" android:text="您想用哪张SIM卡发送？" skin:style="style_new_comer_guide_text" />
+        <com.iflytek.base.skin.customView.XLinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.iflytek.base.skin.customView.XLinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/viafly_sim_card_select_card1_panel" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0" skin:background="image.sim_card_select_dialog_card1_normal">
+                <com.iflytek.base.skin.customView.XImageView android:id="@id/viafly_sim_card_select_card1_indicator" android:layout_width="wrap_content" android:layout_height="wrap_content" skin:background="image.sim_card" />
+                <com.iflytek.base.skin.customView.XTextView android:gravity="center" android:id="@id/viafly_sim_card_select_card1_text" android:layout_width="wrap_content" android:layout_height="wrap_content" skin:style="style_new_comer_guide_text" />
+            </com.iflytek.base.skin.customView.XLinearLayout>
+            <com.iflytek.base.skin.customView.XLinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/viafly_sim_card_select_card2_panel" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0" skin:background="image.sim_card_select_dialog_card2_normal">
+                <com.iflytek.base.skin.customView.XImageView android:id="@id/viafly_sim_card_select_card2_indicator" android:layout_width="wrap_content" android:layout_height="wrap_content" skin:background="image.sim_card" />
+                <com.iflytek.base.skin.customView.XTextView android:gravity="center" android:id="@id/viafly_sim_card_select_card2_text" android:layout_width="wrap_content" android:layout_height="wrap_content" skin:style="style_new_comer_guide_text" />
+            </com.iflytek.base.skin.customView.XLinearLayout>
+        </com.iflytek.base.skin.customView.XLinearLayout>
+        <com.iflytek.base.skin.customView.XButton android:gravity="center" android:id="@id/viafly_sim_card_select_cancel_btn" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:text="取消" skin:background="stateList.sim_card_select_dialog_cancel_btn" skin:style="style_sim_card_select_cancel_btn" />
+    </com.iflytek.base.skin.customView.XLinearLayout>
+</LinearLayout>

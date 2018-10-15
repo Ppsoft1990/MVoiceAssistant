@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/color_standard_c4" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/speaker_choose_detail_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="14.0dip" android:layout_marginBottom="12.0dip" android:layout_centerInParent="true">
+        <com.iflytek.viafly.ui.view.CircleImageView android:layout_gravity="center_horizontal" android:id="@id/speaker_choose_icon_img" android:layout_width="68.0dip" android:layout_height="68.0dip" android:src="@drawable/ic_broadcast_default_icon" />
+        <TextView android:textSize="@dimen/text_standard_size_t2" android:textColor="@color/color_standard_c1" android:layout_gravity="center_horizontal" android:id="@id/speaker_choose_role_tv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="14.0dip" android:text="嘉嘉" />
+        <LinearLayout android:layout_gravity="center_horizontal" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dip">
+            <TextView android:textSize="@dimen/text_standard_size_t5" android:textColor="@color/color_standard_c3" android:id="@id/speaker_choose_language_tv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="4.0dip" android:text="普通话" />
+            <View android:layout_gravity="center_vertical" android:id="@id/star_line_view" android:background="@color/color_standard_c9" android:layout_width="1.0dip" android:layout_height="12.0dip" />
+            <TextView android:textSize="@dimen/text_standard_size_t5" android:textColor="@color/color_standard_c3" android:id="@id/speaker_size_tv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="4.0dip" android:text="" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:layout_gravity="center_horizontal" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12.0dip">
+            <ImageView android:id="@id/speaker_choose_audition_img" android:background="@drawable/auido_paly_animation_list_new" android:layout_width="22.0dip" android:layout_height="22.0dip" android:layout_marginRight="12.0dip" android:src="@drawable/voice_choose_aution_bg_new" />
+            <View android:id="@id/speaker_line" android:background="#ffe3eaef" android:layout_width="1.0dip" android:layout_height="22.0dip" />
+            <ImageView android:id="@id/speaker_choose_select_img" android:layout_width="22.0dip" android:layout_height="22.0dip" android:layout_marginLeft="12.0dip" android:src="@drawable/voice_speaker_usage_bg" />
+            <RelativeLayout android:id="@id/speaker_choose_layout" android:layout_width="24.0dip" android:layout_height="24.0dip" android:layout_marginLeft="12.0dip">
+                <ImageView android:id="@id/speaker_anim" android:layout_width="24.0dip" android:layout_height="24.0dip" android:src="@drawable/ic_speaker_downloging" android:layout_centerInParent="true" />
+                <ImageView android:id="@id/speaker_choose_download_img" android:layout_width="22.0dip" android:layout_height="22.0dip" android:src="@drawable/voice_speaker_usage_bg" android:layout_centerInParent="true" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:skin="http://schemas.android.com/apk/res-auto">
+    <com.iflytek.base.skin.customView.XRelativeLayout android:layout_width="fill_parent" android:layout_height="60.0dip" skin:background="image.sms_edit_title_bg">
+        <com.iflytek.base.skin.customView.XLinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/sms_add_contacts_cancel_btn" android:layout_width="63.0dip" android:layout_height="fill_parent" android:layout_alignParentLeft="true" android:layout_centerVertical="true" skin:background="statelist.home_title_left_states">
+            <com.iflytek.base.skin.customView.XImageView android:gravity="center" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" skin:src="image.ic_sms_cancel" />
+        </com.iflytek.base.skin.customView.XLinearLayout>
+        <com.iflytek.base.skin.customView.XTextView android:id="@id/sms_add_contacts_counter" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="更换联系人" android:layout_centerHorizontal="true" android:layout_centerVertical="true" skin:style="style_contact_add_title_extra" />
+    </com.iflytek.base.skin.customView.XRelativeLayout>
+    <com.iflytek.base.skin.customView.XLinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/sms_edit_contact_search_layout" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="50.0dip" skin:background="image.shop_list_item_normal_extra">
+        <com.iflytek.base.skin.customView.XImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginRight="10.0dip" skin:background="color.transparent" skin:src="image.contact_search_indicator_extra" />
+        <com.iflytek.base.skin.customView.XEditText android:gravity="center_vertical" android:id="@id/sms_edit_title_search" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginTop="3.0dip" android:hint="搜索需要被发送的联系人" android:singleLine="true" android:layout_weight="1.0" skin:background="color.transparent" skin:style="style_contact_search_name_extra" />
+    </com.iflytek.base.skin.customView.XLinearLayout>
+    <com.iflytek.base.skin.customView.XRelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent" skin:background="color.contact_add_list_bg_color">
+        <com.iflytek.base.skin.customView.XListView android:id="@id/sms_add_contacts_list" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="wrap_content" android:listSelector="@drawable/transparent" android:footerDividersEnabled="false" android:fadeScrollbars="true" skin:divider="none" skin:cacheColorHint="transparent" />
+        <com.iflytek.base.skin.customView.XTextView android:gravity="center" android:id="@id/sms_add_contacts_no_contacts_info" android:paddingTop="25.0dip" android:paddingBottom="25.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="无联系人" skin:style="style_sms_add_contacts_no_contacts_info" />
+    </com.iflytek.base.skin.customView.XRelativeLayout>
+</LinearLayout>

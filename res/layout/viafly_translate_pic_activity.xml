@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:orientation="vertical" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:orientation="vertical" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <SurfaceView android:id="@id/pic_translate_surface" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <com.iflytek.viafly.ui.view.GridLinesView android:paddingTop="46.0dip" android:paddingBottom="70.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </FrameLayout>
+    <FrameLayout android:orientation="vertical" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="horizontal" android:id="@id/pic_translate_graffiti_layout" android:background="@color/color_standard_c9_v5" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <com.iflytek.viafly.ui.view.ScanImageView android:gravity="center" android:orientation="horizontal" android:id="@id/pic_translate_scan_layout" android:background="@drawable/ic_pic_translate_scan_down" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </FrameLayout>
+    <com.iflytek.viafly.translate.ui.TranslateLoadingView android:gravity="center" android:layout_gravity="bottom|center" android:id="@id/pic_translate_loading" android:background="@drawable/viafly_translate_pic_tip_bg" android:padding="14.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="80.0dip" />
+    <TextView android:textSize="@dimen/text_standard_size_t4" android:textColor="@color/color_standard_c4_v5" android:gravity="center" android:layout_gravity="bottom|center" android:id="@id/pic_translate_tip" android:background="@drawable/viafly_translate_pic_tip_bg" android:paddingLeft="20.0dip" android:paddingTop="8.0dip" android:paddingRight="20.0dip" android:paddingBottom="8.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="80.0dip" />
+    <ImageView android:id="@id/pic_translate_focus" android:layout_width="90.0dip" android:layout_height="90.0dip" android:src="@drawable/pic_translate_focus" />
+    <RelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:background="@color/status_bar_bg_color" android:layout_width="fill_parent" android:layout_height="46.0dip" android:layout_alignParentTop="true">
+            <ImageView android:gravity="center" android:layout_gravity="center" android:id="@id/pic_translate_close" android:paddingLeft="16.0dip" android:paddingTop="14.0dip" android:paddingRight="16.0dip" android:paddingBottom="14.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/pic_translate_close" />
+            <LinearLayout android:gravity="center" android:id="@id/translate_language_switch" android:visibility="visible" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <com.iflytek.base.skin.customView.XTextView android:textSize="@dimen/text_standard_size_t2" android:textColor="@color/color_standard_c4_v5" android:ellipsize="end" android:layout_gravity="center_vertical" android:id="@id/translate_mode_name1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="英文" android:singleLine="true" />
+                <ImageView android:layout_gravity="center_vertical" android:id="@id/translate_mode_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:src="@drawable/pic_translate_en_ch" />
+                <com.iflytek.base.skin.customView.XTextView android:textSize="@dimen/text_standard_size_t2" android:textColor="@color/color_standard_c4_v5" android:ellipsize="end" android:layout_gravity="center_vertical" android:id="@id/translate_mode_name2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:text="中文" android:singleLine="true" />
+            </LinearLayout>
+            <ImageView android:id="@id/pic_translate_flash" android:padding="10.0dip" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/pic_translate_flash_on" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:background="@color/color_standard_c4_v5" android:focusable="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+            <LinearLayout android:orientation="vertical" android:id="@id/pic_translate_result_layout" android:paddingTop="10.0dip" android:focusable="true" android:visibility="gone" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:paddingLeft="15.0dip" android:paddingTop="12.0dip" android:paddingRight="10.0dip" android:paddingBottom="12.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_pic_translate_result" />
+                    <TextView android:textColor="@color/color_standard_c2_v5" android:layout_gravity="center" android:paddingLeft="4.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="翻译文本" />
+                    <View android:layout_width="0.0dip" android:layout_height="1.0dip" android:layout_weight="1.0" />
+                    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_arrow" />
+                </LinearLayout>
+                <TextView android:textColor="@color/color_standard_c2_v5" android:ellipsize="end" android:layout_gravity="center" android:id="@id/pic_translate_result_text" android:paddingLeft="15.0dip" android:paddingTop="10.0dip" android:paddingRight="15.0dip" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="你好啊，今天是星期五，今天的天气非常好，还可以开车去交友，你好啊，今天是星期五，今天的天气非常好，还可以开车去交友" android:maxLines="2" android:lines="2" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center_vertical" android:layout_gravity="bottom" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/bottom_left_layout" android:paddingLeft="20.0dip" android:paddingTop="10.0dip" android:paddingRight="20.0dip" android:paddingBottom="8.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <ImageView android:id="@id/bottom_left_button" android:visibility="visible" android:layout_width="28.0dip" android:layout_height="28.0dip" android:src="@drawable/pic_translate_album" />
+                    <TextView android:textSize="@dimen/text_standard_size_t5" android:textColor="@color/pic_translate_tip_text_color" android:id="@id/bottom_left_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="本地图库" />
+                </LinearLayout>
+                <FrameLayout android:layout_gravity="bottom" android:padding="10.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                    <ImageView android:gravity="center" android:layout_gravity="center" android:id="@id/bottom_middle_button" android:clickable="true" android:layout_width="50.0dip" android:layout_height="50.0dip" android:src="@drawable/pic_translate_middle_bg" />
+                </FrameLayout>
+                <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/bottom_right_layout" android:paddingLeft="20.0dip" android:paddingTop="10.0dip" android:paddingRight="20.0dip" android:paddingBottom="8.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <ImageView android:id="@id/bottom_right_button" android:layout_width="28.0dip" android:layout_height="28.0dip" android:src="@drawable/pic_translate_skills" />
+                    <TextView android:textSize="@dimen/text_standard_size_t5" android:textColor="@color/pic_translate_tip_text_color" android:id="@id/bottom_right_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="拍照技巧" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</FrameLayout>

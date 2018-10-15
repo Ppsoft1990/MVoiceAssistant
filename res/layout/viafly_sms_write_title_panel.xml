@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.iflytek.base.skin.customView.XLinearLayout android:orientation="vertical" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:skin="http://schemas.android.com/apk/res-auto">
+    <com.iflytek.base.skin.customView.XLinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/sms_edit_title" android:paddingTop="5.0dip" android:paddingBottom="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.iflytek.base.skin.customView.XImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="13.0dip" android:layout_marginRight="10.0dip" skin:background="color.transparent" skin:src="image.contact_search_indicator_extra" />
+        <com.iflytek.base.skin.customView.XLinearLayout android:id="@id/title_blank" android:visibility="gone" android:layout_width="20.0dip" android:layout_height="fill_parent" />
+        <com.iflytek.base.skin.customView.XTextView android:ellipsize="end" android:gravity="center_vertical" android:id="@id/sms_edit_title_edit2" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="60.0dip" android:singleLine="true" android:layout_weight="1.0" skin:style="style_contact_name_extra" />
+        <com.iflytek.base.skin.customView.XScrollView android:layout_gravity="center_vertical" android:orientation="horizontal" android:id="@id/contacts_scrollView" android:scrollbars="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0" android:fadeScrollbars="true">
+            <com.iflytek.viafly.mms.ui.SmsFlowLayout android:id="@id/sms_edit_title_edit" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" />
+        </com.iflytek.base.skin.customView.XScrollView>
+    </com.iflytek.base.skin.customView.XLinearLayout>
+</com.iflytek.base.skin.customView.XLinearLayout>

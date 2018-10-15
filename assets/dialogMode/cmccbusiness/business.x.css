@@ -1,0 +1,284 @@
+html, body {
+  width: 320dp|720:720px;
+  height: 100%;
+  padding: 0px;
+  margin: 0px;
+  border: 0px;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}		
+body {
+  background-color: #F2F2F2;
+  -webkit-font-smoothing: antialiased;
+}
+.top {
+  height: 11dp;
+}
+.page {
+  position: absolute;
+  width: 320dp;
+  top: 0px;
+  left:0px;
+  padding-top: 6dp;
+  padding-bottom:6dp;
+}
+
+/******************气泡动画********************/
+/*******使用transition而不使用animation，是因为在某些android手机上animation动画结束时会出现闪烁********************/
+.css_dialog_opacity_anim{
+  -webkit-backface-visibility: hidden;
+  -webkit-transition: opacity 0.3s ease;
+}
+.css_dialog_translate_anim{
+  -webkit-backface-visibility: hidden;
+  -webkit-transition: -webkit-transform 0.15s ease-in-out;
+}
+.show_div {
+  margin-top:4dp|720:10px;  
+}
+.box_out {
+    margin-top:0;
+    margin-right:8dp|320:9px;
+    margin-bottom:6dp;
+    margin-left:8dp|320:9px;
+	padding: 1px;
+	background-color: #DCDDE0;
+	border-radius: 10px;
+}
+.box_inner {
+	padding: 1px;
+	background-color: #C7C8CB;
+	border-radius: 9px;
+}
+.box_content_white {
+  position: relative;
+  background-color: white;
+  border-radius: 8px;
+}
+.box_content_yellow {
+  position: relative;
+  background-color: #fef4e8;
+  border-radius: 8px;
+}
+/**************************/
+.css_dialog_question_text {
+  word-break:break-word;
+  color: #515151;
+  padding: 14dp 15dp;
+  font-size: 16dp;
+  
+  outline: none;
+  border-radius: 8px 8px 0 8px;
+}
+.css_dialog_answer_text {
+  font-size: 16dp;
+  word-break:break-word;
+  color: #515151;
+}
+.css_answer_text_whith_share{
+  word-break:break-word;
+  width:272dp;
+  padding: 14dp 15dp;
+}
+.css_dialog_answer_sharePlayDiv {
+  border-top: solid 1px #e5e5e5;
+  text-align: right;
+  padding: 5dp 14dp;
+  color: #515151;
+  font-size: 12dp;
+}
+/*底部按钮文本所用样式*/
+.btn_text{
+    color: #515151;
+    text-align: center;
+    padding: 3px;
+    height: 44dp|720:100px;
+    line-height: 44dp|720:100px;
+    font-size: 17dp|720:38px;
+}
+/**************************/
+.chat_corner_left {
+	position: absolute;
+	left: -12px;
+	bottom: -3px;
+}
+.chat_corner_right {
+	position: absolute;
+	right: -12px;
+	bottom: -3px;
+}
+.css_dilaog_out_div {
+  position: relative;
+  margin-top: 0;
+  margin-bottom: 6dp;
+  margin-left: 8dp;
+  margin-right: 8dp;
+}
+
+.css_dialog_answer_text2{
+  font-size: 16dp;
+  color: #515151;
+}
+.box_content_green {
+  position: relative;
+  background-color: #73c96e;
+  border-radius: 8px;
+}
+
+/**
+ * 	业务相关样式文件
+ */
+.cmbusiness_bg {
+    position: absolute;
+    z-index: -2;
+    top: 0;
+    left: 0;
+}
+.css_cmbusiness_border_div {
+    padding-top: 10dp;
+    padding-bottom: 10dp;
+    padding-left: 14dp|720:33px;
+    padding-right: 12dp;
+}
+.css_cmbusiness_border_bottom_div {
+    color: #717171;
+    font-size: 12dp|720:28px; 
+}
+.css_cmbusiness_border_bottom_div a {
+    color: #599ed9;
+    text-decoration:none;
+}
+.css_left_label_updatetime_div {
+  width: 40%;
+  height: inherit;
+  display: inline-block;
+  vertical-align: middle;
+}
+.css_middle_content_div {
+  width: 45%;
+  display: inline-block;
+  vertical-align: middle;
+}
+.css_right_speaker_div {
+  width: 15%;
+  display: inline-block;
+  vertical-align: middle;
+}
+.css_data_and_unit_div {
+    float: right;
+    color: #57ae58;
+}
+.css_left_content_table_div {
+    height: inherit;
+    display: table;
+}
+.css_content_table_cell_div {
+    display: table-cell;
+    vertical-align: middle;
+}
+.css_cmbusiness_topic_label {
+    font-size: 17dp|720:38px;
+    color: #515151;
+    display: block;
+}
+.css_cmbusiness_topic_data_div {
+    font-size: 22dp|720:50px;
+    display: inline-block;
+    /*text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden; */
+}
+.css_focus_unit_div {
+    font-size: 12dp|720:28px;
+    display: inline-block;
+}
+.css_cmbusiness_update_time_div {
+    color: #717171;
+    font-size: 12.4dp;
+}
+.css_play_status_img {
+    width: 16dp;
+    height: 16dp;
+    float: right;
+}
+
+.cmbusiness_sub{
+    width: 100%;
+}
+
+.css_cm_business_item_div {
+    position: relative;
+    width: 100%;
+    display: table;
+}
+.css_business_info_div {
+    height: 60dp|720:136px;
+    padding-left: 14dp|720:33px;
+    padding-right: 14dp|720:33px;
+    display: table-cell;
+    vertical-align: middle;
+}
+.css_business_info_left_div {
+    width: 40%;
+    display: inline-block;
+    vertical-align: middle;
+}
+.css_business_info_left_div2 {
+    width: 85%;
+    display: inline-block;
+    vertical-align: middle;
+}
+.css_cmbusiness_info_middle_div {
+    width: 45%;
+    display: inline-block;
+    vertical-align: middle;
+}
+.css_business_info_label {
+    height: 22dp|720:50px;
+    font-size: 17dp|720:38px;
+    color: #515151;
+    display: inline-block;
+}
+.css_business_updatetime_label {
+    color: #717171;
+    font-size: 12.4dp;
+}
+.css_business_div {
+    font-size: 17dp|720:38px;
+    color: #515151;
+    float: right;
+}
+.css_refresh_load_content_div {
+    width: 15%;
+    display: inline-block;
+    text-align: right;
+    vertical-align: middle;
+}
+.css_business_refresh_img {
+    width: 28dp;
+    height: 28dp;
+    float: right;
+}
+.css_business_laoding_canvas {
+    float: right;
+    display: none;
+}
+.css_disclaimer_info_div {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10dp;
+    font-size: 11dp|720:24px;
+    color: #717171;
+    display: none;
+}
+.css_pay_item_div {
+    position: relative;
+}
+.css_pay_info_div {
+    font-size: 17dp;
+    color: #FFFFFF;
+    height: 47dp;
+    line-height: 47dp;
+    text-align: center;
+    border-radius: 8px;
+    background: #73c96e;
+}

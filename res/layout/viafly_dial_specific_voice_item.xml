@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.iflytek.base.skin.customView.XLinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:skin="http://schemas.android.com/apk/res-auto">
+    <com.iflytek.base.skin.customView.XFrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.iflytek.base.skin.customView.XImageView android:layout_gravity="center" android:layout_width="fill_parent" android:layout_height="fill_parent" skin:background="image.diy_broadcast_list_bg_dial" />
+        <com.iflytek.base.skin.customView.XLinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="@dimen/dial_specific_voice_item_height">
+            <com.iflytek.base.skin.customView.XLinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginLeft="3.0dip" android:layout_marginTop="3.0dip" android:layout_marginRight="3.0dip" android:layout_marginBottom="2.0dip" android:layout_weight="1.0">
+                <com.iflytek.base.skin.customView.XFrameLayout android:id="@id/fl_audition" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                    <com.iflytek.base.skin.customView.XImageView android:layout_gravity="center" android:id="@id/iv_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                    <com.iflytek.base.skin.customView.XImageView android:layout_gravity="bottom|center|right" android:id="@id/iv_playIcon" android:layout_width="@dimen/dial_specific_audition_icon_width" android:layout_height="@dimen/dial_specific_audition_icon_height" android:layout_marginRight="4.0dip" android:layout_marginBottom="4.0dip" />
+                </com.iflytek.base.skin.customView.XFrameLayout>
+            </com.iflytek.base.skin.customView.XLinearLayout>
+            <com.iflytek.base.skin.customView.XImageView android:layout_gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" skin:background="image.diy_broadcast_divider_dial" />
+            <com.iflytek.viafly.dial.ui.view.TextProgressBar android:layout_gravity="center_horizontal" android:id="@id/pb_status" android:layout_width="fill_parent" android:layout_height="@dimen/dial_specific_progress_height" android:layout_marginLeft="3.0dip" android:layout_marginRight="3.0dip" android:layout_marginBottom="3.0dip" android:progressDrawable="@drawable/viafly_right_angle_progress_style" skin:background="statelist.dial_specific_progress" style="?android:attr/progressBarStyleHorizontal" />
+        </com.iflytek.base.skin.customView.XLinearLayout>
+        <com.iflytek.base.skin.customView.XImageView android:layout_gravity="center" android:id="@id/selected" android:layout_width="fill_parent" android:layout_height="fill_parent" skin:background="image.diy_bordcast_checkbox_dial" />
+    </com.iflytek.base.skin.customView.XFrameLayout>
+    <com.iflytek.base.skin.customView.XTextView android:textSize="@dimen/dial_specific_voice_name_fontsize" android:textColor="#ff515151" android:gravity="bottom|center" android:id="@id/tv_name" android:layout_width="fill_parent" android:layout_height="@dimen/dial_specific_voice_name_height" />
+    <com.iflytek.base.skin.customView.XTextView android:textSize="@dimen/dial_specific_voice_size_fontsize" android:textColor="#ff838383" android:gravity="center" android:id="@id/tv_size" android:layout_width="fill_parent" android:layout_height="@dimen/dial_specific_voice_size_height" />
+</com.iflytek.base.skin.customView.XLinearLayout>

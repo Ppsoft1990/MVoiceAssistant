@@ -1,0 +1,112 @@
+<html>
+	<head>
+		<meta http-equiv=Content-Type content="text/html;charset=utf-8">
+		<meta id="viewport" name="viewport" content="target-densitydpi=device-dpi,width=device-width,initial-scale=1.0,user-scalable=no">
+		<meta name="description" content="说法示例引导页面">
+		<meta name="author" content="xfchen2">
+		<meta name="date" content="2015-2-3">
+		<title>示例引导</title>
+		<style>
+            body {
+                width: 100%;
+                background-color: #ffffff;
+                -webkit-font-smoothing: antialiased;
+            }
+        </style>
+		
+		<!-- JS代码 -->
+		<script type="text/javascript" src="common/api.js"></script>
+		<script type="text/javascript" src="common/base.js"></script>
+		<script type="text/javascript">
+		    // 屏幕滑动距离检测器
+		    var moveOverCheck = new checkMoveOver();
+		    
+			//获取URL中参数值
+			function getQueryString(name) {
+				var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+				var r = window.location.search.substr(1).match(reg);
+				if (r != null)
+					return unescape(r[2]);
+				return null;
+			}
+			
+			var ErrorTipMap = {
+				"1":"您好像没说话",
+				"2":"您好像说的不太完整",
+				"3":"好像出错了"
+			}
+			
+			function resetScale() {
+				//更改标题栏文字
+				exec('UIComponents',"setPageFlowTitle",["示例引导"]);
+				
+				if(!isNeedResetScale) {
+		            console.log("there's no need reset Scale for main page, scale is " + scale);
+		            onPageLoadFinish();
+		            return;
+		        }
+		        console.log("main page : before reset scale is " + scale);
+		        setTimeout(function() {// 延迟一段以便页面加载完毕
+		            scale = document.body.clientWidth / 320;
+		            console.log("main page : after reset scale is " + scale);
+		            onPageLoadFinish();
+		        }, 350);
+			}
+			
+			function onPageLoadFinish() {
+				console.log("speechExampleGuide page load finish");
+				var xcssParser = new XcssParser();
+	            xcssParser.parseStyleFile("./common/business.x.css", function(){
+	            	//获取错误码
+	            	var result = exec('SystemComponents',"getSetting",["com.iflytek.cmcc.SPEECH_EXAMPLE_GUIDE_ERROR", 3]);
+	            	console.log("getSetting, result is " + result);
+	            	var resultObj = eval("("+result+")");
+	            	var errorCode = resultObj.message.value;
+					var errorTip = document.getElementById("errorTip");
+					if(errorTip && errorCode) {
+						errorTip.innerText = ErrorTipMap[errorCode];
+					}
+					
+					showElements();
+					
+					var moreSpeechBtn = document.getElementById("more_speech_button");
+					if(moreSpeechBtn) {
+						moreSpeechBtn.addEventListener("touchstart", function(){
+				            moveOverCheck.start(event);
+						},false);
+						moreSpeechBtn.addEventListener("touchmove", function(){
+							moveOverCheck.check(event);
+						},false);
+						moreSpeechBtn.addEventListener("touchend", function(){
+				            if (!moveOverCheck.isMoveOver()) {
+				            	var result = exec('SystemComponents',"getBusinessUrl",["20001"]);
+				            	console.log("getUrl, result is " + result);
+				            	var resultObj=eval("("+result+")");
+				            	exec('UIComponents',"openBrowser",["说法示例",resultObj.message]);
+				            }
+						},false);
+					}
+	            });
+			}
+			
+			/** 将元素显示出来，防止先变小后变大的视觉体验*/
+			function showElements() {
+				var elements = document.getElementsByTagName("div");
+				for(var i=0; i<elements.length; i++) {
+					elements[i].style.display = "block";
+				}
+			}
+			
+		</script>
+
+	</head>
+	<body onload="resetScale()">
+		<div id="errorTip" class="error_tip"></div>
+		<div class="speech_example_title" style="display:none">点击底部麦克风试着说</div>
+		<div class="speech_example" style="display:none">"打电话给妈妈"</div>
+		<div class="speech_example" style="display:none">"北京的天气"</div>
+		<div class="speech_example" style="display:none">"把张三的号码发给李四"</div>
+		<div class="speech_example" style="display:none">"提醒我上午九点钟开会"</div>
+		<div id="more_speech_button" class="more_speech_button" style="display:none">更多说法>></div>
+	</body>
+</html>

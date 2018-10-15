@@ -1,0 +1,344 @@
+html, body {
+    width: 320dp|720:720px;
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+body {
+    background-color: #F2F2F2;
+    -webkit-font-smoothing: antialiased;
+}
+.top {
+    height: 11dp;
+}
+.page {
+    position: absolute;
+    width: 320dp;
+    top: 0px;
+    left: 0px;
+    padding-top: 6dp;
+    padding-bottom: 6dp;
+}
+
+/******************气泡动画********************/
+/*******使用transition而不使用animation，是因为在某些android手机上animation动画结束时会出现闪烁********************/
+.css_dialog_opacity_anim {
+    -webkit-backface-visibility: hidden;
+    -webkit-transition: opacity 0.3s ease;
+}
+.css_dialog_translate_anim {
+    -webkit-backface-visibility: hidden;
+    -webkit-transition: -webkit-transform 0.15s ease-in-out;
+}
+
+.box_out {
+    margin-top: 0;
+    margin-right:8dp|320:10px|360:10px;
+    margin-bottom:6dp;
+    margin-left:8dp|320:10px|360:10px;
+    padding: 1px;
+    background-color: #DCDDE0;
+    border-radius: 10px;
+}
+.box_inner {
+    padding: 1px;
+    background-color: #C7C8CB;
+    border-radius: 4px;
+}
+.box_content_white {
+    position: relative;
+    background-color: white;
+    padding: 0 1px;
+    border-radius: 4px;
+}
+.box_content_yellow {
+    position: relative;
+    background-color: #fef4e8;
+    padding: 0 1px;
+    border-radius: 4px;
+}
+/**************************/
+.css_dialog_question_text {
+    word-break: break-word;
+    color: #515151;
+    padding: 14dp 15dp;
+    font-size: 16dp;
+    outline: none;
+    border-radius: 4px 4px 0 4px;
+}
+.css_dialog_answer_text {
+    font-size: 16dp;
+    word-break: break-word;
+    color: #515151;
+}
+.css_answer_text_whith_share {
+    word-break: break-word;
+    width: 272dp;
+    padding: 14dp 15dp;
+}
+.css_dialog_answer_sharePlayDiv {
+    border-top: solid 1px #e5e5e5;
+    text-align: right;
+    padding: 5dp 14dp;
+    color: #515151;
+    font-size: 12dp;
+}
+.show_div {
+  margin-top:4dp|720:10px;  
+}
+/*底部按钮文本所用样式*/
+.btn_text {
+    color: #515151;
+    text-align: center;
+    padding: 3px;
+    height: 44dp |720:100px;
+    line-height: 44dp |720:100px;
+    font-size: 17dp |720:38px;
+}
+/**************************/
+.chat_corner_left {
+    position: absolute;
+    left: -12px;
+    bottom: -3px;
+}
+.chat_corner_right {
+    position: absolute;
+    right: -12px;
+    bottom: -3px;
+}
+.css_dilaog_out_div {
+    position: relative;
+    margin-top: 0;
+    margin-bottom: 6dp;
+    margin-left: 8dp;
+    margin-right: 8dp;
+}
+
+/********************设备列表的css******************************/
+
+.device_list_inner{
+}
+.device_list_item{
+}
+.device_list_inner > .device_list_item:first-child{
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+.device_list_inner > .device_list_item:last-child{
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+.device_item_left{
+    display: inline-block;
+    width: 65%;
+}
+.device_item_right{
+    display: inline-block;
+    vertical-align: middle;
+    width: 35%;
+}
+.device_item_icon{
+    vertical-align: middle;
+    width: 31dp;
+    height: 31dp;
+    padding-top:9dp;
+    padding-bottom:9dp;
+    margin-left: 15dp;
+    margin-right: 11dp;
+}
+.device_item_detail{
+    vertical-align: middle;
+    display: inline-block;
+    width: 70%;
+}
+
+
+.css_device_right_operation_btn_div{
+    display: inline-block;
+    width: 66dp;
+    height: 25dp;
+    vertical-align: middle;
+    position: relative;
+    left: 50%;
+    -webkit-transform: translate(-50%,0%);    /* 50%为自身尺寸的一半 */
+    transform: translate(-50%,0%);    /* 50%为自身尺寸的一半 */
+}
+.css_device_right_operation_btn_div_text{
+    position:absolute;
+    font-size:12dp;
+    color: #5b84d0;
+    display:inline-block;
+    width: 66dp;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);    /* 50%为自身尺寸的一半 */
+    transform: translate(-50%, -50%);    /* 50%为自身尺寸的一半 */
+}
+
+.css_speech_case_div_container{
+    display: block;
+    background-color:#F7F5EE;
+}
+
+.css_speech_case_div{
+    padding-left: 58dp;
+    padding-top: 7dp;
+    padding-bottom: 7dp;
+    display: block;
+    font-size:12dp;
+    color: #838383;
+}
+
+.device_list_first_line_text{
+    display: block;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    font-size:16dp;
+    color: #515151;
+}
+
+.device_list_second_line_text{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    font-size:12dp;
+    color: #838383;
+}
+.sub_list_divider{
+    border-top: 1px solid #e0e0e0;
+}
+
+.css_title_div{
+    display: inline-block;
+    position: relative;
+    margin-top: 17dp;
+    margin-bottom: 8dp;
+    font-size: 16dp;
+    color: #515151;
+    background-color: #ffffff;
+    left: 50%;
+    -webkit-transform: translate(-50%,0%);    /* 50%为自身尺寸的一半 */
+    transform: translate(-50%,0%);    /* 50%为自身尺寸的一半 */
+}
+
+.css_sub_title_div{
+    display: inline-block;
+    position: relative;
+    margin-top: 8dp;
+    font-size: 12dp;
+    color: #838383;
+    margin-bottom: 10dp;
+    background-color: #ffffff;
+    left: 50%;
+    -webkit-transform: translate(-50%,0%);    /* 50%为自身尺寸的一半 */
+    transform: translate(-50%,0%);    /* 50%为自身尺寸的一半 */
+}
+
+
+.css_add_operation_btn_nor{
+    position: relative;
+    margin-right: 10dp;
+    margin-left: 10dp;
+    height: 40dp;
+    background-color: #37ba91;
+    border-radius: 8px;
+    margin-top:111dp;
+}
+
+.css_add_operation_btn_txt{
+    position:absolute;
+    font-size: 15dp;
+    color: #ffffff;
+    display:block;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);    /* 50%为自身尺寸的一半 */
+    transform: translate(-50%, -50%);    /* 50%为自身尺寸的一半 */
+}
+
+/********************未查询到设备的css***************************/
+
+.css_dialog_mode_smart_home_link {
+    display:block;
+    text-align: right;
+    color: #5B84D0;
+    padding-bottom: 4dp;
+    padding-right: 6dp;
+    padding-left: 15dp;
+}
+
+.css_smart_home_device_not_found_div {
+    width: 100%;
+    text-align: center;
+}
+
+.css_smart_home_device_not_found_pic {
+    position: relative;
+    margin: 0 auto;
+    display: block;
+    margin-top: 17dp;
+    width: 100dp;
+}
+
+.css_smart_home_device_not_found_tip {
+    margin: 0 auto;
+    display: inline-block;
+    font-size: 16dp;
+    margin-top: 8dp;
+    margin-bottom: 18dp;
+    color: #515151;
+}
+
+.css_smart_home_support_list_btn {
+    position: relative;
+    width:auto;
+    background-color: #424141;
+    border-radius: 4px;
+    display: inline-block;
+    padding-left: 2dp;
+    padding-right: 2dp;
+    font-size: 16dp;
+}
+
+.css_smart_home_support_device_total {
+    padding-top: 14dp;
+    text-align: left;
+}
+
+.css_smart_home_support_list_title {
+    font-size: 12dp;
+    color:#838383;
+    margin-bottom: 3dp;
+    margin-left: 17dp;
+}
+
+.css_smart_home_support_device_list {
+    padding-bottom: 14dp;
+}
+
+.css_smart_home_support_list_item {
+    text-align: left;
+    margin-top: 6dp;
+}
+
+.css_smart_home_support_list_item_pic {
+    margin-left: 17dp;
+    display: inline;
+    vertical-align: middle;
+    font-size: 3dp;
+    color:#838383;
+}
+
+.css_smart_home_support_list_item_name {
+    margin-left: 5dp;
+    font-size: 12dp;
+    display: inline;
+    color:#838383;
+    vertical-align: middle;
+}
+
+
+

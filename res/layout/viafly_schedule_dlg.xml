@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.iflytek.base.skin.customView.XLinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/dlg_layout" android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:skin="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:gravity="center_horizontal" android:layout_gravity="center_horizontal" android:orientation="vertical" android:id="@id/dlg_title_bar" android:layout_width="fill_parent" android:layout_height="50.0dip" android:layout_weight="1.0">
+            <com.iflytek.base.skin.customView.XTextView android:ellipsize="end" android:gravity="center" android:id="@id/dlg_main_title" android:paddingLeft="10.0dip" android:paddingTop="10.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:singleLine="true" skin:style="style_dlg_title" />
+            <com.iflytek.base.skin.customView.XTextView android:ellipsize="end" android:gravity="center" android:id="@id/dlg_secondry_title" android:padding="5.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" skin:style="style_dlg_title" />
+        </LinearLayout>
+        <com.iflytek.base.skin.customView.XButton android:gravity="center" android:layout_gravity="center|right|top" android:id="@id/dlg_exit_btn" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="7.0dip" android:layout_marginRight="10.0dip" skin:background="stateList.dlg_exit_btn_state" />
+    </FrameLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/base_dlg_title_splite" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="4.0dip">
+        <com.iflytek.base.skin.customView.XImageView android:layout_width="fill_parent" android:layout_height="wrap_content" skin:background="image.split_tittle_line" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/dlg_body" android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0" />
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/dlg_foot_bar" android:layout_width="fill_parent" android:layout_height="@dimen/dlg_foot_bar_layout_height">
+        <com.iflytek.base.skin.customView.XButton android:gravity="center" android:id="@id/dlg_foot_bar_single_cancel_btn" android:paddingBottom="4.0dip" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/cancel" skin:background="stateList.dlg_single_cancel_btn_state" skin:style="style_dlg_text_tip" />
+        <com.iflytek.base.skin.customView.XLinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/dlg_foot_bar_level2" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" skin:background="image.dlg_single_cancel_btn_normal">
+            <com.iflytek.base.skin.customView.XButton android:gravity="center" android:id="@id/dlg_foot_bar_left_btn" android:paddingBottom="4.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/cancel" android:layout_weight="1.0" skin:background="stateList.dlg_speakover_btn_states" skin:style="style_dlg_text_tip" />
+            <com.iflytek.base.skin.customView.XButton android:gravity="center" android:id="@id/dlg_foot_bar_middle_btn" android:paddingBottom="4.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/cancel" android:layout_weight="1.0" skin:style="style_dlg_text_tip" />
+            <com.iflytek.base.skin.customView.XButton android:gravity="center" android:id="@id/dlg_foot_bar_right_btn" android:paddingBottom="4.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/cancel" android:layout_weight="1.0" skin:background="stateList.dlg_cancel_btn_states" skin:style="style_dlg_text_tip" />
+        </com.iflytek.base.skin.customView.XLinearLayout>
+    </LinearLayout>
+</com.iflytek.base.skin.customView.XLinearLayout>

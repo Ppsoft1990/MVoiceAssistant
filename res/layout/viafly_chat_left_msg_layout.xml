@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:id="@id/layout_container" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.iflytek.viafly.ui.view.CircleImageView android:layout_gravity="bottom" android:id="@id/head_icon" android:layout_width="36.0dip" android:layout_height="36.0dip" android:src="@drawable/btn_role_default" />
+    <LinearLayout android:orientation="vertical" android:background="@drawable/bg_dialog_blue" android:paddingLeft="14.0dip" android:paddingTop="14.0dip" android:paddingRight="16.0dip" android:paddingBottom="14.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:minHeight="44.0dip">
+        <TextView android:textSize="16.0sp" android:textColor="@color/white" android:gravity="center_vertical" android:id="@id/chat_content" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </LinearLayout>
+</LinearLayout>

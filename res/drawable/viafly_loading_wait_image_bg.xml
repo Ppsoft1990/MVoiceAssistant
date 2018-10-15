@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list android:oneshot="false"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:duration="100" android:drawable="@drawable/ic_notificationbar_loading_dark1" />
+    <item android:duration="100" android:drawable="@drawable/ic_notificationbar_loading_dark2" />
+    <item android:duration="100" android:drawable="@drawable/ic_notificationbar_loading_dark3" />
+    <item android:duration="100" android:drawable="@drawable/ic_notificationbar_loading_dark4" />
+    <item android:duration="100" android:drawable="@drawable/ic_notificationbar_loading_dark5" />
+    <item android:duration="100" android:drawable="@drawable/ic_notificationbar_loading_dark6" />
+    <item android:duration="100" android:drawable="@drawable/ic_notificationbar_loading_dark7" />
+    <item android:duration="100" android:drawable="@drawable/ic_notificationbar_loading_dark8" />
+</animation-list>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:id="@id/content_layout" android:paddingLeft="@dimen/common_chat_message_margin" android:paddingTop="@dimen/common_chat_message_margin_top" android:paddingRight="@dimen/common_chat_message_margin" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="@drawable/viafly_shape_cornor_home_card_bg" android:layout_width="fill_parent" android:layout_height="@dimen/common_chat_message_height">
+        <ImageView android:id="@id/action_icon" android:layout_width="28.0dip" android:layout_height="28.0dip" android:layout_marginLeft="@dimen/common_chat_message_image_margin" android:src="@drawable/ic_link" android:layout_weight="0.0" />
+        <TextView android:textSize="@dimen/common_chat_message_text_size" android:textColor="@color/common_message_text_color" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/chat_content" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:maxLines="1" android:layout_weight="1.0" />
+        <ImageView android:layout_width="16.0dip" android:layout_height="16.0dip" android:layout_marginRight="10.0dip" android:src="@drawable/ic_arrow" android:layout_weight="0.0" />
+    </LinearLayout>
+</LinearLayout>

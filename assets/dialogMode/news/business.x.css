@@ -1,0 +1,425 @@
+html, body {
+  width: 320dp|720:720px;
+  padding: 0px;
+  margin: 0px;
+  border: 0px;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}		
+body {
+  background-color: #F2F2F2;
+  -webkit-font-smoothing: antialiased;
+}
+.top {
+  height: 11dp;
+}
+.page {
+  position: absolute;
+  width: 320dp;
+  top: 0px;
+  left:0px;
+  padding-top: 6dp;
+  padding-bottom:6dp;
+}
+
+.show_div {
+    margin-top:4dp|720:10px;
+}
+
+/******************气泡动画********************/
+/*******使用transition而不使用animation，是因为在某些android手机上animation动画结束时会出现闪烁********************/
+.css_dialog_opacity_anim{
+  -webkit-backface-visibility: hidden;
+  -webkit-transition: opacity 0.3s ease;
+}
+.css_dialog_translate_anim{
+  -webkit-backface-visibility: hidden;
+  -webkit-transition: -webkit-transform 0.15s ease-in-out;
+}
+
+.box_out {
+    margin-top:0;
+    margin-right:8dp|320:9px;
+    margin-bottom:6dp;
+    margin-left:8dp|320:9px;
+	padding: 1px;
+	background-color: #DCDDE0;
+	border-radius: 10px;
+}
+.box_inner {
+	padding: 1px;
+	background-color: #C7C8CB;
+	border-radius: 9px;
+}
+.box_content_white {
+  position: relative;
+  background-color: white;
+  border-radius: 8px;
+}
+.box_content_yellow {
+  position: relative;
+  background-color: #fef4e8;
+  border-radius: 8px;
+}
+/**************************/
+.css_dialog_question_text {
+  word-break:break-word;
+  color: #515151;
+  padding: 14dp 15dp;
+  font-size: 16dp;
+  
+  outline: none;
+  border-radius: 8px 8px 0 8px;
+}
+.css_dialog_answer_text {
+  font-size: 16dp;
+  word-break:break-word;
+  color: #515151;
+}
+.css_answer_text_whith_share{
+  word-break:break-word;
+  width:272dp;
+  padding: 14dp 15dp;
+}
+.css_dialog_answer_sharePlayDiv {
+  border-top: solid 1px #e5e5e5;
+  text-align: right;
+  padding: 5dp 14dp;
+  color: #515151;
+  font-size: 12dp;
+}
+/*底部按钮文本所用样式*/
+.btn_text{
+    color: #515151;
+    text-align: center;
+    padding: 3px;
+    height: 44dp|720:100px;
+    line-height: 44dp|720:100px;
+    font-size: 17dp|720:38px;
+}
+/**************************/
+.chat_corner_left {
+	position: absolute;
+	left: -12px;
+	bottom: -3px;
+}
+.chat_corner_right {
+	position: absolute;
+	right: -12px;
+	bottom: -3px;
+}
+.css_dilaog_out_div {
+  position: relative;
+  margin-top: 0;
+  margin-bottom: 6dp;
+  margin-left: 8dp;
+  margin-right: 8dp;
+}
+
+
+/**
+ * 	App 业务相关样式文件
+ */
+.main_list_inner{
+}
+.main_list_item{
+}
+.sub_list_divider2{
+    border-bottom: 1px solid #e0e0e0;
+}
+.css_dialog_list_item {
+  height: 60.4dp;
+}
+.css_dialog_news_inner {
+    width: 304dp;
+}
+.css_dialog_news_title {
+    font-size: 20dp;
+    text-align: center;
+    background-color: #b6271c;
+    color: white;
+    height: 45dp|720:111px;
+    line-height: 45dp|720:111px;
+}
+.css_dialog_news_content_main_div{
+    background-color: #f7f7f9;
+}
+.css_dialog_news_content_main_div2{
+    background-color: red;
+    background: rgba(255,0,0,0.18);
+}
+
+.css_dialog_news_content_wraper {
+    font-size: 16dp;
+    height: 162dp|480:240px|540:270px;
+    overflow: hidden;
+    position: relative;
+}
+.css_dialog_news_content_wraper2 {
+    font-size: 16dp;
+    position: relative;
+}
+.css_dialog_news_content_text {
+    padding: 11dp 15dp;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.css_dialog_news_content_text2 {
+    padding: 11dp 15dp;
+}
+.css_dialog_news_content_bottom{
+    padding: 11dp 15dp 8dp 15dp;
+    font-size: 14dp;
+    color: #babaca;
+    display: block;
+}
+.css_dialog_news_content_source {
+    display:inline-block;
+    text-align: left;
+}
+
+.css_dialog_news_content_stretch{
+    text-align:right;
+    font-size:14dp;
+    color:white;
+    background-color:#babaca;
+    display: none;
+    float: right;
+}
+.css_dialog_news_control_div {
+    position: relative;
+}
+.css_dialog_news_control_btn_div {
+    padding-top: 0;
+    height: 44dp;
+    position: relative;
+}
+.css_dialog_news_control_btn_img {
+    width: 28.5dp;
+    height: 28.5dp;
+    margin-top: 9dp;
+}
+.css_dialog_news_btn_last{
+    margin-left: 15dp;
+}
+.css_dialog_news_btn_play{
+    margin-left: 94dp;
+}
+.css_dialog_news_btn_next{
+    position: absolute;
+    right: 15dp;
+}
+
+.css_dialog_news_loading {
+    position: absolute;
+    width: 304dp;
+    top: 130dp;
+    text-align: center;
+}
+.css_dialog_news_loading_failertext {
+    font-size: 20dp;
+}
+
+.myScrollbarV {
+    position:absolute;
+    z-index:100;
+    width:4dp;
+    bottom:7dp;top:2dp;right:1dp
+}
+
+.myScrollbarV > div {
+    position:absolute;
+    z-index:100;
+    width:100%;
+    background-image:url('image/default/news_scroller.png');
+}
+
+.css_dialog_sohu_news_title {
+    height: 59dp;
+    background:#F8F8F8;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+.sohu_news_title_logo{
+    width: 53dp;
+    height: 53dp;
+    vertical-align: middle;
+    padding-top: 4.5dp;
+    margin-left: 5.78dp;
+}
+.css_dialog_sohu_news_title_text{
+    display: inline-block;
+    margin-left:8dp;
+    padding-top:6.7dp;
+    color: #515151;
+    font-size: 17dp;
+    vertical-align: middle;
+}
+.css_dialog_sohu_news_sharePlayDiv {
+    display: inline-block;
+    position: absolute;
+    top: 14.7dp;
+    right: 15.55dp;
+}
+.css_btn_client_download_div{
+    margin-left: 15dp;
+    text-align: center;
+    font-size:17dp;
+    color:#515151;
+    vertical-align: middle;
+    margin-top:11dp;
+    display: inline-block;
+}
+.sohu_news_look_client_img{
+    display: inline-block;
+    position: absolute;
+    width:16dp;
+    height:16dp;
+    right: 15dp;
+    top: 11dp;
+    vertical-align: middle;
+}
+.css_sohu_news_button_container{
+    position:relative;
+    height:46dp;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+.css_sohu_item_div{
+    height:62dp;
+    position:relative;
+    width: 100%;
+    display: inline-block;
+}
+.css_sohu_news_img{
+    width:62.7dp;
+    height:46dp;
+    margin-left:12.4dp;
+    border-right:1px solid #ececef;
+    border-bottom:1px solid #ececef;
+    vertical-align: middle;
+}
+.css_title_and_brief_div{
+    margin-left:13.3dp;
+    margin-top:6.7dp;
+    margin-bottom:8.44dp;
+    width:177dp;
+    display: inline-block;
+    vertical-align: middle;
+}
+.css_sohu_news_arrow_right{
+    position: absolute;
+    width:16dp;
+    height:16dp;
+    right: 12dp;
+    display: inline-block;
+    top: 23.5dp;
+    vertical-align: middle;
+}
+.css_dialog_sohu_title_div{
+    font-size:14.22dp;
+    color:#515151;
+    width:177dp;
+    max-width: 177dp;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+    overflow:hidden;
+}
+.css_dialog_sohu_brief_div{
+    font-size:10.7dp;
+    color:#717171;
+    width:177dp;
+    margin-top:5.7dp;
+}
+.css_dialog_sohu_content_main_div{
+    /*height:311dp;*/
+    position: relative;
+}
+.css_sohu_loading_fail_wrapper{
+    width:304dp;
+    text-align: center;
+    display:inline-block;
+    position: relative;
+    margin-top:15.56dp;
+}
+.css_dialog_sohu_news_loading_failertext {
+    font-size: 16dp;
+    color:#424141;
+    display:inline-block;
+    vertical-align: middle;
+}
+.css_sohu_failure_refresh_image {
+    width: 15dp;
+    height: 15dp;
+    vertical-align: middle;
+    margin-left:6dp;
+}
+.css_dialog_news_loading_fail_container{
+    display:inline-block;
+    text-align: center;
+}
+.css_dialog_news_loading_refresh{
+    width:35dp;
+    height:35dp;
+    margin-left:16dp;
+}
+.css_dialog_sohu_news_loading {
+    position: absolute;
+    width: 304dp;
+    text-align: center;
+    top: 121dp;
+}
+.css_dialog_sohu_news_content_wrapper{
+    position: relative;
+}
+.sub_list_divider{
+    border-top: 1px solid #e0e0e0;
+}
+
+
+/**
+ *  动画
+ */
+.up_down{
+    width:100%;
+    height:27dp;
+    position:relative;
+}
+.up_down_arrow{
+    width:18dp;
+    height:18dp;
+    position:absolute;
+    top:4dp;
+    left:31dp;
+    -webkit-transform-style: preserve-3d;
+    -webkit-transition: 300ms;
+    /*background-image:url(img/up_arrow.png);*/
+    background-size: 18dp 36dp;
+    background-repeat: no-repeat;
+    -webkit-transform: rotate(-180deg)
+
+}
+.loading{
+    background-position: center -18dp;
+    -webkit-transform:rotate(0deg) translateZ(0);
+    -webkit-animation-name:loading;
+    -webkit-animation-duration:2s;
+    -webkit-animation-iteration-count:infinite;
+    -webkit-animation-timing-function:linear;
+}
+@-webkit-keyframes loading {
+    from { -webkit-transform:rotate(0deg) translateZ(0); }
+    to { -webkit-transform:rotate(360deg) translateZ(0); }
+}
+.up_down_text{
+    width:100dp;
+    position:absolute;
+    height:27dp;
+    line-height:27dp;
+    text-align:center;
+    top:50%;
+    left:50%;
+    margin-top:-13dp;
+    margin-left:-33dp;
+    font-size: 16dp;
+    color:#878787;
+}

@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="app_angry_birds">
+        <item>angry birds</item>
+        <item>愤怒的小鸟</item>
+    </string-array>
+    <string-array name="app_map_apps">
+        <item>应用程序</item>
+        <item>功能列表</item>
+        <item>菜单</item>
+    </string-array>
+    <string-array name="app_map_backup">
+        <item>备份</item>
+        <item>备份与恢复</item>
+    </string-array>
+    <string-array name="app_map_browser">
+        <item>浏览器</item>
+        <item>互联网</item>
+        <item>网络</item>
+        <item>阅读器</item>
+    </string-array>
+    <string-array name="app_map_call">
+        <item>电话</item>
+        <item>通话记录</item>
+        <item>通讯记录</item>
+        <item>来电记录</item>
+        <item>未接记录</item>
+    </string-array>
+    <string-array name="app_map_camera">
+        <item>相机</item>
+        <item>照相机</item>
+        <item>照相摄像</item>
+        <item>拍照和摄像</item>
+        <item>照相</item>
+        <item>摄像机</item>
+        <item>摄像</item>
+    </string-array>
+    <string-array name="app_map_clock">
+        <item>时钟</item>
+        <item>闹钟</item>
+        <item>秒表</item>
+        <item>定时器</item>
+        <item>计时器</item>
+    </string-array>
+    <string-array name="app_map_contact">
+        <item>联系人</item>
+        <item>通讯录</item>
+        <item>通讯薄</item>
+        <item>通讯簿</item>
+        <item>通信录</item>
+        <item>电话本</item>
+        <item>电话薄</item>
+        <item>电话簿</item>
+    </string-array>
+    <string-array name="app_map_dial">
+        <item>拨号</item>
+        <item>拨号器</item>
+        <item>拨号盘</item>
+    </string-array>
+    <string-array name="app_map_file">
+        <item>文件管理</item>
+        <item>我的文件</item>
+    </string-array>
+    <string-array name="app_map_mail">
+        <item>邮件</item>
+        <item>电子邮件</item>
+        <item>电子邮箱</item>
+        <item>邮箱</item>
+        <item>电邮服务</item>
+    </string-array>
+    <string-array name="app_map_memo">
+        <item>备忘录</item>
+        <item>记事本</item>
+        <item>当前备忘</item>
+        <item>便签</item>
+        <item>待办事项</item>
+        <item>记事簿</item>
+    </string-array>
+    <string-array name="app_map_music">
+        <item>音乐</item>
+        <item>音乐播放器</item>
+        <item>多媒体播放器</item>
+        <item>播放器</item>
+    </string-array>
+    <string-array name="app_map_picture">
+        <item>相册</item>
+        <item>图库</item>
+        <item>照片</item>
+        <item>媒体库</item>
+        <item>多媒体库</item>
+        <item>图片</item>
+        <item>相片</item>
+    </string-array>
+    <string-array name="app_map_picture_edit">
+        <item>图片编辑器</item>
+        <item>图片管理器</item>
+    </string-array>
+    <string-array name="app_map_radio">
+        <item>收音机</item>
+        <item>FM收音机</item>
+        <item>调频收音机</item>
+    </string-array>
+    <string-array name="app_map_record">
+        <item>录音机</item>
+        <item>录音器</item>
+    </string-array>
+    <string-array name="app_map_schedule">
+        <item>日历</item>
+        <item>日程</item>
+    </string-array>
+    <string-array name="app_map_setting">
+        <item>设置</item>
+        <item>设定</item>
+        <item>系统设置</item>
+        <item>蓝牙</item>
+        <item>wifi</item>
+        <item>无线网</item>
+    </string-array>
+    <string-array name="app_map_sms">
+        <item>信息</item>
+        <item>短信</item>
+        <item>消息</item>
+        <item>短消息</item>
+        <item>短信息</item>
+        <item>简讯</item>
+        <item>短讯</item>
+        <item>短讯息</item>
+    </string-array>
+    <string-array name="app_map_video">
+        <item>录像</item>
+        <item>视频</item>
+    </string-array>
+    <string-array name="app_zombies">
+        <item>plants vs. zombies</item>
+        <item>植物大战僵尸</item>
+    </string-array>
+    <string-array name="map_packages">
+        <item>com.baidu.BaiduMap</item>
+    </string-array>
+    <string-array name="maps">
+        <item>百度地图</item>
+    </string-array>
+    <string-array name="novel_speak_mode_choice_summary">
+        <item>更佳的朗读效果，需联网</item>
+        <item>无网络状态下可播报</item>
+    </string-array>
+    <string-array name="novel_speak_mode_choice_title">
+        <item>故事风格播报</item>
+        <item>离线播报</item>
+    </string-array>
+    <string-array name="operator_choice">
+        <item>电信</item>
+        <item>联通</item>
+        <item>移动</item>
+    </string-array>
+    <string-array name="setting_translate_mode_items">
+        <item>中译英</item>
+        <item>英译中</item>
+    </string-array>
+    <string-array name="settings_call_pattern">
+        <item>您有电话来自张三</item>
+        <item>张三给您打电话了</item>
+        <item>张三来电话了</item>
+    </string-array>
+    <string-array name="settings_notify_delay_time">
+        <item>5分钟</item>
+        <item>10分钟</item>
+        <item>15分钟</item>
+        <item>20分钟</item>
+        <item>25分钟</item>
+    </string-array>
+    <string-array name="settings_notify_times">
+        <item>1 次</item>
+        <item>2 次</item>
+        <item>3 次</item>
+    </string-array>
+    <string-array name="settings_remind_pattern">
+        <item>您有一个新提醒</item>
+        <item>现在是9点半，您应该开会了</item>
+    </string-array>
+    <string-array name="settings_remind_times">
+        <item>1 次</item>
+        <item>2 次</item>
+    </string-array>
+    <string-array name="settings_sim_item_functions">
+        <item>卡1</item>
+        <item>卡2</item>
+    </string-array>
+    <string-array name="settings_sms_pattern">
+        <item>新短信来了</item>
+        <item>您有一条新短信</item>
+        <item>您有短信来自张三</item>
+        <item>您有短信来自张三，我马上就到</item>
+        <item>张三给您发来短信</item>
+        <item>张三给您发来短信，我马上就到</item>
+    </string-array>
+    <string-array name="voice_language">
+        <item>普通话</item>
+        <item>粤语</item>
+    </string-array>
+    <string-array name="webview_white_host_list">
+        <item>ydclient.voicecloud.cn</item>
+        <item>s1.voicecloud.cn</item>
+    </string-array>
+    <string-array name="welcomes_h00_06">
+        <item>你好需要帮忙吗</item>
+        <item>您好</item>
+    </string-array>
+    <string-array name="welcomes_h06_08">
+        <item>早上好！</item>
+        <item>早安！</item>
+        <item>一大早就看见你，真开心！</item>
+    </string-array>
+    <string-array name="welcomes_h08_11">
+        <item>见到你真开心</item>
+        <item>上午好！</item>
+        <item>有什么需要帮助的吗</item>
+    </string-array>
+    <string-array name="welcomes_h11_14">
+        <item>中午好！</item>
+        <item>您好需要帮忙吗？</item>
+        <item>见到你真开心。</item>
+    </string-array>
+    <string-array name="welcomes_h14_19">
+        <item>您需要做什么？</item>
+        <item>您好需要帮忙吗？</item>
+    </string-array>
+    <string-array name="welcomes_h19_24">
+        <item>晚上好！</item>
+        <item>您好！</item>
+    </string-array>
+</resources>

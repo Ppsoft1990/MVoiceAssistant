@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="bottom" android:background="@drawable/transparent" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:skin="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:id="@id/xlistview_header_content" android:layout_width="fill_parent" android:layout_height="70.0dip">
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/xlistview_header_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true">
+            <TextView android:textSize="14.0sp" android:textColor="#ff515151" android:id="@id/xlistview_header_hint_textview" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/xlistview_header_hint_normal" />
+            <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3.0dip">
+                <TextView android:textSize="12.0sp" android:textColor="#ff717171" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/xlistview_header_last_time" />
+                <TextView android:textSize="12.0sp" android:textColor="#ff717171" android:id="@id/xlistview_header_time" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            </LinearLayout>
+        </LinearLayout>
+        <ImageView android:id="@id/xlistview_header_arrow" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="-35.0dip" android:src="@drawable/xlistview_arrow" android:layout_alignLeft="@id/xlistview_header_text" android:layout_centerVertical="true" />
+        <com.iflytek.base.skin.customView.XProgressBar android:id="@id/xlistview_header_progressbar" android:visibility="invisible" android:layout_width="19.0dip" android:layout_height="19.0dip" android:layout_marginLeft="-40.0dip" android:layout_alignLeft="@id/xlistview_header_text" android:layout_centerVertical="true" skin:cycleDrawable="image.loading_circle" />
+    </RelativeLayout>
+</LinearLayout>

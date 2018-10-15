@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/viafly_share_select_app_item" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:skin="http://schemas.android.com/apk/res-auto">
+    <com.iflytek.base.skin.customView.XButton android:id="@id/appShareImg" android:layout_width="39.0dip" android:layout_height="39.0dip" />
+    <com.iflytek.base.skin.customView.XTextView android:id="@id/appShareName" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:singleLine="true" skin:style="style_oral_get_help_icon_txt" />
+</LinearLayout>

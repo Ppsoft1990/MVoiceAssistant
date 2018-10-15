@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.iflytek.base.skin.customView.XLinearLayout android:orientation="vertical" android:layout_width="@dimen/sms_receive_layout_width" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:skin="http://schemas.android.com/apk/res-auto">
+    <com.iflytek.base.skin.customView.XRelativeLayout android:layout_width="fill_parent" android:layout_height="@dimen/sms_name_panel_height" skin:background="image.sms_dlg_title_bg">
+        <com.iflytek.base.skin.customView.XRelativeLayout android:id="@id/sms_ic_lingxi" android:layout_width="50.0dip" android:layout_height="fill_parent" android:layout_marginLeft="6.0dip" android:layout_alignParentLeft="true">
+            <com.iflytek.base.skin.customView.XImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" skin:src="image.sms_dlg_ic_sms_lingxi" />
+        </com.iflytek.base.skin.customView.XRelativeLayout>
+        <com.iflytek.base.skin.customView.XRelativeLayout android:layout_width="40.0dip" android:layout_height="fill_parent" android:layout_toRightOf="@id/sms_ic_lingxi">
+            <com.iflytek.base.skin.customView.XTextView android:gravity="center_vertical" android:id="@id/sms_receive_count" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" skin:style="style_dialog_small_item_content" />
+        </com.iflytek.base.skin.customView.XRelativeLayout>
+        <com.iflytek.base.skin.customView.XTextView android:ellipsize="end" android:gravity="center" android:id="@id/sms_receive_name" android:layout_width="@dimen/sms_name_width" android:layout_height="wrap_content" android:text="李少红" android:singleLine="true" android:layout_centerInParent="true" skin:style="style_sms_receive_name" />
+        <com.iflytek.base.skin.customView.XImageView android:id="@id/src_right_bg" android:layout_width="6.5dip" android:layout_height="fill_parent" android:layout_alignParentRight="true" skin:background="@null" />
+        <com.iflytek.base.skin.customView.XRelativeLayout android:id="@id/sms_receive_close_bg" android:layout_width="50.0dip" android:layout_height="fill_parent" android:layout_toLeftOf="@id/src_right_bg">
+            <com.iflytek.base.skin.customView.XImageView android:id="@id/sms_receive_close" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" skin:src="statelist.sms_broadcast_setting_hz" />
+            <View android:id="@id/sms_setting_btn_area" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        </com.iflytek.base.skin.customView.XRelativeLayout>
+        <com.iflytek.base.skin.customView.XRelativeLayout android:layout_width="40.0dip" android:layout_height="fill_parent" android:layout_toLeftOf="@id/sms_receive_close_bg">
+            <com.iflytek.base.skin.customView.XImageView android:layout_gravity="center" android:id="@id/sms_receive_mode" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" skin:background="image.sms_receive_sim1" />
+        </com.iflytek.base.skin.customView.XRelativeLayout>
+    </com.iflytek.base.skin.customView.XRelativeLayout>
+    <com.iflytek.base.skin.customView.XLinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" skin:background="image.mainpage_list_mid">
+        <LinearLayout android:orientation="horizontal" android:id="@id/scroll_panel" android:paddingTop="13.0dip" android:layout_width="fill_parent" android:layout_height="@dimen/sms_gallery_height" android:baselineAligned="false">
+            <LinearLayout android:id="@id/left_scroll_layout" android:paddingLeft="7.5dip" android:paddingRight="12.0dip" android:visibility="invisible" android:layout_width="31.5dip" android:layout_height="fill_parent">
+                <com.iflytek.base.skin.customView.XImageView android:layout_gravity="center" android:id="@id/left_scroll" android:layout_width="wrap_content" android:layout_height="wrap_content" skin:background="image.sms_receive_left_scroll_normal_hz" />
+            </LinearLayout>
+            <com.iflytek.viafly.mms.ui.SmsGallery android:gravity="fill" android:id="@id/custom_gallery" android:fadingEdge="horizontal" android:fadingEdgeLength="0.0dip" android:layout_width="0.0dip" android:layout_height="fill_parent" android:spacing="110.0dip" android:layout_weight="1.0" android:unselectedAlpha="1.0" />
+            <LinearLayout android:id="@id/right_scroll_layout" android:paddingLeft="12.0dip" android:paddingRight="7.5dip" android:visibility="invisible" android:layout_width="31.5dip" android:layout_height="fill_parent">
+                <com.iflytek.base.skin.customView.XImageView android:layout_gravity="center" android:id="@id/right_scroll" android:layout_width="wrap_content" android:layout_height="wrap_content" skin:background="image.sms_receive_right_scroll_normal_hz" />
+            </LinearLayout>
+        </LinearLayout>
+        <com.iflytek.base.skin.customView.XRelativeLayout android:layout_width="fill_parent" android:layout_height="55.0dip" android:baselineAligned="false">
+            <com.iflytek.base.skin.customView.XTextView android:layout_gravity="center_vertical" android:id="@id/sms_receive_date" android:paddingLeft="31.5dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="今天 12:00:00" android:layout_alignParentLeft="true" android:layout_centerVertical="true" skin:style="style_sms_save_dialog_date" />
+            <com.iflytek.base.skin.customView.XImageView android:id="@id/btn_bg" android:layout_width="6.5dip" android:layout_height="fill_parent" android:layout_alignParentRight="true" skin:background="@null" />
+            <com.iflytek.base.skin.customView.XRelativeLayout android:id="@id/btn_read_bg" android:visibility="gone" android:layout_width="62.0dip" android:layout_height="fill_parent" android:layout_toLeftOf="@id/btn_bg" android:layout_centerVertical="true">
+                <com.iflytek.base.skin.customView.XImageView android:id="@id/btn_read" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" skin:background="statelist.sms_dlg_btn_read_hz" />
+                <View android:id="@id/btn_read_area" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            </com.iflytek.base.skin.customView.XRelativeLayout>
+            <com.iflytek.base.skin.customView.XRelativeLayout android:id="@id/btn_delete_bg" android:layout_width="62.0dip" android:layout_height="fill_parent" android:layout_toLeftOf="@id/btn_read_bg" android:layout_centerVertical="true">
+                <com.iflytek.base.skin.customView.XImageView android:id="@id/btn_delete" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" skin:background="statelist.sms_dlg_btn_delete_hz" />
+                <View android:id="@id/btn_delete_area" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            </com.iflytek.base.skin.customView.XRelativeLayout>
+            <com.iflytek.base.skin.customView.XRelativeLayout android:layout_width="62.0dip" android:layout_height="fill_parent" android:layout_toLeftOf="@id/btn_delete_bg" android:layout_centerVertical="true">
+                <com.iflytek.base.skin.customView.XImageView android:id="@id/btn_call" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" skin:background="statelist.sms_dlg_btn_call_hz" />
+                <View android:id="@id/btn_call_area" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            </com.iflytek.base.skin.customView.XRelativeLayout>
+        </com.iflytek.base.skin.customView.XRelativeLayout>
+    </com.iflytek.base.skin.customView.XLinearLayout>
+    <com.iflytek.base.skin.customView.XLinearLayout android:orientation="vertical" android:id="@id/reply_area" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" skin:background="image.mainpage_list_mid">
+        <com.iflytek.base.skin.customView.XLinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="17.5dip" android:layout_marginTop="5.0dip" android:layout_marginRight="17.5dip">
+            <com.iflytek.base.skin.customView.XEditText android:textColorHint="#ff999999" android:gravity="top" android:id="@id/reply_edit" android:background="@null" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="回复" android:lines="2" skin:style="style_sms_edit_sms_content_extra" />
+        </com.iflytek.base.skin.customView.XLinearLayout>
+    </com.iflytek.base.skin.customView.XLinearLayout>
+    <LinearLayout android:layout_gravity="center" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="@dimen/sms_name_panel_height">
+        <com.iflytek.base.skin.customView.XButton android:id="@id/sms_close_btn" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="关闭" android:layout_weight="1.0" skin:background="statelist.btn_popup_l" skin:style="style_sms_receive_send_btn" />
+        <com.iflytek.base.skin.customView.XButton android:id="@id/sms_open_reply_btn" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="回复" android:layout_weight="1.0" skin:background="statelist.btn_popup_r" skin:style="style_sms_receive_send_btn" />
+        <com.iflytek.base.skin.customView.XButton android:id="@id/sms_send_btn" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/sms_receive_reply" android:layout_weight="1.0" skin:style="style_sms_receive_send_btn" />
+    </LinearLayout>
+</com.iflytek.base.skin.customView.XLinearLayout>

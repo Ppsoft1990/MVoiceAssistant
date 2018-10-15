@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@drawable/transparent" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:paddingLeft="14.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@id/music_item_playing" android:paddingRight="14.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_music_playing" />
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <TextView android:textSize="@dimen/text_standard_size_t3" android:textColor="#ff212325" android:ellipsize="end" android:id="@id/music_item_song" android:paddingTop="14.0dip" android:paddingRight="5.0dip" android:paddingBottom="16.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="我真的受伤了" android:singleLine="true" />
+            <TextView android:textSize="@dimen/text_standard_size_t5" android:textColor="#ff353638" android:ellipsize="end" android:id="@id/music_item_singer" android:paddingTop="14.0dip" android:paddingRight="14.0dip" android:paddingBottom="16.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="-张学友" android:singleLine="true" />
+            <ImageView android:id="@id/music_item_tag" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_music_local" />
+        </LinearLayout>
+        <ImageView android:id="@id/music_item_delete" android:padding="12.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_music_delete" />
+    </LinearLayout>
+    <View android:background="#20000000" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_marginLeft="14.0dip" />
+</LinearLayout>

@@ -1,0 +1,37 @@
+!!brut.androlib.meta.MetaInfo
+apkFileName: pconline1524099677630.apk
+compressionType: false
+doNotCompress:
+- arsc
+- properties
+- json
+- assets/channel/cid_L6010003
+- a
+isFrameworkApk: false
+packageInfo:
+  forcedPackageId: '127'
+  renameManifestPackage: null
+sdkInfo:
+  minSdkVersion: '14'
+  targetSdkVersion: '23'
+sharedLibrary: false
+unknownFiles:
+  com/iflytek/common/lbs/XAddress.aidl: '8'
+  com/iflytek/framework/plugin/interfaces/lockscreen/ILockScreen.aidl: '8'
+  com/iflytek/framework/plugin/sdk/IRemotePlugin.aidl: '8'
+  com/iflytek/plugin/mobius/I2HeadsetAidlInterface.aidl: '8'
+  com/iflytek/plugin/mobius/IHeadsetAidlInterface.aidl: '8'
+  com/iflytek/plugin/mobius/event/PluginEvent.aidl: '8'
+  com/iflytek/viafly/mutiprocess/IProcess.aidl: '8'
+  com/iflytek/viafly/player/base/IPlayCallback.aidl: '8'
+  com/iflytek/viafly/player/base/IPlaybackService.aidl: '8'
+  com/iflytek/viafly/player/entity/Audio.aidl: '8'
+  com/iflytek/viafly/smarthome/XHomeInterface.aidl: '8'
+usesFramework:
+  ids:
+  - 1
+  tag: null
+version: 2.3.0
+versionInfo:
+  versionCode: '3586'
+  versionName: 6.0.3586

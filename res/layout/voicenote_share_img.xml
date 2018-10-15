@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/color_standard_c9" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:id="@id/note_share_title" android:background="@drawable/home_title_gradient_bg" android:layout_width="fill_parent" android:layout_height="@dimen/home_titlebar_layout_height">
+        <TextView android:textSize="@dimen/text_standard_size_t3" android:textColor="@drawable/note_share_cancel" android:layout_gravity="center_vertical" android:id="@id/img_share_cancel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="14.0dip" android:text="取消" />
+        <View android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" />
+        <ImageView android:layout_gravity="center_vertical" android:id="@id/img_save_img" android:background="@drawable/note_pic_save" android:layout_width="24.0dip" android:layout_height="24.0dip" android:layout_marginRight="14.0dip" />
+        <ImageView android:layout_gravity="center_vertical" android:id="@id/img_note_share" android:background="@drawable/note_share_state" android:layout_width="24.0dip" android:layout_height="24.0dip" android:layout_marginRight="14.0dip" />
+    </LinearLayout>
+    <ScrollView android:id="@id/view_note_scroll" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/note_share_title">
+        <LinearLayout android:background="@color/color_standard_c9" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:id="@id/view_note_share" android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="14.0dip" android:layout_marginTop="14.0dip" android:layout_marginRight="14.0dip">
+                <TextView android:textSize="@dimen/text_standard_size_t3" android:textColor="@color/color_standard_c1" android:ellipsize="end" android:id="@id/text_share_note_content" android:paddingBottom="20.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="14.0dip" android:layout_marginTop="14.0dip" android:layout_marginRight="14.0dip" />
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="40.0dip">
+                    <ImageView android:background="@drawable/note_share_mic" android:layout_width="16.0dip" android:layout_height="18.0dip" android:layout_marginLeft="14.0dip" />
+                    <TextView android:textSize="@dimen/text_standard_size_t6" android:textColor="@color/color_standard_c3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="4.0dip" android:text="通过咪咕灵犀分享" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="14.0dip" android:layout_alignParentBottom="true">
+        <ImageView android:id="@id/img_share_skin4" android:background="@drawable/note_share_skin_sel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="14.0dip" android:layout_marginBottom="14.0dip" android:layout_alignParentRight="true" />
+        <ImageView android:id="@id/img_share_skin3" android:background="@drawable/note_share_skin3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="16.0dip" android:layout_toLeftOf="@id/img_share_skin4" />
+        <ImageView android:id="@id/img_share_skin2" android:background="@drawable/note_share_skin2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="16.0dip" android:layout_toLeftOf="@id/img_share_skin3" />
+        <ImageView android:id="@id/img_share_skin1" android:background="@drawable/note_share_skin1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="16.0dip" android:layout_toLeftOf="@id/img_share_skin2" />
+    </RelativeLayout>
+</RelativeLayout>

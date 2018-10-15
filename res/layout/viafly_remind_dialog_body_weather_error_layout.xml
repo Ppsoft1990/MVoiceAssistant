@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.iflytek.base.skin.customView.XLinearLayout android:orientation="vertical" android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:skin="http://schemas.android.com/apk/res-auto">
+    <com.iflytek.base.skin.customView.XRelativeLayout android:gravity="center|left" android:orientation="vertical" android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.iflytek.base.skin.customView.XTextView android:textSize="@dimen/text_standard_size_t2" android:textColor="@color/color_standard_c1" android:id="@id/dialog_schedule_dialog_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="24.0dip" android:layout_marginTop="24.0dip" android:text="生活提醒" />
+    </com.iflytek.base.skin.customView.XRelativeLayout>
+    <com.iflytek.base.skin.customView.XLinearLayout android:layout_gravity="center_vertical" android:orientation="horizontal" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="24.0dip" android:layout_marginTop="25.0dip" android:layout_marginBottom="10.0dip">
+        <com.iflytek.base.skin.customView.XLinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="43.0dip" android:layout_height="46.0dip">
+            <com.iflytek.base.skin.customView.XImageView android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" skin:src="image.ic_mainpage_error" />
+        </com.iflytek.base.skin.customView.XLinearLayout>
+        <com.iflytek.base.skin.customView.XLinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="15.0dip">
+            <com.iflytek.base.skin.customView.XTextView android:textSize="@dimen/text_standard_size_t4" android:textColor="@color/color_standard_c2" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/dialog_reminder_weather_error" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="网络异常，无法获取天气信息" />
+        </com.iflytek.base.skin.customView.XLinearLayout>
+    </com.iflytek.base.skin.customView.XLinearLayout>
+</com.iflytek.base.skin.customView.XLinearLayout>

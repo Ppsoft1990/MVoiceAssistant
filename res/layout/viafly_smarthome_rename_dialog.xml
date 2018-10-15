@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.iflytek.base.skin.customView.XLinearLayout android:orientation="vertical" android:layout_width="300.0dip" android:layout_height="265.0dip" skin:layout_width="600" skin:layout_height="450"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:skin="http://schemas.android.com/apk/res-auto">
+    <com.iflytek.base.skin.customView.XLinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" skin:background="image.mainpage_list_top">
+        <com.iflytek.base.skin.customView.XTextView android:textColor="#ff000000" android:gravity="center" android:id="@id/smarthome_rename_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="设备重命名" skin:layout_marginTop="25" skin:layout_marginBottom="40" />
+        <com.iflytek.base.skin.customView.XEditText android:textColor="#ff000000" android:id="@id/smarthome_device_name" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="请输入设备名称" skin:layout_marginLeft="50" skin:layout_marginTop="20" skin:layout_marginRight="50" />
+    </com.iflytek.base.skin.customView.XLinearLayout>
+    <com.iflytek.base.skin.customView.XLinearLayout android:layout_gravity="bottom" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="60.0dip">
+        <com.iflytek.base.skin.customView.XButton android:textColor="#ff000000" android:id="@id/smarthome_cancel_button" android:layout_width="fill_parent" android:layout_height="45.0dip" android:text="取消" android:layout_weight="1.0" skin:background="stateList.btn_popup_l" />
+        <com.iflytek.base.skin.customView.XButton android:textColor="#ff000000" android:id="@id/smarthome_confirm_button" android:layout_width="fill_parent" android:layout_height="45.0dip" android:text="确定" android:layout_weight="1.0" skin:background="stateList.btn_popup_r" />
+    </com.iflytek.base.skin.customView.XLinearLayout>
+</com.iflytek.base.skin.customView.XLinearLayout>

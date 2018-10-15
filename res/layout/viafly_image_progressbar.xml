@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.iflytek.base.skin.customView.XRelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:skin="http://schemas.android.com/apk/res-auto">
+    <com.iflytek.base.skin.customView.XImageView android:id="@id/base_progressbar_background" android:layout_width="wrap_content" android:layout_height="wrap_content" skin:background="image.progress_bar_bg" />
+    <com.iflytek.base.skin.customView.XImageView android:id="@id/base_progressbar" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" skin:background="image.second_progress_bar_bg" />
+</com.iflytek.base.skin.customView.XRelativeLayout>

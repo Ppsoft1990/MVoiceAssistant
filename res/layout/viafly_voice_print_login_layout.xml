@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.iflytek.viafly.ui.view.CircleImageView android:id="@id/user_image" android:layout_width="84.0dip" android:layout_height="84.0dip" android:layout_marginTop="30.0dip" android:src="@drawable/ic_usercenter_head" android:layout_centerHorizontal="true" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/phone_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="30.0dip" android:layout_below="@id/user_image">
+        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="25.0dip" android:src="@drawable/ico_voice_login_phone" />
+        <TextView android:textSize="@dimen/text_standard_size_t3" android:textColor="@color/color_standard_c1" android:id="@id/phone_num_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" />
+    </LinearLayout>
+    <TextView android:id="@id/space_line" android:background="#55979a9e" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_marginLeft="70.0dip" android:layout_marginTop="3.0dip" android:layout_marginRight="20.0dip" android:layout_below="@id/phone_layout" />
+    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/space_line" android:layout_centerHorizontal="true">
+        <TextView android:textSize="@dimen/text_standard_size_t5" android:textColor="@color/color_standard_c3" android:id="@id/tip_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="24.0dip" android:text="请按住按钮,匀速读出数字!" />
+        <TextView android:textSize="36.0sp" android:textColor="@color/color_standard_c1" android:id="@id/password_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" />
+    </LinearLayout>
+    <include android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" layout="@layout/viafly_voice_print_mic_layout" />
+</RelativeLayout>

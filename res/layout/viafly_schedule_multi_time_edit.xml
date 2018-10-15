@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/viafly_schedule_multi_times_edit_layout" android:background="@drawable/viafly_schedule_item" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:skin="http://schemas.android.com/apk/res-auto">
+    <View android:background="#ffe1e1e1" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_marginLeft="15.0dip" android:layout_marginRight="15.0dip" />
+    <LinearLayout android:orientation="vertical" android:id="@id/viafly_schedule_manage_multi_times_container" android:paddingTop="1.0px" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <com.iflytek.base.skin.customView.XTextView android:gravity="center" android:id="@id/viafly_schedule_manage_multi_times_add" android:background="@drawable/viafly_shape_no_corner_with_all_border" android:layout_width="fill_parent" android:layout_height="40.0dip" android:layout_marginLeft="15.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="15.0dip" android:layout_marginBottom="10.0dip" android:text="添加一次提醒时间" skin:style="style_reminder_edit_title_text" />
+</LinearLayout>

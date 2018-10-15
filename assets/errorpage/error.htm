@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta content="text/html;charset=utf-8">
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <script type="text/javascript" src="file:///android_asset/dialogMode/lib/api.js"></script>
+    <style>
+			html, body {
+				padding: 0px;
+				margin: 0px;
+				border: 0px;
+				-webkit-tap-highlight-color: rgba(0,0,0,0);
+			}
+		</style>
+</head>
+<body>
+	<div style="text-align: center;" ontouchend = "exec('NativeUI', 'showProgressDialog', []);setTimeout(function(){exec('NativeUI', 'retry', [])},300);">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAaCAYAAABCfffNAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAZBJREFUSEutVtFthDAMpRvcCB3hRrgROkK/+O4IbHCfSICUETrCjUA3YIR2AKTUDxkaEjsO9E6ydALbL/Z7dnipCn/Oucs8z9fV3Xv/U9f1V2F4VfV93yBJHNC27SvekU1kXrKu6z7J3k0wcnrAQkdOLiZWAHGQmwpGAN8cSAW5C/0ftZNbz9WqwsAA8EgVO98EiB5crdOdeT8Mw9vWOvSxJAlX6JirBhzm4uC/iamEYAr4kAiF+gywZomzQCBRS56UAxUmHKKaJdYqG8FaJSs4K1KcpYWbEhAGyg4cFKVw1KBdllQnPshd2grRAEste4QgazIoB6fSp1chSerKsknOJNOEoIJYyjnyXtoW8U48ki/xzWyOe+LMcgQvWJrFvGCelFn5U2WUfFXJZCmKZ02Tr8dW2CrJbN9x5xjVjkHNXWg7d201BAkcppcX6g0ytwYZPO1A0JZn3CXBoVLCubfPulvGrFTRkn9WNJaIBUsTFZ255+UW5criHaZ+DoWiSEg+OtpIwFLFN9hmaG1Ja34BFRYs2IhEhIgAAAAASUVORK5CYII=" style="margin-top: 30%;">
+        <br/><br/>
+        <div style="color: #717171">网络连接超时，请点击重试。</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="@dimen/dimen_48dp">
+        <ImageView android:id="@id/sso_titlebar_left_back_iv" android:background="@drawable/union_title_back_selector" android:layout_width="@dimen/dimen_48dp" android:layout_height="@dimen/dimen_48dp" android:layout_alignParentLeft="true" />
+        <TextView android:textSize="@dimen/dimen_18sp" android:textColor="@color/union_color_titlebar_title" android:gravity="center_horizontal" android:id="@id/sso_titlebar_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerInParent="true" />
+        <TextView android:textSize="@dimen/dimen_15sp" android:textColor="@color/union_title_right_tv_selector" android:gravity="center_vertical" android:id="@id/sso_titlebar_right_tv" android:paddingRight="@dimen/dimen_16dp" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_alignParentRight="true" />
+    </RelativeLayout>
+    <TextView android:id="@id/sso_title_underline" android:background="@color/union_color_titlebar_underline" android:layout_width="fill_parent" android:layout_height="@dimen/dimen_0.5dp" />
+</LinearLayout>

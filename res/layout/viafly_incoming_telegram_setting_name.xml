@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.iflytek.base.skin.customView.XLinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:skin="http://schemas.android.com/apk/res-auto">
+    <com.iflytek.base.skin.customView.XLinearLayout android:orientation="vertical" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.iflytek.base.skin.customView.XLinearLayout android:orientation="vertical" android:paddingLeft="@dimen/call_pattern_setting_padding" android:paddingRight="@dimen/call_pattern_setting_padding" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.iflytek.base.skin.customView.XLinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/call_pattern_setting_name_top">
+                <com.iflytek.base.skin.customView.XEditText android:textColorHint="#ffbdbdbd" android:id="@id/broadcast_name_title" android:background="@drawable/transparent" android:layout_width="0.0dip" android:layout_height="@dimen/call_pattern_setting_name_height" android:hint="@string/broadcast_format_default_name" android:singleLine="true" android:layout_weight="1.0" skin:style="style_xpreference_title" />
+                <com.iflytek.base.skin.customView.XImageView android:layout_gravity="right" android:id="@id/broadcast_btn_input_del" android:layout_width="wrap_content" android:layout_height="wrap_content" skin:src="image.btn_input_del_dial" />
+            </com.iflytek.base.skin.customView.XLinearLayout>
+            <com.iflytek.base.skin.customView.XImageView android:layout_width="fill_parent" android:layout_height="wrap_content" skin:background="image.address_input_bg_dial" />
+            <com.iflytek.base.skin.customView.XTextView android:layout_gravity="right" android:id="@id/broadcast_name_content" android:layout_width="wrap_content" android:layout_height="@dimen/call_pattern_setting_name_content_height" skin:style="style_xpreference_summary" />
+        </com.iflytek.base.skin.customView.XLinearLayout>
+    </com.iflytek.base.skin.customView.XLinearLayout>
+    <com.iflytek.base.skin.customView.XLinearLayout android:id="@id/broadcast_audition" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="@dimen/call_pattern_setting_audition_content_height">
+        <com.iflytek.base.skin.customView.XLinearLayout android:gravity="center" android:orientation="horizontal" android:paddingLeft="@dimen/call_pattern_setting_padding" android:paddingRight="@dimen/call_pattern_setting_padding" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <com.iflytek.base.skin.customView.XImageView android:layout_width="wrap_content" android:layout_height="wrap_content" skin:src="image.call_broadcast_dialog_icon_on" />
+            <com.iflytek.base.skin.customView.XTextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/call_pattern_setting_audition_margin_left" android:text="@string/broadcast_format_default_tip" skin:style="style_xpreference_title" />
+        </com.iflytek.base.skin.customView.XLinearLayout>
+    </com.iflytek.base.skin.customView.XLinearLayout>
+</com.iflytek.base.skin.customView.XLinearLayout>

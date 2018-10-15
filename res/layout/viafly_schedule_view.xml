@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:id="@id/schedule_root" android:background="@color/color_standard_c4_v5" android:layout_width="fill_parent" android:layout_height="56.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ImageView android:id="@id/schedule_back" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" />
+        <View android:id="@id/schedule_hide" android:background="#66000000" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </FrameLayout>
+    <com.iflytek.base.skin.customView.XImageView android:id="@id/schedule_icon" android:layout_width="40.0dip" android:layout_height="40.0dip" android:layout_marginLeft="14.0dip" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+    <TextView android:textSize="@dimen/text_standard_size_t3" android:textColor="@color/color_standard_c1" android:id="@id/schedule_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="12.0dip" android:text="靠近常用Wi-Fi时提醒我" android:layout_toRightOf="@id/schedule_icon" android:layout_centerVertical="true" />
+    <TextView android:textSize="@dimen/text_standard_size_t5" android:textColor="@color/color_standard_c4_v5" android:gravity="center" android:id="@id/schedule_button" android:background="@drawable/ic_schedule_add_bg" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginRight="14.0dip" android:text="添加" android:drawablePadding="4.0dip" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    <include layout="@layout/line" />
+</RelativeLayout>

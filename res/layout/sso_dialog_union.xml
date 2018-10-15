@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:background="@drawable/sso_shape_dialog_background" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/dimen_22dp">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dimen_22dp" android:layout_marginTop="@dimen/dimen_30dp" android:layout_marginRight="@dimen/dimen_22dp" android:layout_marginBottom="@dimen/dimen_12dp">
+            <TextView android:textSize="@dimen/dimen_16sp" android:textColor="@color/sso_color_dialog_text_main" android:layout_gravity="center_horizontal" android:id="@id/tv_main_error_message" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/sso_dialog_padding_bottom" android:text="" android:includeFontPadding="false" android:lineSpacingMultiplier="1.5" />
+            <TextView android:textSize="@dimen/dimen_14sp" android:textColor="@color/sso_color_dialog_text_secondary" android:id="@id/tv_secondary_error_message" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/sso_dialog_padding_bottom" android:text="" android:lineSpacingMultiplier="1.5" />
+        </LinearLayout>
+        <CheckBox android:textSize="@dimen/dimen_12sp" android:textColor="@color/sso_color_dialog_text_main" android:id="@id/ckb_never_remind" android:paddingLeft="@dimen/dimen_6dp" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dimen_20dp" android:layout_marginBottom="@dimen/dimen_10dp" android:button="@drawable/checkbox_state" android:text="@string/str_login_never_remind" />
+        <View android:background="@color/sso_color_dialog_divider" android:layout_width="fill_parent" android:layout_height="@dimen/dimen_1dp" android:layout_marginTop="@dimen/dimen_10dp" />
+        <LinearLayout android:gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="@dimen/dimen_50dp">
+            <TextView android:textSize="@dimen/dimen_17sp" android:textColor="@color/sso_color_errtip2" android:gravity="center" android:id="@id/tv_secondary_choice" android:background="@drawable/sso_dialog_button_selector" android:clickable="true" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/sso_str_dialog_text_cancel" android:layout_weight="1.0" />
+            <View android:id="@id/view_vertical_divider" android:background="@color/sso_color_dialog_divider" android:layout_width="1.0dip" android:layout_height="fill_parent" />
+            <TextView android:textSize="@dimen/dimen_17sp" android:textColor="@color/main_theme_color" android:gravity="center" android:id="@id/tv_main_choice" android:background="@drawable/sso_dialog_button_selector" android:clickable="true" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/sso_str_dialog_text_ok" android:layout_weight="1.0" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

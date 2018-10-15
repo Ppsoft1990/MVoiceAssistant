@@ -1,0 +1,12 @@
+.css_card_manage_btn{
+    width: 100%;
+    height: 36dp;
+    line-height: 36dp;
+    text-align: center;
+    font-size: 16dp|720:36px;
+    color: #333333;
+    background-color: #ffffff;
+    border-bottom: 1px solid #dfdfdf;
+    display: inline-block;
+    margin-bottom: 20dp;
+}

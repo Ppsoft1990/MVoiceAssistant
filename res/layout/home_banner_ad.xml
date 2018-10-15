@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/color_standard_c6" android:layout_width="fill_parent" android:layout_height="178.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:id="@id/view_divide" android:layout_width="fill_parent" android:layout_height="8.0dip" />
+    <com.iflytek.viafly.homepage.banner.view.HomeConvenientBanner android:id="@id/convenientBanner" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginBottom="8.0dip" android:layout_below="@id/view_divide" />
+</RelativeLayout>

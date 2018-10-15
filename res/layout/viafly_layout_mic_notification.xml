@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:background="#00000000" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/mic_layout_margin_left" android:layout_weight="22.0">
+            <LinearLayout android:gravity="center" android:layout_gravity="center_vertical" android:orientation="horizontal" android:id="@id/mic_notification_speech_btn" android:background="@drawable/viafly_mic_notification_btn_white_bg" android:layout_width="fill_parent" android:layout_height="@dimen/mic_notification_speech_btn_height">
+                <ImageView android:layout_gravity="center_vertical" android:id="@id/mic_notification_speech_btn_img" android:layout_width="@dimen/mic_notification_speech_btn_img_width" android:layout_height="@dimen/mic_notification_speech_btn_img_height" android:src="@drawable/ic_notificationbar_mic_white" android:scaleType="centerInside" />
+                <TextView android:textSize="16.0sp" android:textColor="#ffffffff" android:layout_gravity="center_vertical" android:id="@id/mic_notification_speech_btn_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:text="召唤灵犀" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:id="@id/mic_notification_setting_btn" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/mic_layout_set_margin_left" android:layout_marginRight="@dimen/mic_layout_margin_right">
+            <ImageView android:layout_gravity="center_horizontal" android:id="@id/mic_notification_setting_btn_img" android:layout_width="20.0dip" android:layout_height="20.0dip" android:src="@drawable/ic_notification_set_white" android:scaleType="centerInside" />
+            <TextView android:textSize="12.0sp" android:textColor="#ffd6d6d6" android:layout_gravity="center_horizontal" android:id="@id/mic_notification_setting_btn_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:text="设置" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

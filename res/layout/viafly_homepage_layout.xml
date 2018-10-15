@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.iflytek.viafly.homepage.LxBackgroundImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/viafly_bg_mainpage" android:scaleType="fitStart" />
+    <RelativeLayout android:orientation="horizontal" android:id="@id/title_container" android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="60.0dip">
+        <com.iflytek.viafly.ui.view.CircleImageView android:id="@id/home_user_voice" android:layout_width="36.0dip" android:layout_height="36.0dip" android:layout_marginLeft="14.0dip" android:src="@drawable/image_default_jiajia" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+        <View android:id="@id/home_click" android:layout_width="200.0dip" android:layout_height="fill_parent" android:layout_centerHorizontal="true" android:layout_centerVertical="true" />
+        <ImageView android:id="@id/home_user_center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="14.0dip" android:src="@drawable/sel_mainpage_setting" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <com.iflytek.viafly.ui.view.ptr.PtrClassicFrameLayout android:id="@id/ptrClassicFrameLayout" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="60.0dip">
+        <com.iflytek.viafly.homepage.HomeMainScrollView android:id="@id/homepage_scrollview" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <LinearLayout android:orientation="vertical" android:id="@id/homepage_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        </com.iflytek.viafly.homepage.HomeMainScrollView>
+    </com.iflytek.viafly.ui.view.ptr.PtrClassicFrameLayout>
+</merge>

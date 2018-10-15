@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:skin="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:id="@id/customViewContainer" android:background="#ff000000" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <com.iflytek.base.skin.customView.XLinearLayout android:gravity="center_vertical" android:id="@id/browserview_title_bar" android:background="@drawable/home_title_gradient_bg" android:padding="0.0px" android:layout_width="fill_parent" android:layout_height="wrap_content" skin:layout_height="100">
+        <com.iflytek.base.skin.customView.XLinearLayout android:clickable="true" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <com.iflytek.base.skin.customView.XLinearLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <com.iflytek.base.skin.customView.XLinearLayout android:gravity="center" android:id="@id/fluentpage_titleback_container" android:focusable="true" android:clickable="true" android:layout_width="47.0dip" android:layout_height="fill_parent">
+                    <com.iflytek.base.skin.customView.XImageView android:id="@id/fluetpage_title_back" android:layout_width="@dimen/title_image_size" android:layout_height="@dimen/title_image_size" skin:src="statelist.home_title_close_btn_states" />
+                </com.iflytek.base.skin.customView.XLinearLayout>
+                <com.iflytek.base.skin.customView.XImageView android:id="@id/operation_page_left_separator" android:visibility="invisible" android:layout_width="1.0dip" android:layout_height="fill_parent" android:layout_toRightOf="@id/fluentpage_titleback_container" skin:src="image.browser_title_line" />
+                <com.iflytek.base.skin.customView.XTextView android:textSize="@dimen/title_size" android:textColor="@color/white" android:gravity="center" android:id="@id/fluetpage_title" android:paddingRight="3.0dip" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:singleLine="true" />
+            </com.iflytek.base.skin.customView.XLinearLayout>
+        </com.iflytek.base.skin.customView.XLinearLayout>
+        <LinearLayout android:layout_gravity="center|right" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_centerVertical="true">
+            <RelativeLayout android:id="@id/fluetpage_title_refresh_container" android:layout_width="@dimen/fluentpage_title_btn_width" android:layout_height="fill_parent">
+                <com.iflytek.base.skin.customView.XImageView android:id="@id/fluetpage_title_refresh" android:layout_width="@dimen/title_image_size" android:layout_height="@dimen/title_image_size" android:layout_centerInParent="true" skin:src="statelist.home_title_refresh_btn_states" />
+                <com.iflytek.base.skin.customView.XImageView android:id="@id/fluetpage_title_refresh_cancel" android:visibility="gone" android:layout_width="@dimen/fluentpage_title_btn_width" android:layout_height="fill_parent" android:scaleType="centerInside" skin:background="statelist.fluepage_title_btn_states" skin:src="image.title_close_btn" />
+            </RelativeLayout>
+        </LinearLayout>
+    </com.iflytek.base.skin.customView.XLinearLayout>
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/browserview_title_bar">
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/ll_webview" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <com.iflytek.base.skin.customView.DefineProgressView android:gravity="center_vertical" android:id="@id/loading_progress_bar" android:paddingLeft="-3.0dip" android:paddingRight="-3.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="5.0dip" />
+    </FrameLayout>
+</RelativeLayout>

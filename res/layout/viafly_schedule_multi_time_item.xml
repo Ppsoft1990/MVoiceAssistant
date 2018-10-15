@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="45.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:skin="http://schemas.android.com/apk/res-auto">
+    <TextView android:textSize="16.0sp" android:textColor="#ff515151" android:gravity="center|left" android:id="@id/viafly_schedule_multi_time_item_time_value" android:background="@drawable/viafly_shape_with_top_and_bottom_corner" android:paddingLeft="30.0dip" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="08:00" android:layout_toLeftOf="@id/viafly_schedule_multi_time_item_delete" android:layout_below="@id/line" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" />
+    <TextView android:textSize="16.0sp" android:textColor="#ff515151" android:gravity="center|right" android:id="@id/viafly_schedule_multi_time_item_delete" android:background="@drawable/viafly_shape_with_top_and_bottom_corner" android:paddingLeft="15.0dip" android:paddingRight="30.0dip" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="删除" android:layout_below="@id/line" android:layout_alignParentTop="true" android:layout_alignParentRight="true" />
+    <View android:id="@id/line" android:background="#ffe1e1e1" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_marginLeft="25.0dip" android:layout_marginRight="25.0dip" android:layout_alignParentBottom="true" />
+</RelativeLayout>

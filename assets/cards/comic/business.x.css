@@ -1,0 +1,208 @@
+.comic_card_book_area {
+	margin: 0 13dp|720:30px;
+	/*margin-left: 13dp|720:30px;*/
+	padding-top: 9dp|720:20px;
+	padding-bottom: 9dp|720:21px;
+	font-size: 0;
+	/*width: 100%;*/
+	overflow: hidden;
+	/*height: 100dp|720:225px;*/
+}
+
+.comic_card_swipe_area {
+	font-size: 0;
+	height: 100dp|720:225px;
+	position: relative;
+}
+
+.comic_card_swipe_area_block {
+	display: inline-block;
+	width: 13dp|720:30px;
+}
+
+.comic_card_book_item_area {
+    width: 24.1%;
+	display: inline-block;
+	/*padding-right: 9dp|720:20px;*/
+	text-align: center;
+}
+.comic_card_after_book_item_space {
+    width: 1.2%;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+
+.comic_card_book_item_area_last {
+	display: inline-block;
+	/*padding-right: 13dp|720:30px;*/
+}
+
+.comic_card_book_item{
+	display: inline-block;
+	position: relative;
+	width: 100%;
+	height: 105dp;
+	font-size: 0;
+}
+.comic_card_book_item_cover {
+	width: 100%;
+	height: 100%;
+	background-image: url("./novel/res/ic_mainpage_novel_default.png");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+.comic_card_book_item_name {
+	text-align: left;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	font-size: 12dp|720:28px;
+	height: 24dp|720:54px;
+	line-height: 24dp|720:54px;
+	/*background-image: url("./novel/res/ic_mainpage_novel_namebg.png");*/
+	/*background-repeat: repeat-x;*/
+	background-color: rgba(0,0,0,0.30);
+	background-size: 100% 100%;
+}
+.comic_card_book_item_name_text {
+	display: block;
+	margin: 0 3dp|720:8px;
+	text-align: center;
+	color: white;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+.comic_card_category_area{
+	font-size: 0;
+	/*margin-top: 4dp|720:10px;*/
+	margin-bottom: 9dp|720:20px;
+	margin-left: 13dp|720:30px;
+	margin-right: 13dp|720:30px;
+}
+
+.comic_card_category_item_container {
+	display: inline-block;
+	height: 26dp|720:60px;
+	width: 25%;
+	position: relative;
+}
+
+.comic_card_category_item0 {
+    position: absolute;
+	width: 90.9091%;
+	height: 26dp|720:60px;
+	line-height: 26dp|720:60px;
+	font-size: 14dp|720:32px;
+	/*font-size: 12dp|720:28px;*/
+	border-radius: 4px;
+	text-align: center;
+	color: #515151;
+	background-color: #f0f0f0;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+.comic_card_category_item1 {
+    position: absolute;
+	width: 90.9091%;
+	height: 26dp|720:60px;
+	line-height: 26dp|720:60px;
+	font-size: 14dp|720:32px;
+	/*font-size: 12dp|720:28px;*/
+	border-radius: 4px;
+	text-align: center;
+	color: #515151;
+	background-color: #f0f0f0;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+	left: 3.0303%;
+}
+
+.comic_card_category_item2 {
+    position: absolute;
+	width: 90.9091%;
+	height: 26dp|720:60px;
+	line-height: 26dp|720:60px;
+	font-size: 14dp|720:32px;
+	/*font-size: 12dp|720:28px;*/
+	border-radius: 4px;
+	text-align: center;
+	color: #515151;
+	background-color: #f0f0f0;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+	left: 6.0606%;
+}
+
+.comic_card_category_item3 {
+    position: absolute;
+	width: 90.9091%;
+	height: 26dp|720:60px;
+	line-height: 26dp|720:60px;
+	font-size: 14dp|720:32px;
+	/*font-size: 12dp|720:28px;*/
+	border-radius: 4px;
+	text-align: center;
+	color: #515151;
+	background-color: #f0f0f0;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+	right: 0;
+}
+
+.css_comic_bottom_container_div{
+    margin-top: 4dp|720:10px;
+    height: 36dp|720:80px;
+    line-height: 36dp|720:80px;
+    position: relative;
+}
+
+.css_comic_bottom_container_div:before{
+    height: 1px;
+    background-color: rgba(0,0,0,0.12);
+    position: absolute;
+    top: -1px;
+    content: '';
+    left: 13dp|720:30px;
+	right: 13dp|720:30px;
+}
+
+.comic_bottom_switch {
+	display: inline-block;
+	width: 50%;
+	height: 36dp|720:80px;
+	position: relative;
+	font-size: 14dp|720:32px;
+	color: #515151;
+	text-align: center;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+}
+.comic_bottom_switch:after {
+	content: '';
+	position: absolute;
+	width: 1px;
+	background-color: rgba(0,0,0,0.12);
+	right: 0;
+	top: 8dp|720:20px;
+	bottom: 8dp|720:20px;
+}
+.comic_bottom_more {
+	display: inline-block;
+	width: 50%;
+	height: 36dp|720:80px;
+	font-size: 14dp|720:32px;
+	color: #515151;
+	text-align: center;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+}

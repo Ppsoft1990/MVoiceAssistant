@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.iflytek.base.skin.customView.XLinearLayout android:orientation="vertical" android:layout_width="@dimen/cmbusiness_dialog_width" android:layout_height="wrap_content" android:minWidth="280.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:skin="http://schemas.android.com/apk/res-auto">
+    <com.iflytek.base.skin.customView.XTextView android:gravity="center" android:id="@id/list_dialog_title" android:layout_width="fill_parent" android:layout_height="@dimen/cmbusiness_dialog_title_height" skin:background="image.mainpage_list_top" skin:style="style_list_dialog_show_text" />
+    <ListView android:id="@id/list_content" android:layout_width="fill_parent" android:layout_height="wrap_content" android:listSelector="@android:color/transparent" />
+    <com.iflytek.base.skin.customView.XLinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" skin:background="image.mainpage_list_btm">
+        <com.iflytek.base.skin.customView.XButton android:id="@id/list_dialog_cancle_btn" android:layout_width="fill_parent" android:layout_height="@dimen/cmbusiness_dialog_btn_height" android:text="取消" skin:background="statelist.list_dialog_cancle_state" skin:style="style_btn_cancel_show_text" />
+    </com.iflytek.base.skin.customView.XLinearLayout>
+</com.iflytek.base.skin.customView.XLinearLayout>

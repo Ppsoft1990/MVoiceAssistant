@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="#ff0c193a" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:layout_width="fill_parent" android:layout_height="50.0dip">
+        <ImageView android:id="@id/guide_custom_back" android:paddingTop="4.0dip" android:paddingRight="4.0dip" android:paddingBottom="4.0dip" android:layout_width="28.0dip" android:layout_height="32.0dip" android:src="@drawable/ic_music_back" />
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <TextView android:textSize="@dimen/text_standard_size_t2" android:textColor="@color/color_standard_c4_v5" android:gravity="center" android:id="@id/guide_custom_title" android:paddingLeft="20.0dip" android:paddingRight="20.0dip" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" android:layout_weight="1.0" android:marqueeRepeatLimit="marquee_forever" />
+        </LinearLayout>
+        <TextView android:textSize="@dimen/text_standard_size_t4" android:textColor="@color/color_standard_c4_v5" android:gravity="center" android:id="@id/guide_custom_pass" android:background="@drawable/guide_listen_border" android:paddingLeft="10.0dip" android:paddingTop="4.0dip" android:paddingRight="10.0dip" android:paddingBottom="4.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="跳过" />
+    </LinearLayout>
+    <RelativeLayout android:id="@id/guide_custom_container_layout" android:background="@drawable/viafly_shape_corner_guide_layout_bg" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_margin="10.0dip" android:layout_weight="1.0" />
+    <LinearLayout android:gravity="center" android:paddingTop="20.0dip" android:paddingBottom="30.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="@dimen/text_standard_size_t3" android:textColor="@color/color_standard_c4_v5" android:gravity="center" android:id="@id/guide_custom_next" android:background="@drawable/viafly_shape_corner_guide_btn_bg" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:layout_width="140.0dip" android:layout_height="wrap_content" android:text="继续" />
+    </LinearLayout>
+</LinearLayout>

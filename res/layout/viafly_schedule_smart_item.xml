@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/schedule_smart_layout" android:background="#ffffffff" android:paddingLeft="10.0dip" android:paddingTop="14.0dip" android:paddingRight="10.0dip" android:paddingBottom="14.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/schedule_smart_image" android:layout_width="50.0dip" android:layout_height="50.0dip" android:src="@drawable/but_close_full_screen" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+    <TextView android:textSize="@dimen/text_standard_size_t5" android:textColor="@color/color_standard_c1" android:ellipsize="end" android:id="@id/schedule_smart_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:text="流量提醒" android:singleLine="true" />
+</LinearLayout>

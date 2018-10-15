@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="265.0dip" android:minHeight="265.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:skin="http://schemas.android.com/apk/res-auto">
+    <com.iflytek.base.skin.customView.XLinearLayout android:layout_width="fill_parent" android:layout_height="52.0dip" skin:background="image.authentication_dialog_title_bg">
+        <com.iflytek.base.skin.customView.XTextView android:gravity="center" android:id="@id/adaptation_title" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="18.0dip" android:text="提示" skin:style="style_contact_select_dialog_title" />
+    </com.iflytek.base.skin.customView.XLinearLayout>
+    <com.iflytek.base.skin.customView.XLinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0" skin:background="image.authentication_dialog_content_bg">
+        <com.iflytek.base.skin.customView.XTextView android:id="@id/adaptation_body" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="18.0dip" android:layout_marginTop="12.0dip" android:layout_marginRight="18.0dip" android:text="@string/adaptation_dialog_tips" android:layout_weight="1.0" skin:style="style_dialog_content_text" />
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="18.0dip">
+            <com.iflytek.base.skin.customView.XImageView android:id="@id/adaptation_checkbox" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="18.0dip" android:layout_marginRight="8.0dip" skin:background="image.ic_checkbox_carmode_nor" />
+            <com.iflytek.base.skin.customView.XTextView android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="不再提示" skin:style="style_adaptation_dialog_checkbox_tips" />
+        </LinearLayout>
+    </com.iflytek.base.skin.customView.XLinearLayout>
+    <com.iflytek.base.skin.customView.XLinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="60.0dip" skin:background="image.authentication_dialog_content_bg">
+        <com.iflytek.base.skin.customView.XButton android:id="@id/adaptation_left_button" android:layout_width="fill_parent" android:layout_height="45.0dip" android:layout_marginLeft="18.0dip" android:layout_marginRight="5.0dip" android:layout_marginBottom="10.0dip" android:text="取消" android:layout_weight="1.0" skin:background="stateList.dialog_btn_cancel_status" skin:style="style_dialog_cancle_text" />
+        <com.iflytek.base.skin.customView.XButton android:id="@id/adaptation_right_button" android:layout_width="fill_parent" android:layout_height="45.0dip" android:layout_marginLeft="5.0dip" android:layout_marginRight="18.0dip" android:layout_marginBottom="10.0dip" android:text="启用" android:layout_weight="1.0" skin:background="stateList.dialog_btn_confirm_status" skin:style="style_dialog_cancle_text" />
+    </com.iflytek.base.skin.customView.XLinearLayout>
+</LinearLayout>

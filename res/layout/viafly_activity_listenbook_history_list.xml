@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:background="@drawable/home_title_gradient_bg" android:layout_width="fill_parent" android:layout_height="50.0dip">
+        <ImageView android:id="@id/listenbook_history_list_back" android:paddingLeft="10.0dip" android:paddingTop="4.0dip" android:paddingRight="16.0dip" android:paddingBottom="4.0dip" android:layout_width="50.0dip" android:layout_height="32.0dip" android:src="@drawable/ic_music_back" />
+        <TextView android:textSize="@dimen/text_standard_size_t2" android:textColor="@color/color_standard_c4_v5" android:gravity="center" android:paddingLeft="20.0dip" android:paddingRight="20.0dip" android:layout_width="0.0dip" android:layout_height="50.0dip" android:text="听书历史" android:layout_weight="1.0" />
+        <TextView android:textSize="@dimen/text_standard_size_t4" android:textColor="@color/color_standard_c4_v5" android:ellipsize="end" android:gravity="center" android:id="@id/listenbook_history_list_edit" android:paddingRight="10.0dip" android:layout_width="50.0dip" android:layout_height="fill_parent" android:text="编辑" android:singleLine="true" />
+    </LinearLayout>
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <ListView android:id="@id/listenbook_history_list" android:scrollbars="none" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:divider="@null" android:fastScrollEnabled="false" android:overScrollMode="never" />
+        <TextView android:textSize="16.0sp" android:textColor="#ff656667" android:gravity="center" android:layout_gravity="center" android:id="@id/listenbook_history_list_empty" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="当前无内容" android:drawableTop="@drawable/ic_no_content" android:drawablePadding="14.0dip" />
+    </FrameLayout>
+    <View android:background="#10000000" android:layout_width="fill_parent" android:layout_height="1.0px" />
+    <LinearLayout android:gravity="center_vertical" android:id="@id/listenbook_history_list_edit_layout" android:background="@color/color_standard_c4_v5" android:layout_width="fill_parent" android:layout_height="0.0dip">
+        <LinearLayout android:gravity="center_vertical" android:id="@id/listenbook_history_list_select_layout" android:paddingLeft="20.0dip" android:clickable="true" android:layout_width="wrap_content" android:layout_height="55.0dip">
+            <ImageView android:id="@id/listenbook_history_list_select_img" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_speaker_select_nor" />
+            <TextView android:textColor="@color/color_standard_c2_v5" android:paddingLeft="20.0dip" android:paddingRight="20.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="全选" />
+        </LinearLayout>
+        <View android:layout_width="0.0dip" android:layout_height="10.0dip" android:layout_weight="1.0" />
+        <TextView android:textSize="19.0sp" android:textColor="@color/color_standard_c4_v5" android:gravity="center" android:id="@id/listenbook_history_list_delete" android:background="#ff008ef7" android:layout_width="155.0dip" android:layout_height="55.0dip" android:text="删除" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:paddingLeft="@dimen/common_chat_message_margin" android:paddingTop="@dimen/common_chat_message_margin_top" android:paddingRight="@dimen/common_chat_message_margin" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:background="@drawable/viafly_shape_cornor_home_card_bg" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <RelativeLayout android:gravity="center_vertical" android:paddingLeft="13.0dip" android:paddingRight="19.0dip" android:layout_width="fill_parent" android:layout_height="64.0dip">
+            <TextView android:ellipsize="end" android:id="@id/name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxWidth="200.0dip" android:maxLines="1" style="@style/chatMainText" />
+            <ImageView android:id="@id/select" android:paddingLeft="8.0dip" android:paddingTop="6.0dip" android:paddingRight="8.0dip" android:paddingBottom="6.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:src="@drawable/ic_down_arrow" android:layout_toRightOf="@id/name" />
+            <TextView android:id="@id/number" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxWidth="200.0dip" android:layout_below="@id/name" style="@style/chatSubText" />
+            <ImageView android:id="@id/add_img" android:layout_width="@dimen/chat_image_size" android:layout_height="@dimen/chat_image_size" android:layout_marginTop="5.0dip" android:src="@drawable/chat_sms_contact_sel" android:layout_alignParentRight="true" />
+        </RelativeLayout>
+        <View android:background="@color/common_message_text_color" android:layout_width="fill_parent" android:layout_height="1.0px" android:alpha="0.1" />
+        <RelativeLayout android:paddingLeft="13.0dip" android:paddingRight="19.0dip" android:layout_width="fill_parent" android:layout_height="170.0dip">
+            <EditText android:textSize="16.0sp" android:textColor="#ff212325" android:textColorHint="@color/chat_hint_color" android:gravity="center|left|top" android:id="@id/input_text" android:background="@null" android:paddingTop="5.0dip" android:scrollbars="vertical" android:layout_width="fill_parent" android:layout_height="120.0dip" android:hint="输入信息内容" />
+            <Button android:textSize="12.0sp" android:textColor="@color/common_message_text_color" android:id="@id/bless_change_btn" android:background="@drawable/chat_btn_border_bg" android:visibility="gone" android:layout_width="64.0dip" android:layout_height="24.0dip" android:layout_marginBottom="16.0dip" android:text="换一条" android:layout_alignParentBottom="true" />
+            <Button android:textSize="12.0sp" android:textColor="@color/common_message_text_color" android:id="@id/change_contact_btn" android:background="@drawable/chat_btn_border_bg" android:visibility="gone" android:layout_width="64.0dip" android:layout_height="24.0dip" android:layout_marginBottom="16.0dip" android:text="更换" android:layout_alignParentBottom="true" />
+            <TextView android:textSize="16.0sp" android:textColor="@color/chat_message_sum_text_color" android:id="@id/tip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="点击右侧麦克风输入短信内容" android:layout_alignBottom="@id/mic_img" android:layout_alignParentLeft="true" style="@style/chatSubText" />
+            <ImageView android:id="@id/mic_img" android:layout_width="28.0dip" android:layout_height="28.0dip" android:layout_marginBottom="14.0dip" android:src="@drawable/chat_sms_mic" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" />
+        </RelativeLayout>
+        <View android:background="@color/common_message_text_color" android:layout_width="fill_parent" android:layout_height="1.0px" android:alpha="0.1" />
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="44.0dip">
+            <Button android:textSize="@dimen/chat_message_btn_text_size" android:textColor="@color/chat_message_blue_text_color" android:id="@id/cancel" android:background="@null" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="取消" android:layout_weight="1.0" />
+            <View android:id="@id/send_line" android:background="#ff000000" android:layout_width="1.0px" android:layout_height="28.0dip" android:alpha="0.1" />
+            <Button android:textSize="@dimen/chat_message_btn_text_size" android:textColor="@color/chat_message_blue_text_color" android:id="@id/send" android:background="@null" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="发送" android:layout_weight="1.0" />
+            <View android:background="#ff000000" android:layout_width="1.0px" android:layout_height="28.0dip" android:alpha="0.1" />
+            <Button android:textColor="@color/chat_message_blue_text_color" android:id="@id/card_one" android:background="@null" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="卡一" android:layout_weight="1.0" />
+            <Button android:textColor="@color/chat_message_blue_text_color" android:id="@id/card_two" android:background="@null" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="卡二" android:layout_weight="1.0" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

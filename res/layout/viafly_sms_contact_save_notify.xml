@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.iflytek.base.skin.customView.XLinearLayout android:orientation="vertical" android:layout_width="@dimen/sms_save_contact_pop_layout_width" android:layout_height="wrap_content" skin:background="image.mainpage_list_single"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:skin="http://schemas.android.com/apk/res-auto">
+    <com.iflytek.base.skin.customView.XLinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="@dimen/sms_save_contact_pop_title_panel_height" skin:background="image.mainpage_list_top">
+        <com.iflytek.base.skin.customView.XRelativeLayout android:layout_gravity="center" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="@dimen/sms_save_contact_pop_title_name_panel_height">
+            <com.iflytek.base.skin.customView.XTextView android:gravity="center" android:id="@id/sms_receive_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="15.0dip" android:text="@string/phone_number_remind_title" android:singleLine="true" android:layout_centerHorizontal="true" skin:style="style_contact_add_list_item_title_extra" />
+            <com.iflytek.base.skin.customView.XLinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/sms_save_contact_close_btn_bg" android:layout_width="@dimen/sms_save_contact_pop_title_close_btn_width" android:layout_height="fill_parent" android:layout_alignParentRight="true" skin:background="@null">
+                <com.iflytek.base.skin.customView.XImageView android:id="@id/sms_save_contact_close_btn" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3.0dip" skin:src="statelist.sms_receive_dlg_close_btn_states" />
+            </com.iflytek.base.skin.customView.XLinearLayout>
+        </com.iflytek.base.skin.customView.XRelativeLayout>
+        <com.iflytek.base.skin.customView.XLinearLayout android:gravity="center|top" android:layout_gravity="center_horizontal" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="36.5dip">
+            <com.iflytek.viafly.mms.ui.TextViewMarquee android:ellipsize="marquee" android:gravity="center|top" android:layout_gravity="center|top" android:id="@id/sms_prompt" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="@dimen/sms_save_contact_pop_prompt_width" android:layout_height="wrap_content" android:text="李少红为您发来郁文郁文郁文郁文郁文郁文郁文郁文郁文郁文郁文郁文的号码" android:singleLine="true" android:marqueeRepeatLimit="marquee_forever" skin:style="style_contact_title" />
+        </com.iflytek.base.skin.customView.XLinearLayout>
+    </com.iflytek.base.skin.customView.XLinearLayout>
+    <com.iflytek.base.skin.customView.XLinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="@dimen/sms_save_contact_content_time_panel_height" skin:background="image.mainpage_list_middle">
+        <com.iflytek.base.skin.customView.XLinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="@dimen/sms_save_contact_content_panel_height" android:layout_marginLeft="@dimen/sms_save_contact_padding_left" android:layout_marginRight="@dimen/sms_save_contact_padding_left">
+            <com.iflytek.base.skin.customView.XTextView android:gravity="top" android:id="@id/sms_contact_content" android:scrollbars="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="@dimen/sms_save_contact_padding_top" android:layout_marginBottom="1.0dip" android:text="" android:lines="4" skin:style="style_contact_search_name_extra_extra" />
+        </com.iflytek.base.skin.customView.XLinearLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/button_panel_layout" android:layout_width="fill_parent" android:layout_height="@dimen/sms_save_contact_time_panel_height" android:layout_marginLeft="@dimen/sms_save_contact_padding_left">
+            <com.iflytek.base.skin.customView.XTextView android:gravity="top" android:layout_gravity="center|left" android:id="@id/sms_receive_date" android:paddingTop="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="今天 22:22:22" skin:style="style_sms_save_dialog_date" />
+        </LinearLayout>
+    </com.iflytek.base.skin.customView.XLinearLayout>
+    <LinearLayout android:layout_gravity="center" android:orientation="horizontal" android:id="@id/button_panel_layout_bottom" android:layout_width="fill_parent" android:layout_height="@dimen/sms_save_contact_btn_save_height">
+        <com.iflytek.base.skin.customView.XButton android:gravity="center" android:id="@id/sms_save_contact_btn" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/sms_save_contact_tip" skin:background="statelist.sms_receive_dlg_save_btn_states" skin:style="style_sms_edit_sms_content_extra_hz" />
+    </LinearLayout>
+</com.iflytek.base.skin.customView.XLinearLayout>

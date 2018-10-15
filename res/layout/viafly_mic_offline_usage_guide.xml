@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.iflytek.base.skin.customView.XLinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:skin="http://schemas.android.com/apk/res-auto">
+    <com.iflytek.base.skin.customView.XLinearLayout android:orientation="vertical" android:id="@id/layout_mic_offline_usage_guide_cover_up_part" android:background="#00000000" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+    <com.iflytek.base.skin.customView.XTextView android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/txtview_mic_offline_usage_guide" android:background="@drawable/mic_offline_usage_bubbles" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/mic_offline_usage_guide_content" android:singleLine="true" skin:style="style_offline_usage_tip" skin:layout_height="76" skin:paddingLeft="42" skin:paddingRight="42" />
+</com.iflytek.base.skin.customView.XLinearLayout>

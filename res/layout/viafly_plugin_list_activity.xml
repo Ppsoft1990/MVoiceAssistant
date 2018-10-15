@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.iflytek.base.skin.customView.XLinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:skin="http://schemas.android.com/apk/res-auto">
+    <com.iflytek.base.skin.customView.XListView android:id="@id/plugin_list_view" android:descendantFocusability="blocksDescendants" android:layout_width="fill_parent" android:layout_height="0.0dip" android:listSelector="@android:color/transparent" android:cacheColorHint="@drawable/transparent" android:divider="@null" android:layout_weight="1.0" skin:layout_marginLeft="17" skin:layout_marginTop="12" skin:layout_marginRight="17" />
+    <com.iflytek.base.skin.customView.XLinearLayout android:gravity="center" android:id="@id/no_plugins" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.iflytek.base.skin.customView.XImageView android:layout_width="wrap_content" android:layout_height="wrap_content" skin:background="image.ic_plugin_default" />
+    </com.iflytek.base.skin.customView.XLinearLayout>
+</com.iflytek.base.skin.customView.XLinearLayout>

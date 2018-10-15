@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="#fff6f6f6" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:skin="http://schemas.android.com/apk/res-auto">
+    <com.iflytek.base.skin.customView.XRelativeLayout android:orientation="horizontal" android:id="@id/remind_activity_title_bar" android:background="@drawable/home_title_gradient_bg" android:layout_width="fill_parent" android:layout_height="@dimen/home_titlebar_layout_height">
+        <com.iflytek.base.skin.customView.XLinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/remind_activity_title_left_button" android:layout_width="@dimen/hometitle_normal_back_btn_width" android:layout_height="@dimen/home_titlebar_layout_height" android:layout_alignParentLeft="true" android:layout_centerVertical="true" skin:background="statelist.fluepage_title_btn_states">
+            <com.iflytek.base.skin.customView.XImageView android:gravity="center" android:layout_gravity="center" android:layout_width="@dimen/title_image_size" android:layout_height="@dimen/title_image_size" android:layout_alignParentLeft="true" android:layout_centerVertical="true" skin:background="statelist.fluepage_title_back_btn_states" />
+        </com.iflytek.base.skin.customView.XLinearLayout>
+        <TextView android:textSize="@dimen/text_standard_size_t2" android:textColor="@color/color_standard_c4_v5" android:ellipsize="end" android:gravity="center" android:id="@id/remind_activity_title_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="播放历史" android:singleLine="true" android:layout_centerInParent="true" />
+    </com.iflytek.base.skin.customView.XRelativeLayout>
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/history_book_layout" android:background="@drawable/user_center_card_content_bg" android:layout_width="fill_parent" android:layout_height="52.0dip" android:layout_marginTop="10.0dip">
+        <LinearLayout android:gravity="center" android:layout_width="fill_parent" android:layout_height="52.0dip">
+            <TextView android:textSize="@dimen/text_standard_size_t3" android:textColor="#ff212325" android:paddingLeft="20.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="听书历史" android:layout_weight="1.0" />
+            <com.iflytek.base.skin.customView.XImageView android:layout_width="18.0dip" android:layout_height="18.0dip" android:layout_marginRight="16.0dip" skin:src="stateList.setting_subpage_list_arrow_states" />
+        </LinearLayout>
+        <View android:id="@id/user_view_line" android:background="#ffe1e1e1" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginLeft="15.0dip" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/history_music_layout" android:background="@drawable/user_center_card_content_bg" android:layout_width="fill_parent" android:layout_height="52.0dip">
+        <LinearLayout android:gravity="center" android:layout_width="fill_parent" android:layout_height="52.0dip">
+            <TextView android:textSize="@dimen/text_standard_size_t3" android:textColor="#ff212325" android:paddingLeft="20.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="音乐历史" android:layout_weight="1.0" />
+            <com.iflytek.base.skin.customView.XImageView android:layout_width="18.0dip" android:layout_height="18.0dip" android:layout_marginRight="16.0dip" skin:src="stateList.setting_subpage_list_arrow_states" />
+        </LinearLayout>
+        <View android:background="#ffe1e1e1" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginLeft="15.0dip" />
+    </LinearLayout>
+</LinearLayout>

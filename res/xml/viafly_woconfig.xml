@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+    <appid>999WMP</appid>
+    <protocolver>4.2.0</protocolver>
+    <downfrom>01019999</downfrom>
+    <encryptionkey>x%73g</encryptionkey>
+    <cmcc_url />
+    <cmcc_key>x%73h</cmcc_key>
+</config>

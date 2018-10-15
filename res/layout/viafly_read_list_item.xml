@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.iflytek.base.skin.customView.XRelativeLayout android:id="@id/read_list_root" android:background="#fffcfcfc" android:layout_width="fill_parent" android:layout_height="52.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/read_list_play" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="14.0dip" android:src="@drawable/ic_read_mode_playing" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+    <TextView android:textSize="@dimen/text_standard_size_t3" android:textColor="@color/common_message_text_color" android:ellipsize="end" android:id="@id/read_list_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="14.0dip" android:text="" android:singleLine="true" android:layout_toRightOf="@id/read_list_play" android:layout_centerVertical="true" />
+    <View android:background="@color/color_standard_c9" android:layout_width="fill_parent" android:layout_height="0.5dip" android:layout_marginLeft="14.0dip" android:layout_alignParentBottom="true" />
+</com.iflytek.base.skin.customView.XRelativeLayout>

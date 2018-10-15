@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@drawable/viafly_bg_mainpage" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:skin="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="horizontal" android:id="@id/life_type_layout" android:layout_width="fill_parent" android:layout_height="40.0dip" android:layout_below="@id/life_activity_title_bar">
+        <LinearLayout android:orientation="vertical" android:id="@id/life_life_click" android:layout_width="@dimen/dimen_0dp" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <TextView android:textSize="@dimen/text_standard_size_t3" android:textColor="#ff2076ea" android:gravity="center" android:layout_gravity="center" android:id="@id/life_life_text" android:layout_width="wrap_content" android:layout_height="38.0dip" android:text="生活服务" />
+            <View android:layout_gravity="center_horizontal" android:id="@id/life_life_arrow" android:background="#ff2076ea" android:layout_width="62.0dip" android:layout_height="2.0dip" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/life_plug_click" android:layout_width="@dimen/dimen_0dp" android:layout_height="40.0dip" android:layout_weight="1.0">
+            <TextView android:textSize="@dimen/text_standard_size_t3" android:textColor="#ffe8eaf4" android:gravity="center" android:layout_gravity="center" android:id="@id/life_plug_text" android:layout_width="wrap_content" android:layout_height="38.0dip" android:text="工具插件" />
+            <View android:layout_gravity="center_horizontal" android:id="@id/life_plug_arrow" android:background="#ff2076ea" android:visibility="gone" android:layout_width="62.0dip" android:layout_height="2.0dip" />
+        </LinearLayout>
+    </LinearLayout>
+    <View android:background="#ff2c3653" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_below="@id/life_type_layout" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/life_plug" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="1.0dip" android:layout_below="@id/life_type_layout" />
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/life_manage" android:background="@drawable/shape_life_plug_bg" android:visibility="gone" android:layout_width="240.0dip" android:layout_height="40.0dip" android:layout_marginBottom="24.0dip" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true">
+        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_life_plug" />
+        <TextView android:textColor="#ff2076ea" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:text="插件管理" />
+    </LinearLayout>
+    <GridView android:id="@id/life_life" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="1.0dip" android:numColumns="4" android:minHeight="300.0dip" android:layout_below="@id/life_type_layout" />
+    <com.iflytek.base.skin.customView.XRelativeLayout android:orientation="horizontal" android:id="@id/life_activity_title_bar" android:background="@drawable/home_title_gradient_bg" android:layout_width="fill_parent" android:layout_height="@dimen/home_titlebar_layout_height" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" android:layout_alignParentStart="true">
+        <com.iflytek.base.skin.customView.XLinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/life_activity_title_left_button" android:layout_width="@dimen/hometitle_normal_back_btn_width" android:layout_height="@dimen/home_titlebar_layout_height" android:layout_alignParentLeft="true" android:layout_centerVertical="true" skin:background="statelist.fluepage_title_btn_states">
+            <com.iflytek.base.skin.customView.XImageView android:gravity="center" android:layout_gravity="center" android:layout_width="@dimen/title_image_size" android:layout_height="@dimen/title_image_size" android:src="@drawable/home_dialog_title_close_bg" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+        </com.iflytek.base.skin.customView.XLinearLayout>
+        <com.iflytek.base.skin.customView.XImageView android:id="@id/operation_page_left_separator" android:visibility="gone" android:layout_width="1.0dip" android:layout_height="fill_parent" android:layout_toRightOf="@id/life_activity_title_left_button" skin:src="image.browser_title_line" />
+        <com.iflytek.base.skin.customView.XTextView android:ellipsize="end" android:gravity="center" android:id="@id/remind_activity_title_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="更多工具" android:singleLine="true" android:layout_centerInParent="true" skin:style="style_title_white" />
+    </com.iflytek.base.skin.customView.XRelativeLayout>
+</RelativeLayout>

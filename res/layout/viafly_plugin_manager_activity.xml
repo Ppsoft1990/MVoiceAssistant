@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.iflytek.base.skin.customView.XRelativeLayout android:id="@id/plugin_manager_root_view" android:layout_width="fill_parent" android:layout_height="fill_parent" skin:background="color.color_plugin_list_background"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:skin="http://schemas.android.com/apk/res-auto">
+    <ScrollView android:fadingEdge="none" android:fadingEdgeLength="0.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.iflytek.base.skin.customView.XLinearLayout android:orientation="vertical" android:id="@id/plugin_list_view" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </ScrollView>
+</com.iflytek.base.skin.customView.XRelativeLayout>

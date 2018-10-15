@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:paddingLeft="@dimen/chat_message_margin" android:paddingTop="@dimen/chat_message_margin_top" android:paddingRight="@dimen/chat_message_margin_right" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="bottom" android:orientation="vertical" android:layout_width="36.0dip" android:layout_height="fill_parent">
+        <com.iflytek.viafly.ui.view.CircleImageView android:id="@id/head_icon" android:layout_width="36.0dip" android:layout_height="36.0dip" android:src="@drawable/btn_role_default" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:background="@drawable/bg_dialog_blue" android:paddingLeft="14.0dip" android:paddingTop="14.0dip" android:paddingRight="12.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:minHeight="44.0dip">
+        <TextView android:textSize="16.0sp" android:textColor="@color/white" android:id="@id/content_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="4.0dip" android:layout_marginBottom="14.0dip" />
+        <View android:background="@color/white" android:layout_width="fill_parent" android:layout_height="1.0px" android:alpha="0.2" />
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/more_layout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="14.0sp" android:textColor="@color/white" android:paddingTop="15.0dip" android:paddingBottom="15.0dip" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="查看更多" android:layout_weight="1.0" />
+            <ImageView android:layout_width="16.0dip" android:layout_height="16.0dip" android:src="@drawable/ic_arrow_white" android:layout_weight="0.0" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

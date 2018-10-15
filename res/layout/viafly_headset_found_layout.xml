@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/layout_content" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:background="@drawable/headset_bg" android:clickable="true" android:layout_width="fill_parent" android:layout_height="368.0dip" android:layout_alignParentBottom="true">
+        <ImageView android:id="@id/close_btn" android:paddingTop="12.0dip" android:paddingRight="12.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_headset_close" android:layout_alignParentTop="true" android:layout_alignParentRight="true" />
+        <TextView android:textSize="20.0sp" android:textColor="#ff0e1939" android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Mobius 耳机在附近" android:layout_below="@id/close_btn" android:layout_centerHorizontal="true" />
+        <ImageView android:id="@id/ear_img" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="48.0dip" android:src="@drawable/pic_headset" android:layout_below="@id/title" android:layout_centerHorizontal="true" />
+        <ImageView android:id="@id/loading_img" android:visibility="gone" android:layout_width="30.0dip" android:layout_height="30.0dip" android:layout_marginBottom="100.0dip" android:src="@drawable/ic_progress_headset" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
+        <Button android:textSize="16.0sp" android:textColor="#ffffffff" android:id="@id/start_use" android:background="@drawable/headset_btn_bg" android:layout_width="fill_parent" android:layout_height="50.0dip" android:layout_marginLeft="38.0dip" android:layout_marginRight="38.0dip" android:layout_marginBottom="28.0dip" android:text="开始使用" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
+        <CheckBox android:textSize="14.0sp" android:textColor="#ff686c75" android:id="@id/check_box" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="26.0dip" android:button="@null" android:text="下次连接时自动启动 Mobius" android:drawableLeft="@drawable/headset_checkbox" android:drawablePadding="5.0dip" android:layout_above="@id/start_use" android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/translate_mic_tip_layout" android:background="@drawable/translate_tip_bg" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="30.0dip" android:layout_marginBottom="20.0dip">
+        <TextView android:textSize="@dimen/text_standard_size_t4" android:textColor="@color/color_standard_c4_v5" android:gravity="center" android:id="@id/speak_tip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="请说中文" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:layout_gravity="bottom" android:orientation="horizontal" android:id="@id/translate_mic_btn_layout" android:background="@drawable/img_translate_bottom_bg" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:paddingBottom="7.0dip" android:layout_width="fill_parent" android:layout_height="65.0dip">
+        <RelativeLayout android:id="@id/chinese_to_other_btn" android:background="@drawable/translate_left_mic_bg" android:focusable="true" android:clickable="true" android:layout_width="0.0dip" android:layout_height="44.0dip" android:layout_weight="1.0">
+            <ImageView android:id="@id/left_btn_img" android:layout_width="36.0dip" android:layout_height="36.0dip" android:layout_marginLeft="4.0dip" android:src="@drawable/ico_translate_cn_flag" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+            <TextView android:textSize="@dimen/text_standard_size_t3" android:textColor="#ff518de8" android:gravity="left" android:id="@id/left_btn_text" android:paddingLeft="15.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="中文" android:layout_toRightOf="@id/left_btn_img" android:layout_centerVertical="true" />
+        </RelativeLayout>
+        <com.iflytek.base.skin.customView.XRelativeLayout android:id="@id/animContainer" android:background="@drawable/btn_translate_result_mic_bg" android:layout_width="57.0dip" android:layout_height="57.0dip" android:layout_centerHorizontal="true">
+            <com.iflytek.viafly.ui.view.MicrophoneView android:id="@id/defaultAnim" android:layout_width="31.0dip" android:layout_height="57.0dip" android:layout_centerHorizontal="true" />
+            <com.iflytek.base.skin.customView.XImageView android:id="@id/defaultAnimImg" android:layout_width="57.0dip" android:layout_height="57.0dip" android:layout_centerHorizontal="true" />
+        </com.iflytek.base.skin.customView.XRelativeLayout>
+        <RelativeLayout android:id="@id/other_to_chinese_btn" android:background="@drawable/translate_right_mic_bg" android:layout_width="0.0dip" android:layout_height="44.0dip" android:layout_weight="1.0">
+            <ImageView android:id="@id/right_btn_img" android:layout_width="36.0dip" android:layout_height="36.0dip" android:layout_marginRight="4.0dip" android:src="@drawable/ico_translate_en_flag" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+            <TextView android:textSize="15.0sp" android:textColor="#ff518de8" android:ellipsize="end" android:gravity="right" android:id="@id/right_btn_text" android:paddingRight="15.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="English" android:maxLines="2" android:layout_toLeftOf="@id/right_btn_img" android:layout_centerVertical="true" />
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

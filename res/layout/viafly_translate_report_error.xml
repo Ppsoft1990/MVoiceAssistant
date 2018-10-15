@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/color_standard_c9" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/text_standard_size_t4" android:textColor="@color/color_standard_c2" android:gravity="center_vertical" android:background="@color/color_standard_c9" android:paddingLeft="14.0dip" android:layout_width="fill_parent" android:layout_height="44.0dip" android:text="错误类型" />
+    <RadioGroup android:id="@id/error_radioGroup" android:background="@color/color_standard_c4" android:layout_width="fill_parent" android:layout_height="wrap_content" android:divider="@drawable/shape_diver" android:showDividers="middle">
+        <RadioButton android:textColor="@color/color_standard_c1" android:id="@id/radioRecogniseError" android:paddingLeft="14.0dip" android:paddingRight="14.0dip" android:layout_width="fill_parent" android:layout_height="44.0dip" android:checked="true" android:button="@null" android:text="语音识别不准确" android:drawableRight="@drawable/but_errortype_selector" />
+        <RadioButton android:textColor="@color/color_standard_c1" android:id="@id/radioResultError" android:paddingLeft="14.0dip" android:paddingRight="14.0dip" android:layout_width="fill_parent" android:layout_height="44.0dip" android:button="@null" android:text="翻译结果不准确" android:drawableRight="@drawable/but_errortype_selector" />
+        <RadioButton android:textColor="@color/color_standard_c1" android:id="@id/radioBothError" android:paddingLeft="14.0dip" android:paddingRight="14.0dip" android:layout_width="fill_parent" android:layout_height="44.0dip" android:button="@null" android:text="语音识别与翻译结果都不准确" android:drawableRight="@drawable/but_errortype_selector" />
+    </RadioGroup>
+    <Button android:textSize="@dimen/text_standard_size_t2" android:textColor="@color/color_standard_c4" android:layout_gravity="center" android:id="@id/translate_error_submit" android:background="@drawable/button_submit_selector" android:layout_width="wrap_content" android:layout_height="44.0dip" android:layout_marginLeft="14.0dip" android:layout_marginTop="14.0dip" android:layout_marginRight="14.0dip" android:text="提交" />
+</LinearLayout>

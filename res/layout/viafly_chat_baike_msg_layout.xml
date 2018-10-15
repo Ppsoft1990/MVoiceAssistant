@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:paddingLeft="@dimen/chat_message_margin" android:paddingTop="@dimen/chat_message_margin_top" android:paddingRight="@dimen/chat_message_margin_right" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="bottom" android:orientation="vertical" android:layout_width="36.0dip" android:layout_height="fill_parent">
+        <com.iflytek.viafly.ui.view.CircleImageView android:id="@id/head_icon" android:layout_width="36.0dip" android:layout_height="36.0dip" android:src="@drawable/btn_role_default" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:background="@drawable/bg_dialog_blue" android:paddingLeft="14.0dip" android:paddingTop="14.0dip" android:paddingRight="12.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:minHeight="44.0dip">
+        <TextView android:textSize="16.0sp" android:textColor="@color/white" android:autoLink="web" android:id="@id/content_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="4.0dip" android:layout_marginBottom="14.0dip" />
+        <View android:background="@color/white" android:layout_width="fill_parent" android:layout_height="1.0px" android:alpha="0.2" />
+        <TextView android:textSize="12.0sp" android:textColor="#ff76b0fe" android:id="@id/tip_text" android:paddingTop="12.0dip" android:paddingBottom="12.0dip" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="来自互联网" android:layout_weight="1.0" />
+    </LinearLayout>
+</LinearLayout>

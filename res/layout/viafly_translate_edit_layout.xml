@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:background="#ffeef2f6" android:layout_width="fill_parent" android:layout_height="12.0dip" />
+    <RelativeLayout android:background="@color/color_standard_c4" android:layout_width="fill_parent" android:layout_height="@dimen/translate_edit_height">
+        <EditText android:textColor="@color/color_standard_c1" android:gravity="left" android:id="@id/edit_text" android:background="@null" android:paddingLeft="22.0dip" android:paddingTop="14.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="this is edit layout" />
+        <ImageView android:id="@id/clear_edit_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/translate_edit_clear_margin_right" android:layout_marginBottom="@dimen/translate_edit_clear_margin_buttom" android:src="@drawable/edit_clear_text_selector" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+    <View android:background="#ffeef2f6" android:layout_width="fill_parent" android:layout_height="17.0dip" />
+    <RelativeLayout android:id="@id/edit_btn" android:background="@drawable/change_title_backgroud_color" android:layout_width="fill_parent" android:layout_height="@dimen/translate_edit_button_height">
+        <TextView android:textSize="@dimen/text_standard_size_t3" android:textColor="@color/color_standard_c5" android:id="@id/tranlate_but_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="翻译" android:layout_centerInParent="true" />
+    </RelativeLayout>
+    <ImageView android:layout_gravity="center_horizontal" android:id="@id/rotate_prograss_image" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/translate_edit_icon_margin_top" android:src="@drawable/image_rotate_prograss" />
+    <TextView android:textSize="@dimen/text_standard_size_t4" android:textColor="@color/color_standard_c5" android:layout_gravity="center_horizontal" android:id="@id/translate_edit_tip" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/translate_edit_text_margin_top" android:text="正在翻译..." />
+</LinearLayout>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/fullScreenTranslateRootView" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView android:id="@id/translate_scroll" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="33.0dip" android:layout_marginTop="22.0dip" android:layout_marginRight="66.0dip" android:layout_marginBottom="21.0dip" android:fillViewport="true" android:layout_weight="1.0">
+        <com.iflytek.viafly.translate.ui.LxAutoTextSizeTextView android:textColor="@color/color_standard_c5" android:id="@id/Translate_result" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </ScrollView>
+    <RelativeLayout android:orientation="vertical" android:layout_width="65.0dip" android:layout_height="fill_parent" android:layout_marginRight="0.0dip" android:layout_alignParentRight="true">
+        <ImageView android:layout_gravity="center_horizontal" android:id="@id/close_fullScreen" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="15.0dip" android:src="@drawable/close_full_screen_blue" />
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+            <ImageView android:id="@id/change_text_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="9.0dip" android:src="@drawable/change_tanslate_color" />
+            <ImageView android:layout_gravity="center_horizontal" android:id="@id/change_text_sound" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="11.0dip" android:src="@drawable/translate_sound_text_blue" android:layout_alignParentBottom="true" />
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

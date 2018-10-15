@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/tool_grid_view_item" android:background="@null" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/tool_grid_view_image" android:layout_width="@dimen/speech_tool_pic_size" android:layout_height="@dimen/speech_tool_pic_size" />
+    <com.iflytek.base.skin.customView.XTextView android:textSize="13.0sp" android:textColor="#ff787b87" android:id="@id/tool_grid_view_text" android:layout_width="wrap_content" android:layout_height="19.0dip" android:layout_marginTop="11.0dip" android:singleLine="true" />
+</LinearLayout>

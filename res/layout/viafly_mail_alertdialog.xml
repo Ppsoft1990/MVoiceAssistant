@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.iflytek.base.skin.customView.XLinearLayout android:orientation="vertical" android:layout_width="@dimen/mail_receive_layout_width" android:layout_height="wrap_content" android:minWidth="280.0dip" skin:background="image.mainpage_list_single"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:skin="http://schemas.android.com/apk/res-auto">
+    <com.iflytek.base.skin.customView.XLinearLayout android:orientation="horizontal" android:id="@id/custom_dialog_text_panel" android:layout_width="fill_parent" android:layout_height="@dimen/mail_top_text_height">
+        <com.iflytek.base.skin.customView.XProgressBar android:layout_gravity="center" android:id="@id/custom_dialog_progressbar" android:visibility="gone" android:layout_width="27.0dip" android:layout_height="27.0dip" android:layout_marginLeft="76.0dip" android:singleLine="true" />
+        <com.iflytek.base.skin.customView.XTextView android:layout_gravity="center" android:id="@id/custom_dialog_message" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:layout_marginRight="16.0dip" skin:style="style_dialog_content_text" />
+    </com.iflytek.base.skin.customView.XLinearLayout>
+    <com.iflytek.base.skin.customView.XLinearLayout android:orientation="horizontal" android:id="@id/custom_dialog_button_panel" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.iflytek.base.skin.customView.XButton android:gravity="center" android:id="@id/custom_dialog_positiveButton" android:layout_width="0.0dip" android:layout_height="45.0dip" android:layout_marginLeft="18.0dip" android:layout_marginBottom="26.0dip" android:text="取消" android:singleLine="true" android:layout_weight="1.0" skin:background="stateList.dialog_btn_cancel_status" skin:style="style_dialog_cancle_text" />
+        <com.iflytek.base.skin.customView.XButton android:gravity="center" android:id="@id/custom_dialog_negativeButton" android:layout_width="0.0dip" android:layout_height="45.0dip" android:layout_marginLeft="10.0dip" android:layout_marginRight="18.0dip" android:layout_marginBottom="26.0dip" android:text="同意" android:singleLine="true" android:layout_weight="1.0" skin:background="stateList.dialog_btn_confirm_status" skin:style="style_dialog_cancle_text" />
+    </com.iflytek.base.skin.customView.XLinearLayout>
+</com.iflytek.base.skin.customView.XLinearLayout>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/color_standard_c9" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:skin="http://schemas.android.com/apk/res-auto">
+    <com.iflytek.base.skin.customView.XRelativeLayout android:orientation="horizontal" android:background="@drawable/home_title_gradient_bg" android:layout_width="fill_parent" android:layout_height="@dimen/home_titlebar_layout_height">
+        <com.iflytek.base.skin.customView.XLinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="@dimen/hometitle_normal_back_btn_width" android:layout_height="@dimen/home_titlebar_layout_height" android:layout_alignParentLeft="true" android:layout_centerVertical="true" skin:background="statelist.fluepage_title_btn_states">
+            <com.iflytek.base.skin.customView.XImageView android:gravity="center" android:layout_gravity="center" android:id="@id/myvoice_back" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentLeft="true" android:layout_centerVertical="true" skin:src="statelist.fluepage_title_back_btn_states" />
+        </com.iflytek.base.skin.customView.XLinearLayout>
+        <com.iflytek.base.skin.customView.XImageView android:id="@id/operation_page_left_separator" android:visibility="gone" android:layout_width="1.0dip" android:layout_height="fill_parent" android:layout_toRightOf="@id/myvoice_back" skin:src="image.browser_title_line" />
+        <com.iflytek.base.skin.customView.XTextView android:ellipsize="end" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="我的语音" android:singleLine="true" android:layout_centerInParent="true" skin:style="style_title_white" />
+    </com.iflytek.base.skin.customView.XRelativeLayout>
+    <ScrollView android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <LinearLayout android:orientation="vertical" android:id="@id/voice_system_layout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <LinearLayout android:background="@color/color_standard_c9" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:textSize="@dimen/text_standard_size_t4" android:textColor="@color/color_standard_c2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="12.0dip" android:layout_marginTop="19.0dip" android:layout_marginBottom="12.0dip" android:text="系统语音（粤语模式，该语音不可用）" />
+                </LinearLayout>
+                <RelativeLayout android:background="@color/color_standard_c4" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <com.iflytek.viafly.ui.view.CircleImageView android:id="@id/system_speaker_icon" android:layout_width="40.0dip" android:layout_height="40.0dip" android:layout_marginLeft="12.0dip" android:src="@drawable/ic_star_default_icon" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+                    <TextView android:textSize="@dimen/text_standard_size_t3" android:textColor="@color/color_standard_c1" android:id="@id/system_speaker_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:layout_marginTop="12.0dip" android:layout_toRightOf="@id/system_speaker_icon" />
+                    <TextView android:textSize="@dimen/text_standard_size_t5" android:textColor="@color/color_standard_c2" android:id="@id/system_speaker_desc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:layout_marginTop="8.0dip" android:layout_marginBottom="12.0dip" android:layout_toRightOf="@id/system_speaker_icon" android:layout_below="@id/system_speaker_name" />
+                    <View android:layout_width="0.0dip" android:layout_height="0.0dip" android:layout_below="@id/system_speaker_desc" />
+                    <ImageView android:id="@id/system_speaker_state" android:layout_width="25.0dip" android:layout_height="25.0dip" android:layout_marginRight="14.0dip" android:src="@drawable/ic_speaker_select_select" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+                    <ImageView android:id="@id/system_speaker_listen" android:background="@drawable/auido_paly_animation_list" android:layout_width="25.0dip" android:layout_height="25.0dip" android:layout_marginRight="10.0dip" android:src="@drawable/voice_choose_aution_bg" android:layout_toLeftOf="@id/system_speaker_state" android:layout_centerVertical="true" />
+                </RelativeLayout>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@id/voice_style_layout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <LinearLayout android:background="@color/color_standard_c9" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:textSize="@dimen/text_standard_size_t4" android:textColor="@color/color_standard_c2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="12.0dip" android:layout_marginTop="19.0dip" android:layout_marginBottom="12.0dip" android:text="场景语音" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <LinearLayout android:background="@color/color_standard_c9" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:textSize="@dimen/text_standard_size_t5" android:textColor="@color/color_standard_c2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="12.0dip" android:layout_marginTop="19.0dip" android:layout_marginBottom="12.0dip" android:text="设置以后，喜欢的声音就能常伴你左右了，好鸡冻哦！" />
+                </LinearLayout>
+                <RelativeLayout android:orientation="horizontal" android:id="@id/voice_schedule_layout" android:background="@color/color_standard_c4" android:layout_width="fill_parent" android:layout_height="44.0dip">
+                    <ImageView android:id="@id/voice_schedule_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="12.0dip" android:src="@drawable/ic_voice_schedule" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+                    <TextView android:textSize="@dimen/text_standard_size_t3" android:textColor="@color/color_standard_c1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="12.0dip" android:text="提醒" android:layout_toRightOf="@id/voice_schedule_icon" android:layout_centerVertical="true" />
+                    <com.iflytek.base.skin.customView.XImageView android:id="@id/voice_schedule_arrow" android:layout_width="18.0dip" android:layout_height="18.0dip" android:layout_marginRight="14.0dip" android:layout_alignParentRight="true" android:layout_centerVertical="true" skin:src="stateList.setting_subpage_list_arrow_states" />
+                    <TextView android:textSize="@dimen/text_standard_size_t4" android:textColor="@color/color_standard_c2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10.0dip" android:text="去设置" android:layout_toLeftOf="@id/voice_schedule_arrow" android:layout_centerVertical="true" />
+                    <View android:background="@color/color_standard_c9" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_alignParentBottom="true" />
+                </RelativeLayout>
+                <RelativeLayout android:orientation="horizontal" android:id="@id/voice_tell_layout" android:background="@color/color_standard_c4" android:layout_width="fill_parent" android:layout_height="44.0dip">
+                    <ImageView android:id="@id/voice_tell_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="12.0dip" android:src="@drawable/ic_voice_tell" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+                    <TextView android:textSize="@dimen/text_standard_size_t3" android:textColor="@color/color_standard_c1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="12.0dip" android:text="来电播报" android:layout_toRightOf="@id/voice_tell_icon" android:layout_centerVertical="true" />
+                    <com.iflytek.base.skin.customView.XImageView android:id="@id/voice_tell_arrow" android:layout_width="18.0dip" android:layout_height="18.0dip" android:layout_marginRight="14.0dip" android:layout_alignParentRight="true" android:layout_centerVertical="true" skin:src="stateList.setting_subpage_list_arrow_states" />
+                    <TextView android:textSize="@dimen/text_standard_size_t4" android:textColor="@color/color_standard_c2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10.0dip" android:text="去设置" android:layout_toLeftOf="@id/voice_tell_arrow" android:layout_centerVertical="true" />
+                    <View android:background="@color/color_standard_c9" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_alignParentBottom="true" />
+                </RelativeLayout>
+                <RelativeLayout android:orientation="horizontal" android:id="@id/voice_note_layout" android:background="@color/color_standard_c4" android:layout_width="fill_parent" android:layout_height="44.0dip">
+                    <ImageView android:id="@id/voice_note_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="12.0dip" android:src="@drawable/ic_voice_note" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+                    <TextView android:textSize="@dimen/text_standard_size_t3" android:textColor="@color/color_standard_c1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="12.0dip" android:text="速记" android:layout_toRightOf="@id/voice_note_icon" android:layout_centerVertical="true" />
+                    <com.iflytek.base.skin.customView.XImageView android:id="@id/voice_note_arrow" android:layout_width="18.0dip" android:layout_height="18.0dip" android:layout_marginRight="14.0dip" android:layout_alignParentRight="true" android:layout_centerVertical="true" skin:src="stateList.setting_subpage_list_arrow_states" />
+                    <TextView android:textSize="@dimen/text_standard_size_t4" android:textColor="@color/color_standard_c2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10.0dip" android:text="去设置" android:layout_toLeftOf="@id/voice_note_arrow" android:layout_centerVertical="true" />
+                    <View android:background="@color/color_standard_c9" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_alignParentBottom="true" />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

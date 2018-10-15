@@ -1,0 +1,1658 @@
+html, body {
+  width: 320dp|720:720px;
+  height: 100%;
+  padding: 0px;
+  margin: 0px;
+  border: 0px;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}		
+body {
+  background-color: #F2F2F2;
+  -webkit-font-smoothing: antialiased;
+}
+.top {
+  height: 11dp;
+}
+.page {
+	/*电话频道页面注掉absolute*/
+  /*position: absolute;*/
+  width: 320dp;
+  top: 0px;
+  left:0px;
+  padding-top: 6dp;
+  padding-bottom:6dp;
+}
+.sub_msg_pic_view{
+    position: relative;
+    font-size: 0;
+    border-top: 1px solid #e0e0e0;
+    display: none;
+}
+.sub_msg_pic_load{
+    height: 100dp;
+    text-align: center;
+}
+.sub_msg_pic_load_canvas{
+	background: white;
+    margin-top: 40dp;
+}
+.sub_msg_pic_load_error{
+	display: none;
+    margin-top: 36dp;
+    padding-top: 4dp;
+    padding-bottom: 4dp;
+    font-size: 12dp;
+}
+.sub_msg_pic {
+    width: 100%;
+    height: 100dp;
+}
+.sub_guide_left{
+    display: inline-block;
+    vertical-align: middle;
+    width: 80%;
+}
+.sub_guide_right{
+    display: inline-block;
+    vertical-align: middle;
+    text-align: right;    
+    width: 20%;
+}
+.sub_guide_text{
+    word-break: break-word;
+    color: #616161;
+    padding-top: 14dp;
+    padding-bottom: 14dp;
+    padding-left: 11dp|480:16px|720:24px;
+    font-size: 17dp;
+}
+.sub_guide_help{
+    vertical-align: middle;
+    width: 28dp|540:48px|720:64px;
+    height: 28dp|540:48px|720:64px;
+    margin-right: 14dp|480:22px|720:33px;
+}
+.sub_guide_list{
+    background-color: #FBFBFB;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+.sub_guide_item{
+    word-break: break-word;
+    color: #616161;
+    padding-left: 11dp|480:16px|720:24px;
+    padding-right: 11dp|480:16px|720:24px;
+    padding-top:14dp;
+    padding-bottom: 14dp;
+    font-size: 17dp|720:38px;
+}
+.sub_guide_list > .sub_guide_item:last-child{
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.box_content_yellow {
+  position: relative;
+  background-color: #fef4e8;
+  padding: 0 1px;
+  border-radius: 8px;
+}
+.css_dialog_question_text {
+  /*width: 272dp;*/
+  word-break:break-word;
+  color: #515151;
+  padding: 14dp 15dp;
+  font-size: 16dp;
+  
+  outline: none;
+  border-radius: 8px 8px 0 8px;
+}
+
+/************** callview **************/
+@-webkit-keyframes progressbar {
+	from {width:0px}
+	to { width:100%}
+}
+
+.callview_simcard_table{
+	float: right;
+	height: 55dp|720:124px;
+	margin-right: 4dp|720:10px;
+}
+
+.callview_simcard_cell{
+	display: inline-block;
+    width: 51dp|720:115px|320:41px;
+    height: 55dp|720:124px;
+    vertical-align: middle;
+    line-height: 100%;
+}
+
+.callview_simcard_button{
+	display: inline-block;
+    height: 24dp|720:54px;
+	width: 42dp|720:94px|320:32px;
+    line-height:24dp|720:54px;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 12dp|720:28px;
+    border: solid #bfbfbf;
+    border-width: 1dp|720:2px;
+    border-radius: 6px;
+    background-color: #fff;
+}
+
+.simcard1_margin{
+	margin-top: 15dp|720:35px;
+	margin-right: 2dp|720:5px;
+	margin-bottom: 13dp|720:29px;
+	margin-left: 4dp|720:10px;
+}
+
+.callview_simcard_cell{
+	display: inline-block;
+    width: 51dp|720:115px|320:41px;
+    height: 55dp|720:124px;
+    vertical-align: middle;
+    line-height: 100%;
+}
+
+.callview_simcard_button{
+	display: inline-block;
+    height: 24dp|720:54px;
+	width: 42dp|720:94px|320:32px;
+    line-height:24dp|720:54px;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 12dp|720:28px;
+    border: solid #bfbfbf;
+    border-width: 1dp|720:2px;
+    border-radius: 6px;
+    background-color: #fff;
+}
+
+.simcard2_margin{
+	margin-top: 15dp|720:35px;
+	margin-right: 4dp|720:10px;
+	margin-bottom: 13dp|720:29px;
+	margin-left: 2dp|720:5px;
+}
+
+.box_content_white {
+  position: relative;
+  background-color: white;
+  padding: 0 1px;
+  border-radius: 8px;
+}
+
+.callview_inner{
+	padding-left: 3px;
+	padding-right: 3px;
+}
+
+.call_waiting_item_dial{
+    /*padding-top: 2dp|720:5px;*/
+    color: #717171;
+    font-size: 12dp;
+}
+
+.callview_item{
+    display: inline-block;
+    width: 100%;
+}
+
+.callview_icon_container{
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    text-align: center;
+    width: 54dp|480:80px|720:120px;
+    height: 54dp|480:80px|720:120px;
+    line-height: 54dp|480:80px|720:120px;
+    margin-right: 4dp;
+    margin-left: 6dp|720:13px;
+}
+
+.contact_icon_frame{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 54dp|480:80px|720:120px;
+    height: 54dp|480:80px|720:120px;
+}
+
+.contact_icon_src{
+    vertical-align: middle;
+    width: 40dp|720:88px;
+    height: 40dp|720:88px;
+    border-radius: 80px;
+}
+
+.callview_contact_detail{
+    display: inline-block;
+    vertical-align: middle;
+    width: 43%;
+}
+
+.sub_tel_item_name{
+    display: block;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    height: 22dp|720:50px;
+    font-size: 17dp|720:38px;
+    color: #515151;
+}
+
+.list_second_line_text{
+    font-size: 13dp|720:28px;
+    color: #717171;
+    text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+.contact_item_left{
+    display: inline-block;
+    width: 80%;
+}
+
+.contact_item_detail{
+    display: inline-block;
+    vertical-align: middle;
+    width: 60%;
+}
+
+.latest_progress_container_dial{
+    margin-left: 13dp|720:30px;
+    margin-right: 13dp|720:30px;
+    /*background-color: #f0f0f0;*/
+}
+
+.latest_progress_var_dial{
+    height: 6px;
+    background-color: #62b363;
+    width: 0%;
+}
+
+/************** lastCallView **************/
+.contactview_btn {
+	display: table-cell;
+    width: 43.5dp|720:98px;
+   	height: 57dp|720:128px;
+   	border: 1px solid transparent;
+    float: right;
+}
+
+.contactview_btn_icon_big{
+	display:inline-block;
+	padding-left: 7.75dp|720:18px;
+	padding-right: 7.75dp|720:18px;
+	padding-top: 14.5dp|720:32px;
+	padding-bottom: 14.5dp|720:32px;
+	width:28dp|720:64px;
+	height:28dp|720:64px;
+}
+
+.contactview_item_rightarea{
+	width:4.5dp|720:10px;
+	height: 57dp|720:130px;
+	float: right;
+}
+
+.contact_select_list_item{
+    padding-top: 10dp;
+    padding-bottom: 10dp;
+    padding-left: 15dp|720:33px;
+    padding-right: 8dp|720:20px;
+}
+
+.phone_item_left{
+    display: inline-block;
+    width: 67%;
+    vertical-align: middle;
+}
+
+.phone_item_right{
+    display: inline-block;
+    width: 33%;
+    text-align: right;
+    vertical-align: middle;
+}
+
+.calllog_tel_info{
+    display: inline-block;
+    width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+.phone_list_item_dial_new{
+    padding-top: 17dp|480:26px|540:30px|640:37px|720:42px;
+    padding-bottom: 17dp|480:26px|540:30px|640:37px|720:42px;
+    padding-left: 15dp|720:33px;
+    padding-right: 15dp|720:33px;
+}
+
+.contact_item_name{
+    display: inline-block;
+    vertical-align: middle;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 60%;
+    font-size: 17dp|720:38px;
+    color: #515151;
+}
+phoneNum_list_inner{
+}
+
+.sub_list_divider{
+    border-top: 1px solid #e0e0e0;
+}
+
+.sub_tel_hot_lastitem_border_radio{
+	border-bottom-left-radius: 8px;
+	border-bottom-right-radius: 8px;
+}
+
+/************** missedCallView **************/
+.sub_tel_menu_item{
+	display: table;
+    font-size: 12dp;
+    width: 100%;
+    height: 50dp|720:100px;
+    color: #717171;
+    text-align: center;
+    background: #f5f5f5;
+    border: 1px solid #ededed;
+}
+
+.sub_tel_menu_item_div{
+    display:table-cell;
+	vertical-align:middle;
+	width: 33.33%;
+    height: 100%;
+    border: 1px solid #f5f5f5;
+}
+
+.sub_tel_menu_item_text {
+    display: block;
+    color: #515151;
+    font-size: 12dp|720:26px;
+}
+
+.sub_tel_menu_item_icon {
+    display: inline-block;
+    text-align: center;
+    width: 15dp|720:34px;
+    height: 15dp|720:34px;
+}
+
+.sub_tel_calllog_item:after{
+    display:block;
+    clear:both;
+    visibility:hidden;
+    height:0;
+    overflow:hidden;
+    content:".";
+}
+.sub_tel_calllog_item{
+	display:block;
+   	/*height: 57dp|720:130px;*/
+    color: #717171;
+    zoom:1;
+}
+.sub_tel_calllog_item_left{
+    display: inline-block;
+	float:left;
+    width: 58.8%;
+    /*height: 100%;*/
+   	height: 57dp|720:130px;
+}
+
+.sub_tel_calllog_item_right{
+    /*display: inline-block;*/
+    height: 57dp|720:130px;
+    width: 41.2%;
+    float:right;
+}
+
+.sub_tel_calllog_item_name{
+    display: block;
+    padding-top: 10dp|720:24px;
+    padding-left: 14dp|720:33px;
+    max-width: 100%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    height: 22dp|720:50px;
+    font-size: 17dp|720:38px;
+    color: #515151;
+}
+
+.list_second_line_div{
+    display: inline-block;
+    padding-bottom: 10dp|720:24px;
+    padding-left: 14dp|720:33px;
+    width:100%;
+    height: auto;
+    text-align: middle;
+    white-space:nowrap;
+}
+.sub_tel_item_markicon_left{
+   	/*position:relative;*/
+	display:inline-block;
+	/*float:left;*/
+    width:12dp|720:26px;	
+    height: 12dp|720:26px;
+    vertical-align: middle;
+    text-align: middle;
+    margin-right: 5dp|720:12px;
+    /*background-color:#0ff;*/
+    /*zoom:1;*/
+}
+.calllog_list_second_line_text{
+    display: inline-block;
+    font-size: 13dp|720:26px;
+    height: 15dp|720:32px;
+    text-align: middle;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    vertical-align: top;
+    white-space:nowrap;
+    margin-right: 8dp|720:18px;
+    color: #717171;
+}
+.sub_tel_item_time{
+    display: inline;
+   	height: 15dp|720:32px;
+    text-align: middle;
+    white-space: nowrap;
+    font-size: 13dp|720:26px;
+    color: #717171;
+    vertical-align: top;
+    margin:0 auto;
+    margin-right: 1dp;
+}
+.sub_tel_btn_table {
+	display: table;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+}
+.sub_tel_call_and_mms_btn {
+	display: table-cell;
+    width: 35.7%;
+    height: 57dp|720:130px;
+    vertical-align: middle;
+}
+.sub_tel_tel_mms_icon{
+	display:inline-block;
+	width:28dp|720:64px;
+	height:28dp|720:64px;
+}
+.sub_tel_menu_btn {
+	display: table-cell;
+    width: 28.6%;
+   	height: 57dp|720:130px;
+    vertical-align: middle;
+}
+.sub_tel_menu_icon{
+	display:inline-block;
+	width:17dp|720:38px;
+	height:17dp|720:38px;
+}
+
+.sub_list_divider2{
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.sub_tel_hot_title{
+	position:relative;
+	height: 44.5dp|720:99px;
+	background-color: rgb(248,248,248);
+	border-radius: 8px;
+}
+.sub_tel_hot_title_text{
+	font-size: 16dp;
+	color: #515151;
+	padding-top: 14dp;
+	display: inline-block;
+}
+.sub_tel_hot_padding_left{
+	padding-left: 14.7dp|720:33px;
+}
+.sub_tel_hot_item{
+	display:inline-block;
+   	height: 53.3dp|720:120px;
+   	width: 100%;
+    vertical-align: middle;
+}
+.sub_tel_hot_text_line_1{
+	display:block;
+   	height: 21.3dp|720:48px;
+   	font-size: 17dp|720:38px;
+   	margin-top:10.7dp|720:24px;
+    color: #515151;
+}
+.sub_tel_hot_text_line_2{
+	display:block;
+   	height: 21.3dp|720:48px;
+   	font-size: 10.7dp|720:24px;
+    color: #717171;
+}
+.sub_tel_directory_item_left{
+    display: inline-block;
+   	width: 85%;
+    height: auto;
+    vertical-align: middle;
+}
+.sub_tel_directory_item_right{
+    display: inline-block;
+    width: 15%;
+    height: 100%;
+    height: auto;
+    vertical-align: middle;
+    text-align: right;
+}
+.ic_sub_tel_directory_item_img{
+    width:16dp|720:36px;
+    height:16dp|720:36px;
+    padding-right: 8dp|720:12px;
+    vertical-align: middle;
+}
+.box_content_gray {
+  position: relative;
+  background-color: #f7f7f7;
+  border-radius: 8px;
+}
+.sub_tel_directory_item{
+    padding-top: 10dp;
+    padding-bottom: 10dp;
+    padding-left: 14dp|720:33px;
+    /*padding-right: 8dp|720:12px;*/
+    font-size: 12dp;
+    color: #717171;
+}
+.sub_tel_directory_item_name{
+    display: block;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    height: 22dp|720:50px;
+    font-size: 17dp|720:38px;
+    color: #515151;
+}
+.list_directory_second_line_text{
+    display: inline-block;
+    font-size: 13dp|720:28px;
+    color: #717171;
+    width: 100%;
+    text-overflow: ellipsis;
+}
+.reget_contacts{
+    display: inline;
+    font-size: 17dp|720:38px;
+    line-height:50dp|720:106px;
+    color:#FFFFFF;
+    text-align:center;
+    vertical-align: middle;
+    margin-left: 9dp|720:20px;
+}
+.tel_and_sms_see_more_container{
+	display: block;
+    height: auto;
+    vertical-align: middle;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+.tel_and_sms_see_more{
+	display: inline-block;
+	width: 50%;
+	height: 46dp|720:103px;
+    line-height: 46dp|720:103px;
+	text-align: center;
+    font-size: 16dp|720:36px;
+    color:#515151;
+    background-color: #c8c800
+    border-bottom-left-radius: 8px;
+}
+.css_sub_tel_divider_div {
+    width: 1px;
+    height: 30dp;
+    background-color: #C7C8CB;
+   	margin-top: 8dp;
+    float: left;
+}
+.recent_contacts_isnull_container{
+    display: block;
+    width: 100%;
+    padding-top: 12dp;
+    padding-bottom: 12dp;
+    text-align:center;
+    vertical-align: middle;
+}
+.recent_contacts_icon{
+    vertical-align: top;
+    text-align:center;
+    width: 52dp|720:110px;
+    height: 36dp|720:80px;
+    margin:0 auto;
+    margin-top: 27dp|720:62px;
+    margin-bottom: 9dp|720:20px;
+}
+.tel_and_sms_get_all_contacts{
+	display: inline-block;
+	width: 50%;
+	height: 46dp|720:103px;
+    line-height: 46dp|720:103px;
+	text-align: center;
+    font-size: 16dp|720:36px;
+    color:#515151;
+    border-bottom-right-radius: 8px;
+}
+.recent_contacts_isnull{
+    display: block;
+    vertical-align: bottom;
+    font-size: 15dp|720:32px;
+    color:#717171;
+    margin:0 auto;
+    margin-bottom: 32dp|720:68px;
+}
+.recent_contacts_isnull_item{
+    display: block;
+    width: 100%;
+    text-align:center;
+    border-top:1px solid #e0e0e0;
+}
+.reget_contacts_icon{
+    display: inline;
+    width: 16dp|720:36px;
+    height: 16dp|720:36px;
+    text-align:center;
+    vertical-align: middle;
+}
+.reget_contacts_container{
+    display: inline-block;
+    width: 90%;
+    height: 50dp|720:106px;
+    background-color: #62B363;
+    text-align:center;
+    vertical-align: middle;
+    margin:0 auto;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+.emotion_error_icon{
+    display: block;
+    vertical-align: top;
+    text-align:center;
+    width: 85dp|720:180px;
+    height: 85dp|720:180px;
+    margin:0 auto;
+}
+.emotion_error_txt{
+    display: block;
+    font-size: 15dp|720:32px;
+    color:#717171;
+    text-align:center;
+    margin-top: 25dp|720:50px;
+    vertical-align: bottom;
+}
+.emotion_error_container{
+    display: none;
+    width: 267dp|720:540px;
+    margin:0 auto;
+    height: 130dp|720:264px;
+    vertical-align: middle;
+    margin-top: 40dp|720:80px;
+    margin-bottom: 40dp|720:80px;
+}
+.tel_and_sms_list_title_item{
+    /*padding-left: 14dp|720:33px;
+    padding-top: 12dp;
+    padding-bottom: 12dp;
+    font-size: 16dp;
+    color:#515151;*/
+    background-color:rgb(248,248,248);
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    height: 44.5dp|720:99px;
+}
+.tel_and_sms_list_title_text{
+    padding-left: 14dp|720:33px;
+    padding-top: 12dp;
+    padding-bottom: 12dp;
+    font-size: 16dp;
+    color:#515151;
+}
+
+/************ contactCreateView.js ************/
+
+.create_contact_title_item{
+    padding-left: 14dp|720:33px;
+    padding-top: 12dp;
+    padding-bottom: 12dp;
+    font-size: 16dp;
+    color:#515151;
+    background-color:rgb(248,248,248);
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.sub_list_divider{
+    border-top: 1px solid #e0e0e0;
+}
+.add_number_item{
+    padding-left: 14dp|720:33px;
+    padding-top: 12dp;
+    padding-bottom: 12dp;
+    font-size: 16dp;
+    color:#999999;
+}
+.css_dilaog_out_div {
+  position: relative;
+  margin-top: 0;
+  margin-bottom: 6dp;
+  margin-left: 8dp;
+  margin-right: 8dp;
+}
+.css_dialog_bottom_btntext_div {
+  /*position: absolute;
+  z-index: 5;
+  top: 0;
+  left: 0;*/
+  color:#515151;
+  font-size: 17dp;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+.css_dialog_contact_create_item {
+	display: inline-block;
+	width: 100%;
+}
+.css_dialog_contact_create_item_editText_container_left {
+  position: relative;
+  font-size: 16dp;
+  color: #717171;
+  display: inline-block;
+  width: 80%;
+  vertical-align: middle;
+  height:46dp;
+}
+.css_dialog_contact_create_item_editText_container {
+  position: relative;
+  font-size: 16dp;
+  color: #717171;
+  display: inline-block;
+  vertical-align: middle;
+  width: 304dp;
+  height:46dp;
+}
+.css_dialog_contact_create_item_editText {
+  width:  90%;
+  height: 30dp;
+  line-height: normal;
+  color: #515151;
+  background: transparent;
+  margin-top:8dp;
+  margin-left:15dp;
+  font-size: 16dp;
+  outline: none;
+  border: 0px;
+}
+.css_dialog_contact_create_item_editText2 {
+  width: 90%;
+  height: 30dp;
+  line-height: normal;
+  color: #515151;
+  background: transparent;
+  margin-top:6dp;
+  margin-left:15dp;
+  font-size: 16dp;
+  outline: none;
+  border: 0px;
+}
+.contact_item_right{
+    display: inline-block;
+    width: 20%;
+    text-align: right;
+}
+.contact_number_reduce{
+    vertical-align: middle;
+    width: 28dp|540:48px|720:64px;
+    height: 28dp|540:48px|720:64px;
+    margin-right: 14dp|720:33px;
+}
+/********* contactSearchView.js**************/
+.contact_list_item{
+    padding-top: 2dp|720:5px;
+    padding-bottom: 2dp|720:5px;
+}
+.contact_item_name{
+    display: inline-block;
+    vertical-align: middle;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 60%;
+    font-size: 17dp|720:38px;
+    color: #515151;
+}
+.contact_icon_container{
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    text-align: center;
+    width: 54dp|480:80px|720:120px;
+    height: 54dp|480:80px|720:120px;
+    line-height: 54dp|480:80px|720:120px;
+    margin-right: 8dp;
+    margin-left: 6dp|720:13px;
+}
+.contact_icon_frame{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 54dp|480:80px|720:120px;
+    height: 54dp|480:80px|720:120px;
+}
+.contact_icon_src{
+    vertical-align: middle;
+    width: 40dp|720:88px;
+    height: 40dp|720:88px;
+    border-radius: 80px;
+}
+.contact_item_name_without_icon{
+    display: inline-block;
+    vertical-align: middle;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 60%;
+    font-size: 18dp|720:40px;
+    color: #515151;
+    margin-left: 14dp|720:30px;
+    margin-top: 9dp|720:20px;
+    margin-bottom: 9dp|720:20px;
+}
+.contactview_btn {
+	display: table-cell;
+    width: 43.5dp|720:98px;
+   	height: 57dp|720:128px;
+   	border: 1px solid transparent;
+    float: right;
+}
+.contactview_btn_icon_big{
+	display:inline-block;
+	padding-left: 7.75dp|720:18px;
+	padding-right: 7.75dp|720:18px;
+	padding-top: 14.5dp|720:32px;
+	padding-bottom: 14.5dp|720:32px;
+	width:28dp|720:64px;
+	height:28dp|720:64px;
+}
+.contactview_item_rightarea{
+	width:4.5dp|720:10px;
+	height: 57dp|720:130px;
+	float: right;
+}
+.contactview_item{
+    /*padding-top: 10dp;
+    padding-bottom: 10dp;*/
+    padding-left: 10dp|720:23px;
+    /*padding-right: 8dp|720:20px;*/
+}
+.phone_item_left{
+    display: inline-block;
+    width: 67%;
+    vertical-align: middle;
+}
+.list_first_line_text{
+    display: block;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    color: #515151;
+    height: 22dp|720:50px;
+    font-size: 17dp|720:38px;
+}
+.contactview_btn_table{
+    display: inline-block;
+    vertical-align: middle;
+    text-align: right;
+    width: 33%;
+    /*margin-right: 9dp|720:20px;*/
+    /*float: right;*/
+}
+phoneNum_list_inner{
+}
+
+/***************** contactView.js ***************/
+
+.contactview_simcard_table{
+	float: right;
+	height: 58dp|720:130px;
+}
+.contactview_simcard_cell{
+	display: inline-block;
+    width: 51dp|720:115px|320:41px;
+    height: 58dp|720:130px;
+    vertical-align: middle;
+    line-height: 100%;
+}
+.callview_simcard_button{
+	display: inline-block;
+    height: 24dp|720:54px;
+	width: 42dp|720:94px|320:32px;
+    line-height:24dp|720:54px;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 12dp|720:28px;
+    border: solid #bfbfbf;
+    border-width: 1dp|720:2px;
+    border-radius: 6px;
+    background-color: #fff;
+}
+.simcard1_margin{
+	margin-top: 15dp|720:35px;
+	margin-right: 2dp|720:5px;
+	margin-bottom: 13dp|720:29px;
+	margin-left: 4dp|720:10px;
+}
+.simcard2_margin{
+	margin-top: 15dp|720:35px;
+	margin-right: 4dp|720:10px;
+	margin-bottom: 13dp|720:29px;
+	margin-left: 2dp|720:5px;
+}
+.contact_order_container{
+    display: inline-block;
+    position: relative;
+    z-index: 3;
+    text-align: center;
+    width: 28dp|720:64px;
+    height: 28dp|720:64px;
+    padding-top: 4dp|720:7px;
+    padding-bottom: 4dp|720:7px;
+    line-height: 28dp|720:64px;
+    /*margin-right: 8dp|480:12px|540:14px|640:16px|720:18px;*/
+   	margin-right: 8dp|720:18px;
+    float: left;
+    /*background-color: red;*/
+}
+.contact_order_bg{
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    padding-top: 4dp|720:7px;
+    padding-bottom: 4dp|720:7px;
+    width: 28dp|720:64px;
+    height: 28dp|720:64px;
+}
+.contact_order_text{
+    font-size: 12dp;
+    display: inline;
+    vertical-align: middle;
+    color:white;
+    /*background-color: blue;*/
+}
+.contactview_left{
+    display: inline-block;
+    width: 67%;
+    height: 35dp|720:78px;
+    margin-top: 11dp|720:26px;
+    margin-bottom: 11dp|720:26px;
+    vertical-align: middle;
+}
+.phone_item_right{
+    display: inline-block;
+    width: 33%;
+    text-align: right;
+    vertical-align: middle;
+}
+.contactview_info_outbox_padding_left{
+	padding-left: 36dp|720:82px;
+}
+.contact_item_info_new{
+    display: block;
+    vertical-align: middle;
+    /*width: 75%;*/
+}
+.contactview_info_padding_right{
+	padding-right: 36dp|720:82px;
+}
+.call_contact_item_name{
+    display: inline-block;
+    vertical-align: middle;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+    height: 22dp|720:50px;
+    font-size: 17dp|720:38px;
+    color: #515151;
+}
+.contact_item_number{
+    display: block;
+    vertical-align: middle;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+    font-size: 14dp|720:28px;
+    color: #717171
+}
+.call_contact_item_name{
+    display: inline-block;
+    vertical-align: middle;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+    height: 22dp|720:50px;
+    font-size: 17dp|720:38px;
+    color: #515151;
+}
+.contactview_info_padding_top_when_number_gone{
+	padding-top: 9.5dp|720:20px;
+}
+.sub_guide_left_new{
+    display: block;
+    vertical-align: middle;
+    /*width: 100%;*/
+}
+.contact_item_info_new2{
+    display: inline-block;
+    vertical-align: middle;
+    width: 100%;
+}
+.contactview_btn_icon_small{
+	display:inline-block;
+	padding-left: 13.25dp|720:31px;
+	padding-right: 13.25dp|720:31px;
+	padding-top: 20dp|720:45px;
+	padding-bottom: 20dp|720:45px;
+	width:17dp|720:38px;
+	height:17dp|720:38px;
+}
+.phone_item_icon{
+    width: 28.5dp|720:64px;
+    height: 28.5dp|720:64px;
+    padding: 8.5dp;
+}
+.main_list_inner > .main_list_item:first-child > .contact_select_list_item{
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+.main_list_inner > .main_list_item:last-child > .contact_select_list_item{
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.main_list_inner{
+}
+.main_list_item{
+}
+.main_list_inner > .main_list_item:first-child{
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+.main_list_inner > .main_list_item:last-child{
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+/******** phoneNumView.js************/
+.list_second_line_text_large_high_light{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    color: #26a12f;
+    font-size: 12dp|720:28px;
+}
+.contact_item_name_in_number_list{
+    display: inline-block;
+    vertical-align: middle;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 60%;
+    font-size: 17dp|720:40px;
+    color: #515151;
+}
+.callview_simcard_table{
+	float: right;
+	height: 55dp|720:124px;
+	margin-right: 4dp|720:10px;
+}
+.callview_simcard_cell{
+	display: inline-block;
+    width: 51dp|720:115px|320:41px;
+    height: 55dp|720:124px;
+    vertical-align: middle;
+    line-height: 100%;
+}
+.phonenumview_item_dial{
+    /*padding-top: 11dp|720:25px;*/
+    /*padding-bottom: 11dp|720:25px;*/
+    padding-left: 10dp|720:24px;
+}
+.phonenumview_item_left{
+	padding-top: 10dp|720:22px;
+	padding-bottom: 10dp|720:22px;
+    display: inline-block;
+    width: 67%;
+    vertical-align: middle;
+}
+.list_first_line_text_large_high_light{
+    display: block;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    color: #26a12f;
+    height: 22dp|720:50px;
+    font-size: 18dp|720:40px;
+}
+.list_first_line_text_large{
+    display: block;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    color: #515151;
+    height: 22dp|720:50px;
+    font-size: 18dp|720:40px;
+}
+.list_second_line_text_large{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    color: #717171;
+    font-size: 12dp|720:28px;
+}
+.making_out_container_high_light{
+	display: inline-block;
+	font-size: 14dp|720:28px;
+	color: #26a12f;
+	margin-top: 10dp|720:25px;
+	margin-bottom: 12dp|720:28px;
+	margin-right: 17dp|720:38px;
+}
+.phonenumview_item_icon{
+	padding-top: 11dp|720:25px;
+    margin-right: 17dp|720:38px;
+    padding-bottom: 11dp|720:25px;
+    width: 28dp|720:64px;
+    height: 28dp|720:64px;
+}
+.latest_progress_container1_dial{
+    margin-left: 0;
+    margin-right: 8dp|720:20px;
+    margin-top: 0;
+    /*background-color: #f0f0f0;*/
+}
+.latest_progress_var_dial{
+    height: 6px;
+    background-color: #62b363;
+    width: 0%;
+}
+.sub_tel_hot_lastitem_border_radio{
+	border-bottom-left-radius: 8px;
+	border-bottom-right-radius: 8px;
+}
+.tel_and_sms_see_more_container{
+	display: block;
+    height: auto;
+    vertical-align: middle;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+.recommended_left{
+	display: inline-block;
+	width: 33%;
+    border-bottom-left-radius: 8px;
+}
+.recommended_hint{
+	display: inline-block;
+	width: 74dp|720:166px;
+	text-align: center;
+	vertical-align: middle;
+    padding: 15dp;
+    font-size: 16dp;
+    color:#515151;
+}
+.recommended_middle{
+	display: inline-block;
+	width: 33%;
+    border-left: 1px solid #e5e5e5;
+    border-right: 1px solid #e5e5e5;
+}
+.recommended_right{
+	display: inline-block;
+	width: 33%;
+    border-bottom-right-radius: 8px;
+}
+
+
+/************ latestSmsView ***************/
+.contactview_btn {
+	display: table-cell;
+    width: 43.5dp|720:98px;
+   	height: 57dp|720:128px;
+   	border: 1px solid transparent;
+    float: right;
+}
+.contactview_btn_icon_big{
+	display:inline-block;
+	padding-left: 7.75dp|720:18px;
+	padding-right: 7.75dp|720:18px;
+	padding-top: 14.5dp|720:32px;
+	padding-bottom: 14.5dp|720:32px;
+	width:28dp|720:64px;
+	height:28dp|720:64px;
+}
+.contactview_item_rightarea{
+	width:4.5dp|720:10px;
+	height: 57dp|720:130px;
+	float: right;
+}
+
+.sub_tel_item{
+    padding-top: 10dp;
+    padding-bottom: 10dp;
+    padding-left: 14dp|720:33px;
+    padding-right: 8dp|720:12px;
+    font-size: 12dp;
+    color: #717171;
+}
+.phone_item_left{
+    display: inline-block;
+    width: 67%;
+    vertical-align: middle;
+}
+.phone_item_right{
+    display: inline-block;
+    width: 33%;
+    text-align: right;
+    vertical-align: middle;
+}
+.sub_sms_item_name{
+    display: block;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    height: 22dp|720:50px;
+    font-size: 17dp|720:38px;
+    color: #515151;
+}
+.css_share_title_container{
+    padding-left: 14dp|720:33px;
+    padding-top: 12dp;
+    padding-bottom: 12dp;
+    font-size: 16dp;
+    color:#515151;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+.sub_list_divider2{
+    border-bottom: 1px solid #e0e0e0;
+}
+.css_dialog_contact_create_item {
+	display: inline-block;
+	width: 100%;
+}
+.css_share_item_container_shell {
+	display: block;
+    padding-left: 17dp|480:26px|540:30px|640:37px|720:42px;
+    padding-right: 17dp|480:26px|540:30px|640:37px|720:42px;
+}
+.css_share_item_container {
+	display: inline-block;
+	padding-top:16dp|720:35px;
+	padding-bottom:16dp|720:35px;
+	text-align: center;
+	width: 25%;
+}
+.css_share_item_icon_shell {
+	display: block;
+	text-align: center;
+}
+.css_share_item_icon {
+	display: inline-block;
+	width: 35dp|720:78px;
+	height: 35dp|720:78px;
+}
+.css_share_item_label {
+	display: block;
+	text-align: center;
+    color:#515151;
+	margin-top: 5dp|720:10px;
+	font-size: 11dp|720:24px;
+}
+
+/*************offlinePackageView.js****************/
+.tel_his_inner{
+    padding: 3px;
+}
+.offline_item{
+/*    padding: 12dp 12dp;*/
+    padding-top: 5dp;
+    padding-bottom: 5dp;
+    padding-left: 14dp|720:33px;
+    padding-right: 14dp|720:33px;
+    font-size: 12dp;
+    color: #717171;
+}
+.sub_tel_item_left{
+    display: inline-block;
+    width: 70%;
+    height: auto;
+    vertical-align: middle;
+}
+.sub_tel_item_right{
+    display: inline-block;
+    width: 30%;
+    height: 100%;
+    height: auto;
+    vertical-align: middle;
+    text-align: right;
+}
+.offline_content_up{
+	display: block;
+    font-size: 16dp;
+    color: #515151;
+    width: 100%;
+    height: auto;
+}
+.offline_content_down{
+	display: block;
+    font-size: 12dp;
+    color: #717171;
+    width: 100%;
+    height: auto;
+}
+.offline_icon{
+    vertical-align: middle;
+    width: 28dp|540:48px|720:64px;
+    height: 28dp|540:48px|720:64px;
+}
+
+/****************** smsView.js*******************/
+.call_waiting_item{
+    padding-top: 2dp|720:5px;
+    padding-bottom: 2dp|720:5px;
+    color: #717171;
+    font-size: 12dp;
+}
+.contact_item_left{
+    display: inline-block;
+    width: 80%;
+}
+.sms_icon_position{
+    display: inline-block;
+    vertical-align: middle;
+    height: 54dp|480:80px|720:120px;
+    margin-right: 14dp|480:22px|720:33px;
+}
+.sms_contact_detail{
+    display: inline-block;
+    vertical-align: middle;
+    width: 80%;
+}
+.sms_title_select{
+    margin-left: 4dp;
+    width: 14dp|540:24px|720:32px;
+    height: 14dp|540:24px|720:32px;
+    vertical-align: middle;
+    /*background: red;*/
+}
+.sms_view_second_line_text{
+    font-size: 13dp|720:28px;
+    color: #717171;
+    text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+
+}
+.sms_title_name{
+    display: inline-block;
+    max-width: 86%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    vertical-align: middle;
+    color: #515151;
+    height: 22dp|720:50px;
+    font-size: 16dp|720:38px;
+}
+
+.sms_title_name_only{
+    display: inline-block;
+    max-width: 85%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    vertical-align: middle;
+    color: #515151;
+    font-size: 16dp|720:38px;
+}
+.contact_item_right{
+    display: inline-block;
+    width: 20%;
+    text-align: right;
+}
+.sms_title_add{
+    vertical-align: middle;
+    width: 28dp|540:48px|720:64px;
+    height: 28dp|540:48px|720:64px;
+    margin-right: 14dp|720:33px;
+}
+.sms_content_container{
+    height: 90dp;
+    padding-left: 14dp|720:33px;
+    padding-right: 14dp|720:33px;
+    padding-top: 12dp;
+    border-top: 1px solid #e0e0e0;
+}
+.sms_content{
+    word-break: break-all;
+    overflow-y: auto;
+    color: #515151;
+    width: 100%;
+    height: 100%;
+    font-size: 16dp;
+    z-index: 3;
+    border: 0;
+}
+.sms_hint_micro_container{
+	display: inline-block;
+	position: relative;
+	width: 90%;
+    padding-left: 14dp|720:33px;
+    padding-bottom: 10.4dp;
+    padding-top: 10.4dp|720:24px;
+}
+.sms_change_btn_container{
+	display: inline-block;
+    width: 80%;
+    height: 34dp|540:58px|720:78px;
+}
+.sms_bless_btn{
+    width: 77dp|540:130px|720:174px;
+    height: 34dp|540:58px|720:78px;
+}
+.sms_change_btn{
+    width: 69dp|540:117px|720:156px;
+    height: 34dp|540:58px|720:78px;
+}
+.sms_hint{
+	display: inline-block;
+	width: 80%;
+	height: 16dp|720:36px;
+	color: #999999;
+	position: relative;
+    font-size: 16dp;
+    top: -6dp|720:-14px;
+}
+.sms_muilt_micro_container{
+	width: 20%;
+    height: 34dp|540:58px|720:78px;
+	display: inline-block;
+}
+
+.sms_muilt_micro{
+    width: 34dp|540:58px|720:78px;
+    height: 34dp|540:58px|720:78px;
+	float: right;
+}
+.double_btn_inner{
+    color: #515151;
+    text-align: center;
+    padding-bottom: 3px;
+    padding-top: 3px;
+    height: 44dp|720:100px;
+    line-height: 44dp|720:100px;
+    font-size: 17dp|720:38px;
+}
+.box_inner {
+	padding: 1px;
+	background-color: #C7C8CB;
+	border-radius: 9px;
+}
+.box_out {
+    margin-top:0;
+    margin-right:8dp|320:10px|360:10px;
+    margin-bottom:6dp;
+    margin-left:8dp|320:10px|360:10px;
+	padding: 1px;
+	background-color: #DCDDE0;
+	border-radius: 10px;
+}
+
+/******** dialogView.js *************/
+.chat_corner_left {
+	position: absolute;
+	left: -12px;
+	bottom: -3px;
+}
+.chat_corner_right {
+	position: absolute;
+	right: -12px;
+	bottom: -3px;
+}
+.css_dialog_answer_text {
+  font-size: 16dp;
+  word-break:break-word;
+  color: #515151;
+}
+.css_answer_text_whith_share{
+  word-break:break-word;
+  width:272dp;
+  padding: 14dp 15dp;
+}
+.css_dialog_answer_food_img {
+  width: 200dp;
+  height: 200dp;
+  margin-left: 60dp;
+}
+.css_dialog_answer_sharePlayDiv {
+  border-top: solid 1px #e5e5e5;
+  text-align: right;
+  padding: 5dp 14dp;
+  color: #515151;
+  font-size: 12dp;
+}
+/*底部按钮文本所用样式*/
+.btn_text{
+    color: #515151;
+    text-align: center;
+    padding: 3px;
+    height: 44dp|720:100px;
+    line-height: 44dp|720:100px;
+    font-size: 17dp|720:38px;
+}
+/***************** answerView.js ************/
+.css_dialog_answer_text2_new_message_push{
+  padding-bottom: 3px;
+  font-size: 16.89dp;
+  color: #515151;
+}
+.css_dialog_message_push_icon_containner_new_message_push {
+    width: 275.56dp;
+    height: 107.11dp;
+    margin: 13.33dp 14.67dp 0dp 14.67dp;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    background: #EEDCCF;
+}
+.css_dialog_message_push_icon_new_message_push  {
+    width: 275.56dp;
+    height: 107.11dp;
+    display: inline-block;
+    vertical-align: middle;
+}
+.css_dialog_message_push_loading_icon{
+    width: 28dp;
+    height: 28dp;
+    margin-top: 40dp;
+}
+.css_dialog_message_push_loadfail_icon{
+    width: 45dp;
+    height: 40dp;
+    margin-top: 20dp;
+}
+.css_dialog_message_push_fail {
+    display: block;
+    margin-top: 15dp;
+    color:white;
+}
+.css_answer_text_whith_share_new_message_push{
+  word-break:break-word;
+  width:275.56dp;
+  padding: 8dp 0dp 0dp 14.67dp;
+  font-size: 16.89dp;
+}
+.link_text_div_new_message_push{
+    padding-left: 14.67dp|720:33px;
+    padding-bottom: 16.44dp|720:37px;
+}
+.welcome_try_new_message_push{
+    font-size: 13.33dp|720:30px;
+    color: #66abe0;
+}
+.css_close_btn_div_new_message_push {
+  position: absolute;
+  display: inline-block;
+  top: 0dp;
+  right: 0dp;
+}		
+.css_close_btn_div_new_message_push_img {
+  width:39dp;
+  height:39dp;
+}	
+.css_dialog_message_push_icon {
+    width: 280dp;
+    height: 112dp;
+    display: inline-block;
+    vertical-align: middle;
+}
+.css_dialog_answer_text2{
+  font-size: 16dp;
+  color: #515151;
+}
+.chat_answerView_fromText {
+  font-size: 14dp;
+}
+.css_href_div{
+  background: #e5e5e5;
+  color:#515151;
+  text-align:center;
+  display:inline-block;
+}
+.css_href_div_pressed{
+    background: #008ddc;
+}

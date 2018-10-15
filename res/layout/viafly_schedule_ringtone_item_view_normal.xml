@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.iflytek.base.skin.customView.XLinearLayout android:gravity="center_vertical" android:id="@id/schedule_ringtone_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" skin:background="statelist.setting_item_background_states"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:skin="http://schemas.android.com/apk/res-auto">
+    <ImageView android:id="@id/schedule_ringtone_select_img" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="14.0dip" android:src="@drawable/image_ringtone_item_choose" android:scaleType="fitXY" />
+    <FrameLayout android:paddingLeft="14.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <com.iflytek.viafly.ui.view.CircleImageView android:layout_gravity="center" android:id="@id/schedule_ringtone_img" android:layout_width="36.0dip" android:layout_height="36.0dip" />
+        <ImageView android:layout_gravity="center" android:id="@id/schedule_ringtone_play_img" android:layout_width="36.0dip" android:layout_height="36.0dip" android:src="@drawable/ic_schedule_play" />
+        <ImageView android:layout_gravity="center" android:id="@id/schedule_ringtone_buffer_img" android:background="@drawable/ic_audio_resource_loading" android:visibility="gone" android:layout_width="36.0dip" android:layout_height="36.0dip" />
+    </FrameLayout>
+    <FrameLayout android:paddingLeft="14.0dip" android:paddingTop="14.0dip" android:paddingRight="4.0dip" android:paddingBottom="14.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <EditText android:textSize="@dimen/text_standard_size_t5" android:textColor="@color/color_standard_c3_v5" android:layout_gravity="center" android:id="@id/schedule_ringtone_content_edit" android:background="@drawable/ic_schedule_input_bg" android:padding="8.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="54.0dip" android:hint="请输入播报内容，如：还信用卡" android:lines="2" android:maxLength="30" />
+        <LinearLayout android:id="@id/schedule_ringtone_content_layout" android:paddingLeft="8.0dip" android:paddingTop="2.0dip" android:paddingRight="8.0dip" android:paddingBottom="2.0dip" android:layout_width="wrap_content" android:layout_height="fill_parent">
+            <TextView android:textSize="@dimen/text_standard_size_t3" android:textColor="@color/color_standard_c1_v5" android:gravity="center_vertical" android:layout_gravity="center" android:id="@id/schedule_ringtone_content" android:background="@color/color_standard_c4" android:layout_width="wrap_content" android:layout_height="fill_parent" android:maxLines="2" />
+        </LinearLayout>
+    </FrameLayout>
+    <com.iflytek.base.skin.customView.XLinearLayout android:layout_gravity="center|right" android:id="@id/schedule_ringtone_speaker_layout" android:paddingLeft="10.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" skin:background="statelist.setting_item_background_states">
+        <TextView android:textSize="@dimen/text_standard_size_t3" android:textColor="@color/color_standard_c3" android:ellipsize="end" android:gravity="center|right" android:id="@id/schedule_ringtone_speaker_name" android:layout_width="0.0dip" android:layout_height="fill_parent" android:singleLine="true" android:layout_weight="1.0" />
+        <com.iflytek.base.skin.customView.XImageView android:layout_gravity="center|right" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:layout_marginRight="14.0dip" skin:src="image.remind_fold" />
+    </com.iflytek.base.skin.customView.XLinearLayout>
+    <TextView android:textSize="@dimen/text_standard_size_t3" android:textColor="@color/color_standard_c5" android:gravity="center|right" android:id="@id/schedule_ringtone_done" android:background="@color/color_standard_c4" android:paddingLeft="20.0dip" android:paddingRight="16.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="完成" />
+</com.iflytek.base.skin.customView.XLinearLayout>

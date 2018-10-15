@@ -1,0 +1,1377 @@
+<!DOCTYPE html>
+<html>
+	<head lang="en">
+		<meta charset="UTF-8">
+		<title>灵犀</title>
+		<!-- <meta id="viewport" name="viewport" content="target-densitydpi=device-dpi,width=device-width,initial-scale=1.0,user-scalable=no"> -->
+		<script type="text/javascript" src="common/api.js"></script>
+		<script type="text/javascript" src="common/base.js"></script>
+		<script type="text/javascript" src="common/require.js"></script>
+		<script type="text/javascript" src="common/resources.js"></script>
+		<script type="text/javascript" src="common/ajaxRequest.js"></script>
+		<script type="text/javascript" src="common/xcssParser.js"></script>
+		<script type="text/javascript" src="cardList.js"></script>
+		<style>
+			body {
+				width: 100%;
+				padding: 0;
+				margin: 0;
+				background-color: #e4e9ef;
+				-webkit-tap-highlight-color: rgba(0,0,0,0);
+			}
+		</style>
+	</head>
+	<body onload="resetScale()">
+		<div id="speech_enhance">
+		</div>
+		<div id="nav_local" class="nav_local">
+			<div id="local_card_wrapper" class="css_card_local">
+				<div id="local_title_root"></div>
+				<div id="nav_local_swipe" class="nav_local_swipe"></div>
+				<div id="local_card_shadow" class="css_card_bottom_shadow_local"></div>
+			</div>
+		</div>
+		<script>
+            /***************卡片排序变量定义*****************/
+            var LXCardCacheSortList = null;
+            var showCardSortList = null;
+            var cardArea = null;
+            var noneShowCardsMap = {};
+            var stickTopAnimationHelper = null;
+            var JSToast = null;
+            var speechEnhanceInfo = null;
+            
+            var CMCC_HOME_IC_WIDTH_KEY = "CMCC_HOME_IC_WIDTH_KEY";
+            
+            var CMCC_CLIENT_APP_VERSION = 0; //客户端版本号，卡片可以使用
+			/**
+			 *进行数据排序和缓存 
+			 */
+            function stickTopSort(stickCardId){
+            	if(!stickCardId) {
+            		return;
+            	}
+                for(var i=0;i < LXCardCacheSortList.length; i++) {
+                    if(stickCardId == LXCardCacheSortList[i].id) {
+                        var stickItem = LXCardCacheSortList[i];
+                        LXCardCacheSortList.remove(i);
+                        LXCardCacheSortList.unshift(stickItem);
+
+                        //window.localStorage.setItem("sortCardListCache", JSON.stringify(LXCardCacheSortList));
+                        try{
+	                        cacheMgr.setCache("sortCardListCache", JSON.stringify(LXCardCacheSortList));
+                        }catch(e){
+                        	console.log("WebHomePage stickTopSort setCardListSortData exception : " + e.message);
+                        }
+                        break;
+                    }
+                }
+            }
+            
+            function stickTopCardByDom(cardDom){
+            	if(!cardDom) {
+            		return;
+            	}
+            	if(cardArea.firstElementChild && cardDom != cardArea.firstElementChild) {
+                	console.log("StickTop cardId : " + cardDom.id);
+                    stickTopSort(cardDom.id);
+                    //cardArea.removeChild(cardDom);
+                    //cardArea.insertBefore(cardDom,cardArea.firstElementChild);
+                    stickTopAnimationHelper.startAnimation(cardDom.id);
+                    forceRefreshScreen();
+                }
+                
+            }
+
+            function stickTopCardById(cardId){
+                if(!cardId) {
+                    return;
+                }
+                var cardDom = document.getElementById(cardId);
+                if(!cardDom) {
+                    return;
+                }
+                stickTopCardByDom(cardDom);
+            }
+
+            function openCard(cardId){
+                if(cardId) {
+                    for(var i=0; i<LXCardCacheSortList.length; i++) {
+                        if(cardId == LXCardCacheSortList[i].id) {
+                            var cacheSortItem = LXCardCacheSortList[i];
+                            LXCardCacheSortList.remove(i);
+                            LXCardCacheSortList.push(cacheSortItem);
+
+                            //window.localStorage.setItem("sortCardListCache", JSON.stringify(LXCardCacheSortList));
+                            try{
+	                            cacheMgr.setCache("sortCardListCache", JSON.stringify(LXCardCacheSortList));
+                            }catch(e){
+                            	console.log("WebHomePage openCard setCardListSortData exception : " + e.message);
+                            }
+                            break;
+                        }
+                    }
+
+                    var openCardDom = noneShowCardsMap[cardId];
+                    if(openCardDom) {
+                        delete noneShowCardsMap[cardId];
+                        cardArea.appendChild(openCardDom);
+
+                        if(openCardDom && openCardDom.updateState) {
+                            openCardDom.updateState(true);
+                        }
+                    } else {
+                        openCardDom = document.getElementById(cardId);
+                        if(openCardDom && openCardDom.updateState) {
+                            cardArea.removeChild(openCardDom);
+                            cardArea.appendChild(openCardDom);
+                            openCardDom.updateState(true);
+                        }
+                    }
+                    
+                    scrollToBodyBottom();
+                }
+            }
+            function closeCard(cardId){
+                if(cardId) {
+                    var cardDom = document.getElementById(cardId);
+                    console.log("closeCard cardDiv is " + cardDom);
+
+                    if(cardDom) {
+                        cardArea.removeChild(cardDom);
+                        noneShowCardsMap[cardId] = cardDom;
+
+                        if(cardDom.updateState) {
+                            cardDom.updateState(false);
+                        }
+                        if(cardDom.showContentPage) {
+                        	cardDom.showContentPage();
+                        }
+                    }
+                }
+            }
+
+            var JH_LOG_MAX_TIMES_FOR_CARD_REQUEST = 1;
+			var times_jh_log_card_request = 0;
+
+			var cardList = handleCardListData();
+
+            var tempInitSortData = initCardListSortData(cardList);
+            showCardSortList = tempInitSortData[0];
+            LXCardCacheSortList = tempInitSortData[1];
+
+			var cardLength = cardList.length;
+			var count = 0;
+			//样式解析器
+			var xcssParser = new XcssParser();
+			// 屏幕滑动距离检测器
+			var moveOverCheck = new checkMoveOver();
+			// 进度条定时器
+			var loadingTimer;
+			// 进度条容器
+			var loadingDiv;
+
+			// 卡片内容更新成功
+			var CARD_CONTENT_REQUEST_SUCCESS = 1;
+			
+			// 卡片内容更新失败
+			var CARD_CONTENT_REQUEST_FAILE = -1;
+			
+			// 卡片内容不需要更新
+			var CARD_CONTENT_NO_REQUEST = 0;
+
+            var MAIN_PAGE_CARDS_LOADING_STATE = {
+                NO_NET:"无网络，请检查网络设置",
+                FAIL:"更新失败",
+                LOADING:"正在更新",
+                SUCCESS:"更新成功"
+            };
+            
+            var GLOBAL_UPDATERESULT_STATE = {
+            	IDLE: 0,
+            	LOADING:1,
+            	SUCCESS: 2,
+                NO_NET_FAIL: 3,
+                FAIL: 4
+            };
+            
+            var isActivityOnFront = false;
+            // 程序启动时不调用resume，默认为false会导致网络监听有问题
+            var isPageOnFront = true;
+            var globalNetConnect = true;
+            var isCardsCreateFinish = false;
+            var isGlobalUpdating = false;
+            var cardsDomCache = [];
+            var localCardDom = null;
+            var speechEnhanceDom = null;
+            var forceGlobalUpdate = false;
+            var preGlobalUpdateResState = GLOBAL_UPDATERESULT_STATE.IDLE;
+			function createSpeechEnhanceCard(){
+				try{
+					var speechEnhanceInfoStr = exec("WidgetMMPContainerComponents", "getSpeechEnhanceInfo", []);
+					speechEnhanceInfo = getResultMessage(speechEnhanceInfoStr);
+					if(typeof speechEnhanceInfo !== "object") {
+						return;
+					}
+					
+					var versionArr = speechEnhanceInfo.clientver.split(".");
+			        var versionArrLenth = versionArr.length - 1;
+			        var versionStr = versionArr[2];
+			        var versionCode = 0;
+			        if (versionStr) {
+			            versionCode = parseInt(versionStr);
+			        }
+			        CMCC_CLIENT_APP_VERSION = versionCode; //初始化客户端版本号
+			        if(versionCode < 2190) {
+			        	return;
+			        }
+					
+					var head = document.getElementsByTagName('head').item(0);
+					// 加载js文件
+					var enhanceJs = document.createElement('script');
+					enhanceJs.type = "text/javascript";
+					// 这里要写绝对路径，因为不是部署在一个包中
+					enhanceJs.src = "file:///android_asset/local/speech_enhance.js";
+					//enhanceJs.src = "../local/speech_enhance.js";
+					head.appendChild(enhanceJs);
+					
+					speechEnhanceDom = document.getElementById("speech_enhance");
+				}catch(ex){
+					return;
+				}
+			}
+			
+			function createLocalCard() {
+				var head = document.getElementsByTagName('head').item(0);
+				// 加载js文件
+				var localArea = document.createElement('script');
+				localArea.id = 'localAreaJs';
+				localArea.type = "text/javascript";
+				// 这里要写绝对路径，因为不是部署在一个包中
+				localArea.src = "file:///android_asset/local/local_area.js";
+				head.appendChild(localArea);
+				
+				localCardDom = document.getElementById("nav_local");
+			}
+
+            function changeLoadingState(state) {
+                console.log("WebHomePage changeLoadingState is called , current loading state is : " + state + " /** IDLE:0; LOADING:1; SUCCESS: 2; NO_NET_FAIL: 3; FAIL: 4 **/");
+            }
+            function getICWidthCount(homeType){
+            	var count = 0;
+            	var countCacheStr = window.localStorage.getItem(CMCC_HOME_IC_WIDTH_KEY);
+            	if(countCacheStr) {
+            		try {
+            			var cacheCountJson = JSON.parse(countCacheStr);
+            			if(homeType in cacheCountJson) {
+            				count =  cacheCountJson[homeType];
+            			}
+            			if(NaN === count) {
+            				count = 0;
+            			}
+            		} catch(e) {
+            		}
+            	}
+            	return count;
+            }
+            function setICWidthCount(homeType, newCount){
+            	var countCacheStr = window.localStorage.getItem(CMCC_HOME_IC_WIDTH_KEY);
+        		try {
+        			var cacheCountJson = null;
+            		if(countCacheStr) {
+            			cacheCountJson= JSON.parse(countCacheStr);
+        				cacheCountJson[homeType] = newCount;
+            		} else {
+            			cacheCountJson = {};
+            			cacheCountJson[homeType] = newCount;
+            		}
+            		if(null != cacheCountJson) {
+            			window.localStorage.setItem(CMCC_HOME_IC_WIDTH_KEY, JSON.stringify(cacheCountJson));
+            		}
+            	} catch(e) {
+            	}
+            }
+            function getICWidthInfo(icType){
+            	var icInfo = {};
+				icInfo.code = "IC120013";
+				icInfo.starttime = new Date().valueOf();
+				
+            	var collectInfo = {};
+            	try {
+            		var bodyWidth = document.body.clientWidth;
+	            	var btnWidth = document.getElementById("cards_mgr_btn").clientWidth;
+	            	var innerWidth = window.innerWidth;
+	            	var deviceWidth = resultDevice.screenWidth;
+	            	var webScreenWidth = screen.width;
+	            	
+	            	collectInfo.homeType = icType;
+	            	collectInfo.bodyWidth = bodyWidth;
+	            	collectInfo.btnWidth = btnWidth;
+	            	collectInfo.innerWidth = innerWidth;
+	            	collectInfo.deviceWidth = deviceWidth;
+	            	collectInfo.webScreenWidth = webScreenWidth;
+            	}catch(e) {
+            	}
+            	icInfo.extend = collectInfo;
+            	return icInfo;
+            }
+
+			//创建卡片，递归实现解决异步调用乱序问题
+			function createCard() {
+				if(count >= cardLength) {
+					isCardsCreateFinish = true;
+					//内容卡片创建完毕
+					console.log('cards create finish, count is ' + count);
+
+					//step4: 创建卡片管理按钮
+					xcssParser.parseStyleFile("./cardmanagerbtn/business.x.css", createCardsMgrBtn);
+
+					//收集日志
+					/*
+					setTimeout(function(){
+											var icCount = 0;
+											var homeCreateType = 0;
+											var typeResStr = exec("WidgetMMPContainerComponents", "getHomePageCreateType", []);
+											try {
+												homeCreateType = getResultMessage(typeResStr).homePageCreateType;
+											} catch(e) {
+											}
+											icCount = getICWidthCount(homeCreateType);
+											if(icCount < 2) {
+												setICWidthCount(homeCreateType, icCount+1);
+												var icInfo = getICWidthInfo(homeCreateType);
+												exec("LogComponents", "addLog", [icInfo]);
+											}
+										},2000);*/
+					
+					return;
+				}
+
+//				var cardDefalutData = cardList[count];
+				var cardDefalutData = showCardSortList[count];
+				
+				require([cardDefalutData.entry], function(createFunc) {
+					var cardDiv = createFunc(cardDefalutData, globalNetConnect);
+					setEmptyTransCss(cardDiv);
+					
+					console.log("createCard " + cardDiv.id + " show state : " + cardDiv.initShowState);
+                    if(cardDiv.initShowState === true) {
+                        cardArea.appendChild(cardDiv);
+                    }else{
+                        noneShowCardsMap[cardDiv.id] = cardDiv;
+                    }
+
+					if(0 == count) {
+						exec("WidgetMMPContainerComponents", "homePageLoadFinish", []);
+					}
+					
+					cardsDomCache[count] = cardDiv;
+
+					//创建下一个卡片
+					count++;
+					createCard();
+				}, function(err) {
+					console.error("createCard " + cardDefalutData.id + " error: " + err + " ,create next card");
+					//创建一个空壳，占住位置
+					var cardDiv = document.createElement('div');
+					cardDiv.id = cardDefalutData.id;
+					setEmptyTransCss(cardDiv);
+
+                   if(cardDiv.initShowState === true) {
+                        cardArea.appendChild(cardDiv);
+                    }else{
+                        noneShowCardsMap[cardDiv.id] = cardDiv;
+                    }
+
+					//创建出错，也需要回调，回调不需要请求
+					listener.callBack(cardDefalutData.id, CARD_CONTENT_NO_REQUEST);
+					
+					cardsDomCache[count] = cardDiv;
+
+					//创建下一个卡片
+					count++;
+					createCard();
+				});
+			}
+
+			//创建卡片管理按钮
+			function createCardsMgrBtn() {
+				var btn = document.createElement("div");
+				btn.id = "cards_mgr_btn";
+				btn.className = "css_card_manage_btn";
+				btn.innerText = "卡片管理";
+
+				var targetElement = null;
+				btn.addEventListener("touchstart", function() {
+					event.stopPropagation();
+					targetElement = btn;
+					moveOverCheck.start(event);
+					targetElement.style.backgroundColor = "#efefef";
+				}, false);
+				btn.addEventListener("touchmove", function() {
+					event.stopPropagation();
+					if(targetElement) {
+						targetElement.style.background = "";
+						if(moveOverCheck.check(event)) {
+							targetElement = null;
+						}
+					}
+				}, false);
+				btn.addEventListener("touchend", function() {
+					event.stopPropagation();
+					if(targetElement) {
+						targetElement.style.background = "";
+                        onCardMsgBtnClick();
+                        exec("LogComponents", "addCmccLog", [cpaCode.cardManage]);
+                        exec("WidgetMMPContainerComponents", "appenCardOpLog", ["FT69301", "bottom"]);
+					}
+					targetElement = null;
+				}, false);
+
+				document.body.appendChild(btn);
+			}
+
+            function onCardMsgBtnClick() {
+                //跳转到卡片管理Activity
+                var cards = [];
+                for(var index = 0; index < cardLength; index++) {
+                    var cardDefaultData = cardList[index];
+                    var cardCacheDataStr = cacheMgr.getCache(cardDefaultData.id);
+                    var cardCacheData = null;
+                    if(cardCacheDataStr) {
+                        if( typeof cardCacheDataStr == "string") {
+                            try {
+                                cardCacheData = JSON.parse(cardCacheDataStr);
+                                console.log("cached card data parsed");
+                            } catch(e) {
+                                console.log("JSON parse exception");
+                            }
+                        }
+                    }
+                    if(cardCacheData) {
+                        cardCacheData.content = "";
+                        cards[index] = cardCacheData;
+                    } else {
+                        cards[index] = cardDefaultData;
+                    }
+                }
+                //传入卡片数据json数组
+                exec("WidgetMMPContainerComponents", "startCardsMgr", [cards]);
+            }
+
+			//缓存管理器
+			function CardCacheMgr() {
+				var cacheFileName = "cardCache";
+
+				this.getCache = function(key) {
+					var result = null;
+					try{
+						result = ifly_getString(cacheFileName, key);
+					}catch(e){
+						console.warn("getCache error, key is " + key);
+					}
+					return result;
+				};
+
+				this.setCache = function(key, value) {
+					//字符串是基本数据类型 instanceof 判断String类型返回值为false
+					if( typeof value == "string") {
+						ifly_putString(cacheFileName, key, value);
+					} else if( typeof value == "object") {
+						var stringValue = JSON.stringify(value);
+						ifly_putString(cacheFileName, key, stringValue);
+					} else {
+						console.warn("setCache faile, value type is not surpport");
+					}
+				};
+			}
+
+			var cacheMgr = new CardCacheMgr();
+
+			//卡片请求监听器
+			function CardRequestListener() {
+				var successCount = 0;
+				var faileCount = 0;
+				var noRequestContent = 0;
+				var totalCount = 0;
+				var cardsDomId = {};
+				this.reset = function(){
+					successCount = 0;
+					faileCount = 0;
+					noRequestContent = 0;
+					totalCount = 0;
+					cardsDomId = {};
+				};
+
+				this.callBack = function(cardId, state) {
+					console.log('card request callback, cardId is ' + cardId + ' ,state ' + state + ' ,totalCount is ' + totalCount);
+					
+					if(isGlobalUpdating){
+						//保证一个卡片只接受一次回调
+						if(cardId in cardsDomId){
+							//do nothing
+						}else{
+							if(state == CARD_CONTENT_REQUEST_SUCCESS) {
+								successCount++;
+							} else if(state == CARD_CONTENT_REQUEST_FAILE){
+								faileCount++;
+							} else{
+								noRequestContent++;
+							}
+							cardsDomId[cardId] = 1;
+							totalCount++;
+						}
+						
+						if(totalCount == cardLength) {
+							//更新完毕
+							console.log('all card request callback finish, change loading desc');
+							
+							isGlobalUpdating = false;
+							
+							var needRequest = totalCount - noRequestContent;
+							if(needRequest > 0 && needRequest == faileCount){
+								 //卡片更新全部失败
+	                            
+	                            changeLoadingState(GLOBAL_UPDATERESULT_STATE.FAIL);
+	                            //区分失败原因
+	                            if(globalNetConnect){
+		                            preGlobalUpdateResState = GLOBAL_UPDATERESULT_STATE.FAIL;
+		                            if(forceGlobalUpdate && isPageOnFront){
+			                            //exec("UIComponents","showToast",["网络异常，请稍后重试",1]);
+			                            showUpdateErrorJSToast();
+		                            }
+	                            }else{
+		                            preGlobalUpdateResState = GLOBAL_UPDATERESULT_STATE.NO_NET_FAIL;
+		                            if(forceGlobalUpdate && isPageOnFront){
+		                            	exec("UIComponents","showToast",["网络无连接，请检测网络设置",1]);
+		                            }
+	                            }
+							} else {
+								changeLoadingState(GLOBAL_UPDATERESULT_STATE.SUCCESS);
+	                           
+	                            preGlobalUpdateResState = GLOBAL_UPDATERESULT_STATE.SUCCESS;
+	                        }
+						}
+					}
+					
+					if((times_jh_log_card_request < JH_LOG_MAX_TIMES_FOR_CARD_REQUEST)&&(successCount > 0) ) {
+						times_jh_log_card_request++;
+						//记录更新成功的日志
+						exec("WidgetMMPContainerComponents", "cardListUpdateSucess", []);
+					}
+				};
+			}
+
+			var listener = new CardRequestListener();
+			
+			function isNetConnect(){
+				var connectS = exec("SystemComponents","isNetWorkAvailable",[]);
+				//没有返回结果，默认为链接状态
+				if(!connectS){
+					return true;
+				}
+				var connectMsg = getResultMessage(connectS);
+				if(true == connectMsg) {
+					return true;
+				} 
+				return false;
+			}
+
+			//按顺序创建 本地功能区、loading区、卡片内容区
+			function createMainPageBySequence() {
+				
+				globalNetConnect = isNetConnect();
+				
+				// step2: 解析公共样式表，创建loading区
+				xcssParser.parseStyleFile("./common/business.x.css", function(){});
+				
+				isGlobalUpdating = true;
+				//界面启动的自动更新认为是强制更新
+				forceGlobalUpdate = true;
+
+                cardArea = document.createElement("div");
+                cardArea.handleAnimationEnd = function(stickTopCard){
+                	if(stickTopCard) {
+                    	cardArea.removeChild(stickTopCard);
+                    	cardArea.insertBefore(stickTopCard,cardArea.firstElementChild);
+                    	forceRefreshScreen();
+                	}
+                };
+                document.body.appendChild(cardArea);
+                
+                stickTopAnimationHelper = new CardAnimationHelper();
+                stickTopAnimationHelper.init(cardArea);
+				
+				//step3: 创建内容卡片
+				createCard();
+			}
+
+			if(!isNeedResetScale) {
+				createMainPageBySequence();
+			}
+			/**
+			 * 重新获取屏幕宽度来计算scale
+			 */
+			function resetScale() {
+				if(!isNeedResetScale) {
+					console.log("there's no need reset Scale for main page");
+					return;
+				}
+				console.log("main page : before reset scale is " + scale);
+				setTimeout(function() {// 延迟一段以便页面加载完毕
+					scale = document.body.clientWidth / 320;
+					console.log("main page : after reset scale is " + scale);
+					//重置xcssParser中的scale
+					xcssParser = new XcssParser();
+					createMainPageBySequence();
+				}, 350);
+			}
+
+			//更新卡片状态，由java层调用
+			function updateCardState(id, state) {
+				console.log('updateCardState, cardId is ' + id + ' ,state is ' + state);
+
+				//由各卡片实现update接口：更新缓存、更新界面
+//				var cardDiv = document.getElementById(id);
+//				console.log("cardDiv is " + cardDiv);
+//				if(cardDiv && cardDiv.updateState) {
+//					cardDiv.updateState(convertType(state));
+//				}
+                state = convertType(state);
+                if (state) {
+                    openCard(id);
+                } else {
+                    closeCard(id);
+                }
+			}
+
+			//卡片添加到第position个卡片之下
+			//position为0表示卡片添加在最上面
+			function addCard(position, card) {
+				console.log("addCard(), position is " + position + ", card is " + card.id);
+				if (null == cardArea) {
+				    console.log("cardArea is null");
+				    return;
+				}
+				var childs = cardArea.children;
+				if (childs) {
+				    //过滤掉运营位本身
+				    var childNotBanner = [];
+				    for (var i = 0; i < childs.length; i ++) {
+				        if (childs[i].className.indexOf("css_banner_div") > -1) {
+				            continue;
+				        }
+                        childNotBanner.push(i);
+				    }
+                    
+                    //若卡片的数目小于等于插入的位置，则直接添加该卡片；否则，则插入到第postion+1个卡片的前面
+                    if (childNotBanner.length <= position) {
+                        cardArea.appendChild(card);
+                    } else {
+                        cardArea.insertBefore(card, cardArea.children[childNotBanner[position]]);
+                    }
+				}
+			}
+
+			//删除某个卡片
+			function deleteCard(cardId) {
+				console.log("deleteCard(), cardId is " + cardId);
+				var cardView = document.getElementById(cardId);
+				if(cardView) {
+					cardView.parentNode.removeChild(cardView);
+				}
+			}
+			
+			function onPagePause() {
+				console.log("WebHomePage onPagePause is called");
+				isPageOnFront = false;
+				
+				showCardsContentPage();
+			}
+			function onPageResume() {
+				console.log("WebHomePage onPageResume is called, isGlobalUpdating = " + isGlobalUpdating + " , isCardsCreateFinish = " + isCardsCreateFinish);
+				
+				isPageOnFront = true;
+				//卡片没有创建完、正在更新，都不调用更新
+				if(!isCardsCreateFinish || isGlobalUpdating){
+					return;
+				}
+				
+				forceRefreshScreen();
+				//回到首页，如果上一次失败了，自动重试
+				if(preGlobalUpdateResState == GLOBAL_UPDATERESULT_STATE.FAIL || preGlobalUpdateResState == GLOBAL_UPDATERESULT_STATE.NO_NET_FAIL) {
+					updateAllCards(false);
+				}
+			}
+			function onActivityStop(){
+				console.log("WebHomePage onActivityStop is called");
+				isPageOnFront = false;
+				
+				if(speechEnhanceDom && speechEnhanceDom.showContentPage) {
+            		speechEnhanceDom.showContentPage();
+            	}
+			}
+			
+			function onActivityPause(){
+			}
+			
+			function onActivityResume(){
+				console.log("WebHomePage onActivityResume is called, isGlobalUpdating = " + isGlobalUpdating + " , isCardsCreateFinish = " + isCardsCreateFinish);
+				
+				isPageOnFront = true;
+				//卡片没有创建完、正在更新，都不调用更新
+				if(!isCardsCreateFinish || isGlobalUpdating){
+					return;
+				}
+				//回到首页，如果上一次失败了，自动重试
+				if(preGlobalUpdateResState == GLOBAL_UPDATERESULT_STATE.FAIL || preGlobalUpdateResState == GLOBAL_UPDATERESULT_STATE.NO_NET_FAIL) {
+					updateAllCards(false);
+				}
+			}
+			function onNetConnectChange(isConnect){
+				console.log("WebHomePage onNetConnectChange is called, isConnect = " + isConnect + " , isGlobalUpdating = " + isGlobalUpdating + " , isCardsCreateFinish = " + isCardsCreateFinish + " , isPageOnFront = " + isPageOnFront);
+				//卡片没有创建完、正在更新、不在前台，都不调用更新
+				if(!isCardsCreateFinish || isGlobalUpdating || !isPageOnFront){
+					return;
+				}
+				if(isConnect){
+					if(preGlobalUpdateResState == GLOBAL_UPDATERESULT_STATE.FAIL || preGlobalUpdateResState == GLOBAL_UPDATERESULT_STATE.NO_NET_FAIL) {
+						updateAllCards(false);
+					}
+				}
+			}
+			function updateAllCards(isForceUpdate){
+				console.log("WebHomePage updateAllCards is called, isForceUpdate = " + isForceUpdate);
+				
+				if(isGlobalUpdating){
+					console.log("WebHomePage updateAllCards is updating");
+					return;
+				}
+				forceGlobalUpdate  = isForceUpdate;
+				isGlobalUpdating = true;
+				globalNetConnect = isNetConnect();
+				if(globalNetConnect){
+					listener.reset();
+					changeLoadingState(GLOBAL_UPDATERESULT_STATE.LOADING);
+					for(var i=0; i < cardsDomCache.length; i++){
+						if(cardsDomCache[i].updateData){
+							cardsDomCache[i].updateData();
+						}else{
+							listener.callBack(cardsDomCache[i].id, CARD_CONTENT_NO_REQUEST);
+						}
+					}
+				}else{
+					isGlobalUpdating = false;
+					preGlobalUpdateResState = GLOBAL_UPDATERESULT_STATE.NO_NET_FAIL;
+					changeLoadingState(GLOBAL_UPDATERESULT_STATE.NO_NET_FAIL);
+					if(isForceUpdate) {
+						exec("UIComponents","showToast",["网络无连接，请检测网络设置",1]);
+					}
+				}
+				
+			}
+			
+			function preHandleTitle(titleText) {
+			    if(titleText.length > 5) {
+                    titleText = titleText.substring(0, 5);
+                }
+                return titleText;
+			}
+			
+			
+            function createSpeechCaseView(id, caseTitleTxt, caseArr){
+                if(!id || !caseTitleTxt || !caseArr || 0 == caseArr.length) {
+                    return null;
+                }
+                var caseView = document.createElement("div");
+                caseView.className = "card_op_view";
+                var titleDiv = document.createElement("div");
+                titleDiv.className = "card_op_view_title";
+
+                var left = document.createElement("div");
+                left.className = "card_op_view_title_left";
+                var right = document.createElement("div");
+                right.className = "card_op_view_title_right";
+
+                var titleFlag = document.createElement("label");
+				titleFlag.className= "css_card_title_text";
+				caseTitleTxt = preHandleTitle(caseTitleTxt);
+                titleFlag.innerHTML = caseTitleTxt;
+                left.appendChild(titleFlag);
+                var cancel = document.createElement("div");
+                cancel.className = "card_op_view_cancel";
+                cancel.innerHTML = "取消";
+                right.appendChild(cancel);
+
+                titleDiv.appendChild(left);
+                titleDiv.appendChild(right);
+
+                caseView.appendChild(titleDiv);
+
+                var caseContent = document.createElement("div");
+                caseContent.className = "card_op_view_case";
+
+                var caseContentFlag = document.createElement("div");
+                caseContentFlag.className = "card_op_view_case_flag";
+                caseContentFlag.innerHTML = "点击下面麦克风试着说:";
+
+                caseContent.appendChild(caseContentFlag);
+
+                for(var i = 0; i < caseArr.length; i++){
+                    var caseContentItem = document.createElement("div");
+                    caseContentItem.className = "card_op_view_case_item";
+                    if(i == caseArr.length-1){
+                        caseContentItem.style.paddingBottom = "0";
+                    }
+                    caseContentItem.innerHTML = caseArr[i];
+                    caseContent.appendChild(caseContentItem);
+                }
+
+                caseView.appendChild(caseContent);
+
+                var cancelListener = null;
+
+                cancel.addEventListener("touchstart",function(){
+                    event.stopPropagation();
+                },false);
+                cancel.addEventListener("touchmove",function(){
+                    event.stopPropagation();
+                },false);
+                cancel.addEventListener("touchend",function(){
+                    event.stopPropagation();
+                    if(cancelListener) {
+                        cancelListener();
+                        if(cardOpCode[id]) {
+                        	exec("WidgetMMPContainerComponents","appenCardOpLog",[cardOpCode[id], "speechCaseCancel"]);
+                        }
+                    }
+                },false);
+
+                caseView.setCancelListener = function(listener){
+                	if(!listener){
+	                    console.warn("WebHomePage card " + id + " setCancelListener null");
+                	}
+                    cancelListener = listener;
+                };
+
+                return caseView;
+            }
+
+            function createOperationView(id, opTitleTxt, cardId){
+                if(!id || !opTitleTxt || !cardId) {
+                    return null;
+                }
+                var opView = document.createElement("div");
+                opView.className = "card_op_view";
+                var titleDiv = document.createElement("div");
+                titleDiv.className = "card_op_view_title";
+
+                var left = document.createElement("div");
+                left.className = "card_op_view_title_left";
+                var right = document.createElement("div");
+                right.className = "card_op_view_title_right";
+
+                var titleFlag = document.createElement("label");
+				titleFlag.className = "css_card_title_text";
+				opTitleTxt = preHandleTitle(opTitleTxt);
+                titleFlag.innerHTML = opTitleTxt;
+                left.appendChild(titleFlag);
+                var cancel = document.createElement("div");
+                cancel.className = "card_op_view_cancel";
+                cancel.innerHTML = "取消";
+                right.appendChild(cancel);
+
+                titleDiv.appendChild(left);
+                titleDiv.appendChild(right);
+
+                opView.appendChild(titleDiv);
+
+                var opContent = document.createElement("div");
+                opContent.className = "card_op_view_op";
+
+                var zdItem = document.createElement("div");
+                zdItem.className = "card_op_view_op_item";
+
+                var zdItemIcon = document.createElement("img");
+                zdItemIcon.className = "card_op_view_op_item_icon";
+                zdItemIcon.src = "./common/res/ic_mainpage_cardmanage_top.png";
+
+                var zdItemFlag = document.createElement("label");
+                zdItemFlag.className = "card_op_view_op_item_flag";
+                zdItemFlag.innerHTML = "置顶";
+
+                zdItem.appendChild(zdItemIcon);
+                zdItem.appendChild(zdItemFlag);
+
+                var divider = document.createElement("div");
+                divider.className = "card_op_view_divider";
+
+                var offItem = document.createElement("div");
+                offItem.className = "card_op_view_op_item";
+
+                var offItemIcon = document.createElement("img");
+                offItemIcon.className = "card_op_view_op_item_icon";
+                offItemIcon.src = "./common/res/ic_mainpage_cardmanage_close.png";
+
+                var offItemFlag = document.createElement("label");
+                offItemFlag.className = "card_op_view_op_item_flag";
+                offItemFlag.innerHTML = "关闭";
+
+                offItem.appendChild(offItemIcon);
+                offItem.appendChild(offItemFlag);
+
+                opContent.appendChild(zdItem);
+                opContent.appendChild(divider);
+                opContent.appendChild(offItem);
+
+                opView.appendChild(opContent);
+
+                var opListener = null;
+
+                opView.setOpListener = function(listener){
+                	if(!listener){
+	                    console.warn("WebHomePage card " + id + " setOpListener null");
+                	}
+                    opListener = listener;
+                };
+
+                var checkMoveMotion = false;
+                cancel.addEventListener("touchstart",function(){
+                    event.stopPropagation();
+                    checkMoveMotion = false;
+                    moveOverCheck.start(event);
+                },false);
+                cancel.addEventListener("touchmove",function(){
+                    event.stopPropagation();
+                    if(moveOverCheck.check(event)) {
+                        checkMoveMotion = true;
+                    }
+                },false);
+                cancel.addEventListener("touchend",function(){
+                    event.stopPropagation();
+                    if(!checkMoveMotion && opListener){
+                        checkMoveMotion = false;
+                        //取消
+                        opListener(0);
+                        
+                        if(cardOpCode[id]) {
+                        	exec("WidgetMMPContainerComponents","appenCardOpLog",[cardOpCode[id], "menuCancel"]);
+                        }
+                    }
+                },false);
+
+                zdItem.addEventListener("touchstart",function(){
+                    event.stopPropagation();
+                    checkMoveMotion = false;
+                    zdItem.style.backgroundColor = "#efefef";
+                    moveOverCheck.start(event);
+                },false);
+                zdItem.addEventListener("touchmove",function(){
+                    event.stopPropagation();
+                    if(!checkMoveMotion){
+                        zdItem.style.backgroundColor = "";
+                        checkMoveMotion = true;
+                    }
+                },false);
+                zdItem.addEventListener("touchend",function(){
+                    event.stopPropagation();
+                    zdItem.style.backgroundColor = "";
+                    if(!checkMoveMotion && opListener){
+                        checkMoveMotion = false;
+                        //置顶
+                        opListener(1);
+                        exec("LogComponents", "addCmccLog", [cpaCode.cardManage]);
+                        if(cardOpCode[id]) {
+                        	exec("WidgetMMPContainerComponents","appenCardOpLog", [cardOpCode[id], "cardStick"]);
+                        }
+                    }
+                },false);
+
+                offItem.addEventListener("touchstart",function(){
+                    event.stopPropagation();
+                    checkMoveMotion = false;
+                    offItem.style.backgroundColor = "#efefef";
+                    moveOverCheck.start(event);
+                },false);
+                offItem.addEventListener("touchmove",function(){
+                    event.stopPropagation();
+                    if(!checkMoveMotion){
+                        offItem.style.backgroundColor = "";
+                        checkMoveMotion = true;
+                    }
+                },false);
+                offItem.addEventListener("touchend",function(){
+                    event.stopPropagation();
+                    offItem.style.backgroundColor = "";
+                    if(!checkMoveMotion && opListener){
+                        checkMoveMotion = false;
+                        //关闭
+                        //opListener(2);
+                        closeCard(cardId);
+                        exec("LogComponents", "addCmccLog", [cpaCode.cardManage]);
+                        if(cardOpCode[id]) {
+                        	exec("WidgetMMPContainerComponents","appenCardOpLog", [cardOpCode[id], "cardClose"]);
+                        }
+                    }
+                },false);
+
+                return opView;
+            }
+            
+            function showCardsContentPage() {
+            	var cards = cardArea.childNodes;
+            	if(speechEnhanceDom && speechEnhanceDom.showContentPage) {
+            		speechEnhanceDom.showContentPage();
+            	}
+            	if(localCardDom && localCardDom.showContentPage) {
+            		localCardDom.showContentPage();
+            	}
+				for(var i=0;i < cards.length; i++) {
+					try{
+						if(cards[i].showContentPage) {
+							cards[i].showContentPage();
+						}
+					}catch(e){
+						console.error(cards[i].id + " showContentPage exception, " + e.message);
+					}
+				}
+            }
+            function createCardMainTitleWithExtraParam(id, titleText, caseText, callBack, showParam, showCaseRedDot){
+            	if(!id || !titleText || !caseText) {
+            		return null;
+            	}
+            	var mainTitle = document.createElement("div");
+		        mainTitle.className = "card_main_top_bar";
+		        
+		        var titleLeft = document.createElement("div");
+		        titleLeft.className = "card_main_top_bar_left";
+		        
+		        var caseTitle = document.createElement("div");
+		        caseTitle.className = "card_main_top_bar_left_tile";
+		        titleText = preHandleTitle(titleText);
+		        caseTitle.innerHTML = titleText;
+		        var caseContent = document.createElement("label");
+		        caseContent.className = "card_main_top_bar_left_case";
+		        if(caseText.length > 9) {
+                    caseText = caseText.substring(0, 9);
+                    caseText = caseText + "”";
+                }
+		        caseContent.innerHTML = caseText;
+				var caseArrow = document.createElement("img");
+				caseArrow.className = "card_main_top_bar_left_case_arrow";
+				caseArrow.src = ic_viewsample_arrow_down;
+		        
+		        titleLeft.appendChild(caseTitle);
+		        caseTitle.appendChild(caseContent);
+				titleLeft.appendChild(caseArrow);
+
+				console.log("id= " + id + " | showCaseRedDot= " + showCaseRedDot);
+				var caseRedDot = null;
+				if(true === showCaseRedDot) {
+					caseRedDot = document.createElement("img");
+					caseRedDot.className = "card_main_top_bar_left_case_reddot";
+					caseRedDot.src = ic_viewsample_reddot;
+					titleLeft.appendChild(caseRedDot);
+				}
+		        
+		        var titleRight = document.createElement("div");
+		        titleRight.className = "card_main_top_bar_right";
+		        var arrow = document.createElement("img");
+		        arrow.src = ic_mainpage_card_menu;
+		        arrow.className = "card_main_top_bar_right_arrow";
+		        titleRight.appendChild(arrow);
+		        
+		        mainTitle.appendChild(titleLeft);
+		        if(false !== showParam) {
+			        mainTitle.appendChild(titleRight);
+		        }
+		        
+		        var titleOpListener = callBack;
+	            mainTitle.setMainTitleOpListener = function(listener){
+	            	if(!listener){
+	                    console.warn("WebHomePage card " + id + " setMainTitleOpListener null");
+	            	}
+	            	titleOpListener = listener;
+	            };
+		        
+		        var checkMoveMotion = false;
+		        titleLeft.addEventListener("touchstart",function(){
+	                    event.stopPropagation();
+	                    checkMoveMotion = false;
+	                    moveOverCheck.start(event);
+	                },false);
+	            titleLeft.addEventListener("touchmove",function(){
+	                event.stopPropagation();
+	                if(moveOverCheck.check(event)) {
+	                    checkMoveMotion = true;
+	                }
+	            },false);
+	            titleLeft.addEventListener("touchend",function(){
+	                event.stopPropagation();
+	                if(!checkMoveMotion && titleOpListener){
+	                    checkMoveMotion = false;
+						if(caseRedDot) {
+							caseRedDot.style.display = "none";
+						}
+	                    //说法示例
+	                    titleOpListener(0);
+	                    //记录稽核
+	                    exec("LogComponents", "addCmccLog", [cpaCode.speechCase]);
+	                    if(cardOpCode[id]) {
+                        	exec("WidgetMMPContainerComponents","appenCardOpLog",[cardOpCode[id], "speechCase"]);
+                        }
+	                }
+	            },false);
+	            
+	            titleRight.addEventListener("touchstart",function(){
+	                    event.stopPropagation();
+	                    checkMoveMotion = false;
+	                    moveOverCheck.start(event);
+	                },false);
+	            titleRight.addEventListener("touchmove",function(){
+	                event.stopPropagation();
+	                if(moveOverCheck.check(event)) {
+	                    checkMoveMotion = true;
+	                }
+	            },false);
+	            titleRight.addEventListener("touchend",function(){
+	                event.stopPropagation();
+	                if(!checkMoveMotion && titleOpListener){
+	                    checkMoveMotion = false;
+	                    //置顶
+	                    titleOpListener(1);
+	                    
+	                    if(cardOpCode[id]) {
+                        	exec("WidgetMMPContainerComponents","appenCardOpLog",[cardOpCode[id], "menu"]);
+                        }
+	                }
+	            },false);
+		        
+		        return mainTitle;
+            }
+		    function createCardMainTitle(id, titleText, caseText, callBack, showCaseRedDot){
+		        return createCardMainTitleWithExtraParam(id, titleText, caseText, callBack , true, showCaseRedDot);
+		    }
+            
+            function setTransCss(elem, transPix, time) {
+                setStyle(elem, "-webkit-transform", "translate3d(0px, " + transPix + "px,0px)");
+                setStyle(elem, "-webkit-transition", "-webkit-transform " + time + "s ease");
+                setStyle(elem, "transition", "-webkit-transform " + time + "s ease");
+            }
+
+            function setEmptyTransCss(elem) {
+                //setStyle(elem, "-webkit-transform", null);
+                //setStyle(elem, "-webkit-transition", null);
+                //setStyle(elem, "transition", null);
+                if(!elem) {
+                	return;
+                }
+                setTransCss(elem, 0, 0);
+            }
+
+            function setStyle(elem, name, value) {
+                elem.style[name] = value;
+            }
+                
+            function CardAnimationHelper() {
+                var cardRoot;
+                var stickTopCard;
+                var needAnimationCount = 0;
+                var animationEndCount = 0;
+                //FIXME 这里是卡片间的间距
+                var cardMargin = 7 * scale;
+                if (deviceWidth === 720) {
+                    cardMargin = 16;
+                }
+
+                this.init = function (cardParent) {
+                    cardRoot = cardParent;
+                    cardRoot.addEventListener("webkitTransitionEnd", cardAnimationEnd, true);
+                };
+
+
+                function findCardById(cardId) {
+                    if (!cardId) {
+                        return null;
+                    }
+                    return document.getElementById(cardId);
+                }
+
+                this.startAnimation = function (cardId) {
+                    console.log("CardAnimationHelper startAnimation()  stickTop " + cardId);
+                    var card = findCardById(cardId);
+                    if (!card) {
+                        console.log("CardAnimationHelper startAnimation() did not find card " + cardId);
+                        if (cardRoot.handleAnimationEnd) {
+                            cardRoot.handleAnimationEnd(null);
+                        }
+                        return;
+                    }
+                    stickTopCard = card;
+                    cardRoot.style.cssText = "pointer-events: none;";
+                    var transDownPix = card.offsetHeight + cardMargin;
+                    var transUpPix = card.offsetTop - cardRoot.offsetTop;
+                    console.log("CardAnimationHelper transDownPix: " + transDownPix + ", transUpPix: " + transUpPix);
+                    for (var i = 0; i < cardRoot.childElementCount; i++) {
+                        var currCard = cardRoot.childNodes[i];
+                        if(currCard === card) {
+                            needAnimationCount = i;
+                            setTransCss(card, -transUpPix, 0.52 + needAnimationCount * 0.3);
+                            //后面的不处理
+                            break;
+                        } else {
+                            setTransCss(currCard, transDownPix, 0.5);
+                        }
+                    }
+                };
+                function cardAnimationEnd() {
+                    console.log("CardAnimationHelper cardAnimationEnd() ");
+                    animationEndCount++;
+                    if(animationEndCount < needAnimationCount) {
+                        console.log("CardAnimationHelper updateTransitionAll() wait for last card animation end");
+                        return;
+                    }
+                    animationEndCount = 0;
+                    cardRoot.style.cssText = "";
+                    for (var i = 0; i < cardRoot.childElementCount; i++) {
+                        setEmptyTransCss(cardRoot.childNodes[i]);
+                        if (cardRoot.childNodes[i] == stickTopCard) {
+                            break;
+                        }
+                    }
+                    if (cardRoot.handleAnimationEnd) {
+                        cardRoot.handleAnimationEnd(stickTopCard);
+                    }
+                }
+            }
+            
+            function scrollToBodyBottom(){
+            	if(!isCardsCreateFinish){
+					return;
+				}
+            	//滑动到页面底部
+            	document.body.scrollTop = document.body.scrollHeight;
+            	console.log("document.body.scrollHeight = " + document.body.scrollHeight);
+            }
+            
+            function createJSToast(){
+                var timerId = null;
+                var actionCallBack = null;
+
+                var toast = document.createElement("div");
+                toast.className = "js_toast";
+                var content = document.createElement("div");
+                content.className = "js_toast_content";
+                var tip = document.createElement("label");
+                var action = document.createElement("label");
+                action.className = "js_toast_content_action";
+
+                action.addEventListener("click",function(){
+                    if(actionCallBack) {
+                        actionCallBack();
+                    }
+                    toast.style.display = "none";
+                    if(timerId){
+                        clearTimeout(timerId);
+                        timerId = null;
+                    }
+                    actionCallBack = null;
+                },false);
+
+                content.appendChild(tip);
+                content.appendChild(action);
+                toast.appendChild(content);
+
+                toast.show = function(tipText,actionText,callback) {
+                    actionCallBack = callback;
+
+                    tip.innerText = tipText;
+                    action.innerText = actionText;
+
+                    toast.style.display = "block";
+                };
+
+                toast.resetTimer=function(){
+                    if(timerId){
+                        clearTimeout(timerId);
+                        timerId = null;
+                    }
+
+                    timerId = setTimeout(function(){
+                        toast.style.display = "none";
+                        actionCallBack = null;
+                        timerId = null;
+                    },2500);
+                };
+
+                return toast;
+            }
+            
+            function jsToastCallBack(){
+            	updateAllCards(true);
+            }
+            function showUpdateErrorJSToast(){
+                if(!JSToast){
+                    JSToast = createJSToast();
+                    document.body.appendChild(JSToast);
+                }
+                JSToast.resetTimer();
+                JSToast.show("网络异常，更新失败。","点击刷新",jsToastCallBack);
+            }
+            function createCardIndicator(initNum, initIndex){
+	            var indicator = document.createElement("div");
+	            indicator.className = "card_indicator";
+	            var indi_left = document.createElement("label");
+	            indi_left.className = "card_indicator_text_decorate";
+	            
+	            var indi_right = document.createElement("label");
+	            indi_right.className = "card_indicator_text_decorate";
+	            
+	            var indicator_text = document.createElement("label");
+	            indicator_text.className = "card_indicator_text";
+	            indicator.appendChild(indi_left);
+	            indicator.appendChild(indicator_text);
+	            indicator.appendChild(indi_right);
+	
+	            var initState = true;
+	            var select_index = 0;
+	            var indicator_numbers = 0;
+	            if(initIndex && initNum && (initIndex <= initNum)) {
+	                select_index = initIndex;
+	                indicator_numbers = initNum;
+	                indicator_text.innerHTML = select_index + "/" + indicator_numbers;
+	            } else {
+	                initState = false;
+	                indicator.style.display = "none";
+	            }
+	            indicator.setSelected = function(select){
+	                if(select && indicator_numbers && (select <= indicator_numbers)) {
+	                    if(!initState) {
+	                        initState = true;
+	                        indicator.style.display = "block";
+	                    }
+	                    select_index = select;
+	                    indicator_text.innerHTML = select_index + "/" + indicator_numbers;
+	                }
+	            };
+	            indicator.initIndicator = function(rNum, rIndex){
+	                if(rIndex && rNum && (rIndex <= rNum)) {
+	                    if(!initState) {
+	                        initState = true;
+	                        indicator.style.display = "block";
+	                    }
+	                    select_index = rIndex;
+	                    indicator_numbers = rNum;
+	                    indicator_text.innerHTML = select_index + "/" + indicator_numbers;
+	                } else {
+	                    select_index = 0;
+	                    indicator_numbers = 0;
+	                    initState = false;
+	                    indicator.style.display = "none";
+	                }
+	            };
+	            return indicator;
+	        }
+		</script>
+	</body>
+</html>

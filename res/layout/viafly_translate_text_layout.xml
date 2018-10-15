@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <TextView android:textSize="@dimen/text_standard_size_t3" android:textColor="@color/color_standard_c3_v5" android:gravity="left" android:id="@id/edit_text_below" android:background="@color/color_standard_c4_v5" android:paddingLeft="14.0dip" android:paddingTop="18.0dip" android:layout_width="fill_parent" android:layout_height="114.0dip" android:text="点击输入要翻译的文本" />
+        <RelativeLayout android:id="@id/translate_record_layout" android:background="#ffeef2f6" android:paddingLeft="14.0dip" android:paddingTop="16.0dip" android:paddingRight="14.0dip" android:paddingBottom="14.0dip" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <TextView android:textSize="@dimen/text_standard_size_t5" android:textColor="@color/color_standard_c3_v5" android:id="@id/tranlate_but_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="翻译记录" android:layout_alignParentLeft="true" />
+            <ImageView android:id="@id/btn_clear_all" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/btn_clear_all" android:layout_alignParentRight="true" />
+            <ListView android:id="@id/text_result_lv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:divider="#00000000" android:dividerHeight="16.0dip" android:layout_below="@id/btn_clear_all" />
+        </RelativeLayout>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/text_translate_layout" android:background="#33220000" android:visibility="gone" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <RelativeLayout android:background="@color/color_standard_c4" android:paddingLeft="14.0dip" android:paddingTop="18.0dip" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="114.0dip">
+            <EditText android:textSize="@dimen/text_standard_size_t3" android:textColor="@color/color_standard_c1_v5" android:gravity="left" android:id="@id/edit_text" android:background="@null" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginRight="50.0dip" android:maxLines="3" android:imeOptions="actionDone" />
+            <ImageView android:id="@id/clear_edit_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/translate_edit_clear_margin_right" android:src="@drawable/edit_clear_text_selector" android:layout_alignParentTop="true" android:layout_alignParentRight="true" />
+            <ImageView android:id="@id/text_submit_img" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/translate_edit_clear_margin_right" android:src="@drawable/ic_notification_search_dark" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" />
+            <TextView android:textSize="@dimen/text_standard_size_t5" android:textColor="@color/color_standard_c3_v5" android:id="@id/language_kind" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="自动检测: " android:layout_alignParentBottom="true" />
+        </RelativeLayout>
+        <View android:background="#ffeef2f6" android:layout_width="fill_parent" android:layout_height="2.0dip" />
+        <RelativeLayout android:id="@id/translate_result_layout" android:background="@color/color_standard_c4" android:paddingLeft="22.0dip" android:paddingTop="14.0dip" android:paddingRight="22.0dip" android:paddingBottom="14.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="114.0dip">
+            <TextView android:textColor="@color/color_standard_c1" android:gravity="left" android:id="@id/translate_result" android:background="@null" android:scrollbars="vertical" android:layout_width="fill_parent" android:layout_height="112.0dip" android:layout_marginRight="50.0dip" android:maxLines="5" />
+            <ImageView android:id="@id/swith_results" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/text_translate_result_selector" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+            <ImageView android:id="@id/translate_loading_image" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/image_rotate_prograss" android:layout_centerVertical="true" />
+            <TextView android:textSize="@dimen/text_standard_size_t4" android:textColor="@color/color_standard_c5" android:id="@id/translate_loading_text" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:text="正在翻译..." android:layout_toRightOf="@id/translate_loading_image" android:layout_centerVertical="true" />
+        </RelativeLayout>
+    </LinearLayout>
+</FrameLayout>

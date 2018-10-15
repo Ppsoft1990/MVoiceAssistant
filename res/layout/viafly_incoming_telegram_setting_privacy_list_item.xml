@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.iflytek.base.skin.customView.XLinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" skin:background="statelist.setting_list_item_middle_states"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:skin="http://schemas.android.com/apk/res-auto">
+    <com.iflytek.base.skin.customView.XRelativeLayout android:gravity="center_vertical" android:paddingLeft="@dimen/call_pattern_setting_padding" android:paddingRight="@dimen/call_pattern_setting_padding" android:layout_width="fill_parent" android:layout_height="@dimen/call_privacy_setting_list_item_height">
+        <com.iflytek.base.skin.customView.XTextView android:ellipsize="end" android:id="@id/contact_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxWidth="@dimen/call_privacy_setting_contact_name_Maxwidth" android:singleLine="true" android:layout_centerVertical="true" skin:style="style_xpreference_title" />
+        <com.iflytek.base.skin.customView.XTextView android:ellipsize="end" android:id="@id/contact_audition" android:layout_width="@dimen/call_privacy_setting_contact_audition_width" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/call_pattern_setting_audition_margin_left" android:singleLine="true" android:layout_toRightOf="@id/contact_name" android:layout_centerVertical="true" skin:style="style_xpreference_summary" />
+        <com.iflytek.base.skin.customView.XLinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/contact_reduce" android:layout_width="@dimen/call_privacy_setting_delete_button_width" android:layout_height="fill_parent" android:layout_alignParentRight="true">
+            <com.iflytek.base.skin.customView.XImageView android:id="@id/contact_reduce_button" android:focusable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" skin:background="stateList.contact_reduce_button_states" />
+        </com.iflytek.base.skin.customView.XLinearLayout>
+    </com.iflytek.base.skin.customView.XRelativeLayout>
+</com.iflytek.base.skin.customView.XLinearLayout>

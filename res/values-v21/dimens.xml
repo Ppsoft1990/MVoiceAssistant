@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="sso_dialog_padding_bottom">8.0dip</dimen>
+    <dimen name="sso_tip_padding_bottom">12.0dip</dimen>
+    <dimen name="sso_toast_padding_bottom">7.0dip</dimen>
+</resources>

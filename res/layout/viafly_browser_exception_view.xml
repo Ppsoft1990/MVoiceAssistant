@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.iflytek.base.skin.customView.XLinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" skin:background="color.white"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:skin="http://schemas.android.com/apk/res-auto">
+    <com.iflytek.base.skin.customView.XLinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <com.iflytek.base.skin.customView.XImageView android:layout_gravity="center_horizontal" android:layout_width="149.0dip" android:layout_height="149.0dip" skin:src="image.emotion_error" />
+        <com.iflytek.base.skin.customView.XTextView android:gravity="center" android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="18.0dip" android:text="@string/browser_exception_error" skin:style="style_browser_exception_tip" />
+        <com.iflytek.base.skin.customView.XLinearLayout android:layout_width="272.0dip" android:layout_height="1.0px" android:layout_marginTop="7.0dip" skin:background="color.browser_exception_line" />
+        <com.iflytek.base.skin.customView.XLinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="15.0dip">
+            <com.iflytek.base.skin.customView.XTextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/browser_exception_resion1" android:drawableLeft="@drawable/browser_circle" android:drawablePadding="5.0dip" skin:style="style_browser_exception_resion" />
+            <com.iflytek.base.skin.customView.XTextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/browser_exception_resion2" android:drawableLeft="@drawable/browser_circle" android:drawablePadding="5.0dip" skin:style="style_browser_exception_resion" />
+        </com.iflytek.base.skin.customView.XLinearLayout>
+        <com.iflytek.base.skin.customView.XLinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="33.0dip">
+            <com.iflytek.base.skin.customView.XLinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/browser_refresh_retry" android:layout_width="94.0dip" android:layout_height="33.0dip" android:layout_marginRight="25.0dip" skin:background="statelist.btn_refresh_tryagain_state">
+                <com.iflytek.base.skin.customView.XImageView android:layout_width="15.0dip" android:layout_height="15.0dip" android:layout_marginRight="5.0dip" skin:src="image.ico_refresh_tryagain" />
+                <com.iflytek.base.skin.customView.XTextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/browser_exception_retry" skin:style="style_browser_exception_btn" />
+            </com.iflytek.base.skin.customView.XLinearLayout>
+            <com.iflytek.base.skin.customView.XLinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/browser_set_net" android:layout_width="94.0dip" android:layout_height="33.0dip" skin:background="statelist.btn_refresh_tryagain_state">
+                <com.iflytek.base.skin.customView.XImageView android:layout_width="15.0dip" android:layout_height="15.0dip" android:layout_marginRight="5.0dip" skin:src="image.ico_install_network" />
+                <com.iflytek.base.skin.customView.XTextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/browser_exception_set_net" skin:style="style_browser_exception_btn" />
+            </com.iflytek.base.skin.customView.XLinearLayout>
+        </com.iflytek.base.skin.customView.XLinearLayout>
+    </com.iflytek.base.skin.customView.XLinearLayout>
+</com.iflytek.base.skin.customView.XLinearLayout>

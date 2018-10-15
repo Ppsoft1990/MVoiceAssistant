@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="vertical" android:paddingLeft="17.0dip" android:paddingRight="17.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:skin="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:layout_gravity="center" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <com.iflytek.base.skin.customView.XImageView android:layout_gravity="center_vertical" android:id="@id/tts_tip_icon" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="17.0dip" skin:background="image.setting_remind_icon" />
+        <com.iflytek.base.skin.customView.XTextView android:layout_gravity="center_vertical" android:id="@id/tts_tip_content" android:layout_width="wrap_content" android:layout_height="wrap_content" skin:style="style_dlg_text_tip" />
+    </LinearLayout>
+    <com.iflytek.base.skin.customView.XProgressBar android:id="@id/tts_progress" android:visibility="gone" android:layout_width="60.0dip" android:layout_height="60.0dip" skin:cycleDrawable="image.dlg_recognizing_progress" style="?android:attr/progressBarStyleLarge" />
+    <LinearLayout android:orientation="vertical" android:id="@id/tts_update_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="20.0dip">
+        <com.iflytek.base.skin.customView.XTextView android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/tip_updateing" skin:style="style_dlg_text_tip" />
+        <com.iflytek.base.skin.customView.XRelativeLayout android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layout_marginBottom="10.0dip">
+            <com.iflytek.base.skin.customView.XImageView android:id="@id/tts_update_progressbar_background" android:layout_width="wrap_content" android:layout_height="wrap_content" skin:background="image.progress_bar_bg" />
+            <com.iflytek.base.skin.customView.XImageView android:id="@id/tts_update_progress" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" skin:background="image.second_progress_bar_bg" />
+        </com.iflytek.base.skin.customView.XRelativeLayout>
+        <com.iflytek.base.skin.customView.XTextView android:gravity="center" android:id="@id/tts_download_len" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" skin:style="style_dlg_text_tip" />
+    </LinearLayout>
+</LinearLayout>

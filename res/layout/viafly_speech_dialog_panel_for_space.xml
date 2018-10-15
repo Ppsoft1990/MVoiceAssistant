@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/normal_speech_dialog" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:skin="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0">
+        <com.iflytek.base.skin.customView.XTextView android:id="@id/speech_dialog_panel_prompt" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" skin:style="style_dlg_text_tip" skin:paddingLeft="30" skin:paddingRight="30" />
+        <com.iflytek.viafly.ui.view.MicrophoneView android:layout_gravity="center_vertical" android:id="@id/speech_dialog_panel_recoder" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </LinearLayout>
+    <com.iflytek.base.skin.customView.XTextView android:gravity="center" android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/notify_name" skin:style="style_dlg_company_logo" skin:paddingBottom="30" />
+</LinearLayout>

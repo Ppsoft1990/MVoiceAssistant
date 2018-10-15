@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/voice_root_layout" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:padding="14.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <FrameLayout android:layout_width="87.0dip" android:layout_height="116.0dip">
+            <ImageView android:id="@id/history_cover" android:layout_width="85.0dip" android:layout_height="114.0dip" android:src="@drawable/read_book_default_img" android:scaleType="centerCrop" />
+            <ImageView android:layout_gravity="bottom|center|right" android:layout_width="28.0dip" android:layout_height="28.0dip" android:layout_marginRight="6.0dip" android:layout_marginBottom="6.0dip" android:src="@drawable/ic_start" android:scaleType="centerCrop" />
+        </FrameLayout>
+        <LinearLayout android:orientation="vertical" android:paddingLeft="18.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="@dimen/text_standard_size_t3" android:textColor="#ff212325" android:ellipsize="end" android:id="@id/history_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:singleLine="true" />
+            <TextView android:textSize="@dimen/text_standard_size_t5" android:textColor="#ff838486" android:ellipsize="end" android:id="@id/history_author" android:paddingTop="18.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:singleLine="true" android:drawableLeft="@drawable/ic_listencard_anchor" android:drawablePadding="4.0dip" />
+            <TextView android:textSize="@dimen/text_standard_size_t4" android:textColor="#ff838486" android:ellipsize="end" android:id="@id/history_desc" android:paddingTop="11.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:maxLines="2" android:lineSpacingExtra="3.0dip" />
+        </LinearLayout>
+    </LinearLayout>
+    <View android:id="@id/history_divide" android:background="#ffe7e7e7" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginLeft="14.0dip" android:layout_marginRight="14.0dip" />
+</LinearLayout>

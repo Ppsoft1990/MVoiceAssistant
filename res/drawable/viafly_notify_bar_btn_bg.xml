@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_enabled="true" android:state_pressed="true" android:drawable="@drawable/notify_bar_btn_press" android:color="@drawable/white" />
+    <item android:state_enabled="false" android:drawable="@drawable/notify_bar_btn_press" android:color="@drawable/white" />
+    <item android:drawable="@drawable/notify_bar_btn_nor" android:color="@drawable/white" />
+</selector>

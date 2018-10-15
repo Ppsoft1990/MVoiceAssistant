@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.iflytek.base.skin.customView.XLinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:skin="http://schemas.android.com/apk/res-auto">
+    <com.iflytek.base.skin.customView.XLinearLayout android:orientation="vertical" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip">
+        <com.iflytek.base.skin.customView.XEditText android:textColorHint="#ffdfe0e3" android:gravity="top" android:id="@id/hotword_edit" android:paddingLeft="10.0dip" android:paddingTop="10.0dip" android:paddingRight="10.0dip" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="200.0dip" android:hint="@string/hotword_upload_hint" skin:background="statelist.hotword_edit_states" skin:style="music_search_tilte_style" />
+        <com.iflytek.base.skin.customView.XTextView android:gravity="right" android:id="@id/hotword_number" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginRight="3.0dip" android:text="@string/hotword_upload_left_number" android:minEms="10" skin:style="style_hotword_left_number" />
+    </com.iflytek.base.skin.customView.XLinearLayout>
+</com.iflytek.base.skin.customView.XLinearLayout>

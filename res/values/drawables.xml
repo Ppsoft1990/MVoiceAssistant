@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item type="drawable" name="black_transparent1">#9a000000</item>
+    <item type="drawable" name="main_speech_view_send_btn_disable_text_color">#ffbdbdbd</item>
+    <item type="drawable" name="main_speech_view_send_btn_text_color">#ff515151</item>
+    <item type="drawable" name="setting_high_text_color">#ff56b2ff</item>
+    <item type="drawable" name="transparent">#00000000</item>
+    <item type="drawable" name="viafly_official_weixin_btn_text_normal">#ff4282f7</item>
+    <item type="drawable" name="viafly_official_weixin_btn_text_pressed">#ffffffff</item>
+    <item type="drawable" name="white">#ffffffff</item>
+</resources>

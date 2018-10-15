@@ -1,2 +1,8 @@
 # MVoiceAssistant
-Voice assistant for the old android device.Modification based on the MiguLingxi APK
+
+
+## 应用场景
+家里安卓淘汰手机比较多，打算废物利用。基于移动咪咕灵犀原v6.0.3586安装包修改，APK可直接运行在安卓系统上作为语音助手使用。
+
+## 其他
+纯粹技术研究，勿用于非法用途。

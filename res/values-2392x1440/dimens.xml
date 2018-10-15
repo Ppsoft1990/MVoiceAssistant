@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="home_titlebar_layout_height">56.0dip</dimen>
+    <dimen name="listen_book_img_height">576.0px</dimen>
+    <dimen name="smarthome_scanview_jd_login_width">320.0dip</dimen>
+    <dimen name="smarthome_scanview_top_hight">380.0dip</dimen>
+    <dimen name="dimen_audio_resource_bg_height">135.0dip</dimen>
+</resources>

@@ -1,0 +1,185 @@
+html, body {
+  width: 320dp|720:720px;
+  padding: 0px;
+  margin: 0px;
+  border: 0px;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}		
+body {
+  background-color: #F2F2F2;
+  padding-top: 4dp|720:10px;
+  -webkit-font-smoothing: antialiased;
+}
+.top {
+  height: 11dp;
+}
+.page {
+  position: absolute;
+  width: 320dp;
+  top: 0px;
+  left:0px;
+  padding-top: 6dp;
+  padding-bottom:6dp;
+}
+
+/******************气泡动画********************/
+/*******使用transition而不使用animation，是因为在某些android手机上animation动画结束时会出现闪烁********************/
+/*.css_dialog_opacity_anim{
+  -webkit-backface-visibility: hidden;
+  -webkit-transition: opacity 0.3s ease;
+}
+.css_dialog_translate_anim{
+  -webkit-backface-visibility: hidden;
+  -webkit-transition: -webkit-transform 0.15s ease-in-out;
+}*/
+
+.box_out {
+    margin-top:0;
+    margin-right:8dp|320:10px|360:10px;
+    margin-bottom:6dp;
+    margin-left:8dp|320:10px|360:10px;
+	padding: 1px;
+	background-color: #DCDDE0;
+	border-radius: 10px;
+}
+.box_inner {
+	padding: 1px;
+	background-color: #C7C8CB;
+	border-radius: 9px;
+}
+.box_content_white {
+  position: relative;
+  background-color: white;
+  padding: 0 1px;
+  border-radius: 8px;
+}
+.box_content_yellow {
+  position: relative;
+  background-color: #fef4e8;
+  padding: 0 1px;
+  border-radius: 8px;
+}
+/**************************/
+.css_dialog_question_text {
+  word-break:break-word;
+  color: #515151;
+  padding: 14dp 15dp;
+  font-size: 16dp;
+  
+  outline: none;
+  border-radius: 8px 8px 0 8px;
+}
+.css_dialog_answer_text {
+  font-size: 16dp;
+  word-break:break-word;
+  color: #515151;
+}
+.css_answer_text_whith_share{
+  word-break:break-word;
+  width:272dp;
+  padding: 14dp 15dp;
+  color: #515151;
+  font-size: 16dp;
+}
+.css_dialog_answer_sharePlayDiv {
+  border-top: solid 1px #e5e5e5;
+  text-align: right;
+  padding: 5dp 0dp;
+  color: #515151;
+  font-size: 12dp;
+}
+/*底部按钮文本所用样式*/
+.btn_text{
+    color: #515151;
+    text-align: center;
+    padding: 3px;
+    height: 44dp|720:100px;
+    line-height: 44dp|720:100px;
+    font-size: 17dp|720:38px;
+}
+/**************************/
+.chat_corner_left {
+	position: absolute;
+	left: -12px;
+	bottom: -3px;
+}
+.chat_corner_right {
+	position: absolute;
+	right: -12px;
+	bottom: -3px;
+}
+.css_dilaog_out_div {
+  position: relative;
+  margin-top: 0;
+  margin-bottom: 6dp;
+  margin-left: 8dp;
+  margin-right: 8dp;
+}
+
+/**
+ * 	翻译频道的引导区域
+ */
+.sub_guide_left{
+    display: inline-block;
+    vertical-align: middle;
+    width: 80%;
+}
+.sub_guide_right{
+    display: inline-block;
+    vertical-align: middle;
+    text-align: right;    
+    width: 20%;
+}
+.sub_guide_text{
+    word-break: break-word;
+    color: #616161;
+    padding-top: 14dp;
+    padding-bottom: 14dp;
+    padding-left: 11dp|480:16px|720:24px;
+    font-size: 17dp;
+}
+.sub_guide_help{
+    vertical-align: middle;
+    width: 28dp|540:48px|720:64px;
+    height: 28dp|540:48px|720:64px;
+    margin-right: 14dp|480:22px|720:33px;
+}
+.sub_list_divider{
+    border-top: 1px solid #e0e0e0;
+}
+.sub_guide_list{
+    background-color: #FBFBFB;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+.sub_guide_item{
+    word-break: break-word;
+    color: #616161;
+    padding-left: 11dp|480:16px|720:24px;
+    padding-right: 11dp|480:16px|720:24px;
+    padding-top:14dp;
+    padding-bottom: 14dp;
+    font-size: 17dp|720:38px;
+}
+.sub_guide_list > .sub_guide_item:last-child{
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+//**********重播按钮样式***************************//
+.css_dialog_loading_canvas {
+  margin-right: 12dp;
+  vertical-align: middle;
+}
+.css_dialog_content_play_btn {
+  vertical-align: middle;
+  margin-right: 12dp;
+  width: 28dp|720:64px;
+  height: 28dp|720:64px;
+}
+.css_dialog_content_copy_btn {
+  vertical-align: middle;
+  margin-right: 13dp;
+  width: 28dp|720:64px;
+  height: 28dp|720:64px;
+}

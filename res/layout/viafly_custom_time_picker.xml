@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_gravity="center_horizontal" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="@dimen/schedule_time_picker_height"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:skin="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <com.iflytek.viafly.ui.customtimepicker.NumberPicker android:id="@id/hour" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="@dimen/schedule_number_picker_width" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:layout_marginBottom="16.0dip" />
+        <com.iflytek.base.skin.customView.XTextView android:layout_gravity="center_vertical" android:id="@id/unit_hour" android:paddingTop="@dimen/schedule_unit_padding_top" android:layout_width="wrap_content" android:layout_height="wrap_content" skin:style="style_schedule_time_picker_unit" />
+        <com.iflytek.viafly.ui.customtimepicker.NumberPicker android:id="@id/minute" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="@dimen/schedule_number_picker_width" android:layout_height="wrap_content" android:layout_marginLeft="53.0dip" android:layout_marginTop="16.0dip" android:layout_marginBottom="16.0dip" />
+        <com.iflytek.base.skin.customView.XTextView android:layout_gravity="center_vertical" android:id="@id/unit_min" android:paddingTop="@dimen/schedule_unit_padding_top" android:layout_width="wrap_content" android:layout_height="wrap_content" skin:style="style_schedule_time_picker_unit" />
+    </LinearLayout>
+    <com.iflytek.viafly.ui.customtimepicker.NumberPicker android:id="@id/amPm" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:layout_marginBottom="16.0dip" />
+</LinearLayout>

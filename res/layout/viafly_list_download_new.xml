@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.iflytek.base.skin.customView.XRelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent" skin:background="color.download_list_bg"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:skin="http://schemas.android.com/apk/res-auto">
+    <com.iflytek.base.skin.customView.XRelativeLayout android:id="@id/title_edit" android:background="@drawable/home_title_gradient_bg" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/home_titlebar_layout_height">
+        <com.iflytek.base.skin.customView.XLinearLayout android:gravity="center" android:id="@id/btn_edit_cancel" android:background="@android:color/transparent" android:layout_width="66.0dip" android:layout_height="33.0dip" android:layout_marginLeft="10.0dip" android:layout_alignParentLeft="true" android:layout_centerVertical="true">
+            <com.iflytek.base.skin.customView.XTextView android:textColor="@color/schedule_title_right_btn_bg" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="取消" />
+        </com.iflytek.base.skin.customView.XLinearLayout>
+        <com.iflytek.base.skin.customView.XLinearLayout android:gravity="center" android:id="@id/btn_edit_select" android:background="@android:color/transparent" android:layout_width="66.0dip" android:layout_height="33.0dip" android:layout_marginRight="10.0dip" android:layout_alignParentRight="true" android:layout_centerVertical="true">
+            <com.iflytek.base.skin.customView.XTextView android:textColor="@color/schedule_title_right_btn_bg" android:id="@id/text_edit_select" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </com.iflytek.base.skin.customView.XLinearLayout>
+    </com.iflytek.base.skin.customView.XRelativeLayout>
+    <com.iflytek.base.skin.customView.XLinearLayout android:gravity="center" android:id="@id/btn_delete" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="50.0dip" android:layout_alignParentBottom="true" skin:background="color.remind_manager_undelete_btn_back_color">
+        <com.iflytek.base.skin.customView.XTextView android:id="@id/btn_delete_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="删除" skin:style="style_reminder_dialog_close_button" />
+    </com.iflytek.base.skin.customView.XLinearLayout>
+    <com.iflytek.base.skin.customView.XLinearLayout android:id="@id/download_layout" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/btn_delete" android:layout_below="@id/title_edit" skin:background="color.download_list_bg">
+        <com.iflytek.base.skin.customView.XListView android:id="@id/download_listview" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="1.0dip" android:choiceMode="multipleChoice" android:fadeScrollbars="true" skin:background="color.transparent" skin:divider="image.setting_list_item_divider" skin:selector="statelist.download_item_states" skin:cacheColorHint="transparent" />
+    </com.iflytek.base.skin.customView.XLinearLayout>
+    <com.iflytek.base.skin.customView.XImageView android:id="@id/shadow" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/title_edit" skin:background="image.mainpage_title_shadow" />
+</com.iflytek.base.skin.customView.XRelativeLayout>

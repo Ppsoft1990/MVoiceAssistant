@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:skin="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:id="@id/register_layout" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ImageView android:id="@id/voice_print_logo" android:layout_width="84.0dip" android:layout_height="84.0dip" android:layout_marginTop="34.0dip" android:src="@drawable/ico_voice_print" android:layout_centerHorizontal="true" />
+        <TextView android:textSize="@dimen/text_standard_size_t5" android:textColor="@color/color_standard_c3" android:id="@id/tip_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="24.0dip" android:text="请按住按钮,匀速读出数字!" android:layout_below="@id/voice_print_logo" android:layout_centerHorizontal="true" />
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/password_loading_layout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:layout_below="@id/tip_text">
+            <com.iflytek.base.skin.customView.XImageView android:id="@id/loading_image" android:layout_width="36.0dip" android:layout_height="36.0dip" skin:src="image.ic_mainpage_loading" />
+            <TextView android:textSize="@dimen/text_standard_size_t4" android:textColor="@color/color_standard_c3" android:id="@id/loading_tv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="15.0dip" android:text="数字加载中..." />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/password_suc_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:layout_below="@id/tip_text">
+            <TextView android:textSize="36.0sp" android:textColor="@color/color_standard_c1" android:id="@id/showPwd" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            <TextView android:textSize="@dimen/text_standard_size_t4" android:textColor="@color/color_standard_c3" android:id="@id/showMsg" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/password_fail_layout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:layout_below="@id/tip_text">
+            <com.iflytek.base.skin.customView.XImageView android:id="@id/weather_error_image" android:layout_width="43.0dip" android:layout_height="47.0dip" skin:src="image.ic_mainpage_error" />
+            <TextView android:textSize="@dimen/text_standard_size_t4" android:textColor="@color/color_standard_c3" android:id="@id/load_fail_tv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="15.0dip" android:text="网络不给力, 数字加载失败..." />
+            <TextView android:textSize="14.0sp" android:textColor="@drawable/weather_card_error_textcolor" android:id="@id/retry_tv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:text="点击重试" />
+        </LinearLayout>
+        <include android:id="@id/mic_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" layout="@layout/viafly_voice_print_mic_layout" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/success_layout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ImageView android:id="@id/suc_image" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="96.0dip" android:src="@drawable/ico_voice_print_register_suc" android:layout_centerHorizontal="true" />
+        <TextView android:textSize="@dimen/text_standard_size_t3" android:textColor="#ffff7671" android:id="@id/suc_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="33.0dip" android:text="恭喜你!设置声纹密码成功!" android:layout_below="@id/suc_image" android:layout_centerHorizontal="true" />
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/suc_btn" android:background="#ff4699d6" android:layout_width="fill_parent" android:layout_height="56.0dip" android:layout_marginLeft="20.0dip" android:layout_marginTop="96.0dip" android:layout_marginRight="20.0dip" android:layout_below="@id/suc_text">
+            <TextView android:textSize="@dimen/text_standard_size_t1" android:textColor="@color/color_standard_c4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="完成" />
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

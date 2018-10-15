@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:skin="http://schemas.android.com/apk/res-auto">
+    <com.iflytek.base.skin.customView.XScrollView android:id="@id/viafly_share_select_scroll_view" android:scrollbars="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.iflytek.base.skin.customView.XLinearLayout android:orientation="vertical" android:id="@id/viafly_share_select_scroll_inner_view" android:layout_width="fill_parent" android:layout_height="wrap_content" skin:paddingBottom="35">
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <LinearLayout android:paddingLeft="39.0dip" android:paddingRight="39.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <com.iflytek.base.skin.customView.XTextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="扫描二维码下载灵犀" skin:style="style_share_select_desc" skin:layout_marginTop="30" skin:layout_marginBottom="35" />
+                </LinearLayout>
+                <LinearLayout android:gravity="center" android:layout_gravity="center_horizontal" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <com.iflytek.base.skin.customView.XImageView android:layout_width="wrap_content" android:layout_height="wrap_content" skin:src="image.share_lingxi_QRCode" skin:layout_marginBottom="35" />
+                </LinearLayout>
+                <com.iflytek.base.skin.customView.XLinearLayout android:orientation="vertical" android:paddingLeft="15.0dip" android:paddingRight="15.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <View android:background="#12000000" android:layout_width="wrap_content" android:layout_height="1.0px" />
+                </com.iflytek.base.skin.customView.XLinearLayout>
+                <LinearLayout android:paddingLeft="39.0dip" android:paddingRight="39.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <com.iflytek.base.skin.customView.XTextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="其他推荐方式" skin:style="style_share_select_desc" skin:layout_marginTop="30" skin:layout_marginBottom="35" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:paddingLeft="21.0dip" android:paddingRight="21.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="9.0dip">
+                <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                    <com.iflytek.base.skin.customView.XButton android:id="@id/weixinShareImg" android:layout_width="39.0dip" android:layout_height="39.0dip" skin:background="statelist.ic_weixin_btn_state" />
+                    <com.iflytek.base.skin.customView.XTextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:text="微信好友" android:singleLine="true" skin:style="style_oral_get_help_icon_txt" />
+                </LinearLayout>
+                <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                    <com.iflytek.base.skin.customView.XButton android:id="@id/timeLineShareImg" android:layout_width="39.0dip" android:layout_height="39.0dip" skin:background="statelist.ic_timeline_btn_state" />
+                    <com.iflytek.base.skin.customView.XTextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:text="朋友圈" skin:style="style_oral_get_help_icon_txt" />
+                </LinearLayout>
+                <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                    <com.iflytek.base.skin.customView.XButton android:id="@id/weiboShareImg" android:layout_width="39.0dip" android:layout_height="39.0dip" skin:background="statelist.ic_weibo_btn_state" />
+                    <com.iflytek.base.skin.customView.XTextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:text="新浪微博" skin:style="style_oral_get_help_icon_txt" />
+                </LinearLayout>
+                <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                    <com.iflytek.base.skin.customView.XButton android:id="@id/qqZoneShareImg" android:layout_width="39.0dip" android:layout_height="39.0dip" skin:background="statelist.ic_qqzone_btn_state" />
+                    <com.iflytek.base.skin.customView.XTextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:text="QQ空间" skin:style="style_oral_get_help_icon_txt" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:id="@id/viafly_share_app_line2" android:paddingLeft="21.0dip" android:paddingRight="21.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="9.0dip">
+                <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                    <com.iflytek.base.skin.customView.XButton android:id="@id/qqMobileShareImg" android:layout_width="39.0dip" android:layout_height="39.0dip" skin:background="statelist.share_qqmobile_btn_state" />
+                    <com.iflytek.base.skin.customView.XTextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:text="手机QQ" android:singleLine="true" skin:style="style_oral_get_help_icon_txt" />
+                </LinearLayout>
+                <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                    <com.iflytek.base.skin.customView.XButton android:id="@id/mmsShareImg" android:layout_width="39.0dip" android:layout_height="39.0dip" skin:background="statelist.share_mms_btn_state" />
+                    <com.iflytek.base.skin.customView.XTextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:text="短信" skin:style="style_oral_get_help_icon_txt" />
+                </LinearLayout>
+                <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/moreLayout" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                    <com.iflytek.base.skin.customView.XButton android:id="@id/moreShareImg" android:layout_width="39.0dip" android:layout_height="39.0dip" skin:background="statelist.share_more_btn_state" />
+                    <com.iflytek.base.skin.customView.XTextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:text="更多" skin:style="style_oral_get_help_icon_txt" />
+                </LinearLayout>
+                <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/spaceHolder" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" />
+            </LinearLayout>
+        </com.iflytek.base.skin.customView.XLinearLayout>
+    </com.iflytek.base.skin.customView.XScrollView>
+</LinearLayout>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:background="@color/color_standard_c9" android:layout_width="fill_parent" android:layout_height="8.0dip" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="@color/color_standard_c4" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <View android:background="@color/color_standard_c5" android:layout_width="4.0dip" android:layout_height="fill_parent" android:layout_margin="12.0dip" />
+        <TextView android:textSize="@dimen/text_standard_size_t3" android:textColor="@color/color_standard_c1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12.0dip" android:layout_marginBottom="12.0dip" android:text="热门推荐" />
+    </LinearLayout>
+    <HorizontalScrollView android:id="@id/hot_horizontal" android:background="@color/color_standard_c4" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="horizontal" android:id="@id/hot_root_view" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </HorizontalScrollView>
+    <LinearLayout android:background="@color/color_standard_c9" android:layout_width="fill_parent" android:layout_height="8.0dip" />
+</LinearLayout>

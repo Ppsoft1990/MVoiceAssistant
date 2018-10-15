@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:orientation="horizontal" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="40.0dip">
+        <ImageView android:id="@id/migu_back" android:padding="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentLeft="true" />
+        <TextView android:textSize="18.0sp" android:textColor="#ff000000" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="短信登录" android:layout_centerInParent="true" />
+    </RelativeLayout>
+    <View android:layout_gravity="bottom" android:background="#ffa4a4a4" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+    <EditText android:textSize="15.0sp" android:id="@id/sso_smslogin_username_edt" android:background="@drawable/back_migu_edittext" android:paddingLeft="6.0dip" android:layout_width="fill_parent" android:layout_height="38.0dip" android:layout_marginLeft="17.0dip" android:layout_marginTop="25.0dip" android:layout_marginRight="17.0dip" android:layout_marginBottom="12.0dip" android:hint="手机号" android:maxLength="11" android:inputType="number" />
+    <RelativeLayout android:id="@id/sso_smslogin_smscode_ll" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="17.0dip" android:layout_marginTop="2.0dip" android:layout_marginRight="17.0dip" android:layout_marginBottom="12.0dip">
+        <Button android:textSize="15.0sp" android:textColor="#ffffffff" android:id="@id/sso_smsmlogin_getsms_btn" android:background="@drawable/sl_back_migu_nor" android:layout_width="150.0dip" android:layout_height="38.0dip" android:text="获取验证码" android:layout_alignParentRight="true" />
+        <EditText android:textSize="15.0sp" android:id="@id/sso_smslogin_smscode_edt" android:background="@drawable/back_migu_edittext" android:paddingLeft="6.0dip" android:layout_width="fill_parent" android:layout_height="38.0dip" android:layout_marginRight="26.0dip" android:hint="验证码" android:maxLength="6" android:layout_toLeftOf="@id/sso_smsmlogin_getsms_btn" android:inputType="number" />
+    </RelativeLayout>
+    <Button android:enabled="false" android:textSize="18.0sp" android:textColor="#ffffffff" android:id="@id/sso_smsmlogin_login_btn" android:background="@drawable/sl_back_migu_disable" android:layout_width="fill_parent" android:layout_height="44.0dip" android:layout_marginLeft="17.0dip" android:layout_marginTop="15.0dip" android:layout_marginRight="17.0dip" android:text="登录" />
+    <TextView android:textSize="12.0sp" android:textColor="#ffff0000" android:gravity="center_horizontal" android:id="@id/sso_smslogin_info" android:padding="0.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="17.0dip" android:layout_marginTop="40.0dip" android:layout_marginRight="17.0dip" />
+</LinearLayout>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:scrollbarStyle="outsideOverlay" android:scrollbars="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="300.0dip" android:layout_height="wrap_content"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <com.iflytek.base.skin.customView.XLinearLayout android:orientation="horizontal" android:id="@id/schedule_content_layout" android:focusable="false" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <com.iflytek.base.skin.customView.XTextView android:textSize="42.0sp" android:textColor="@color/color_standard_c2" android:id="@id/tv_show_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="9.0dip" />
+            <com.iflytek.base.skin.customView.XLinearLayout android:orientation="vertical" android:id="@id/schedule_trigger_dialog_time_layout" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <com.iflytek.base.skin.customView.XTextView android:textSize="@dimen/text_standard_size_t4" android:textColor="@color/color_standard_c2" android:gravity="center" android:id="@id/tv_show_date" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" />
+                <com.iflytek.base.skin.customView.XTextView android:textSize="@dimen/text_standard_size_t4" android:textColor="@color/color_standard_c2" android:id="@id/tv_show_week" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6.0dip" android:layout_marginRight="40.0dip" />
+            </com.iflytek.base.skin.customView.XLinearLayout>
+        </com.iflytek.base.skin.customView.XLinearLayout>
+        <TextView android:textSize="@dimen/text_standard_size_t3" android:textColor="@color/color_standard_c2_v5" android:ellipsize="end" android:id="@id/gallery_content" android:layout_width="260.0dip" android:layout_height="wrap_content" android:layout_marginTop="14.0dip" android:layout_marginBottom="2.0dip" android:maxLines="2" />
+    </LinearLayout>
+</ScrollView>

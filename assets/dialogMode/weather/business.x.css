@@ -1,0 +1,452 @@
+html, body {
+  width: 320dp|720:720px;
+  height: 100%;
+  padding: 0px;
+  margin: 0px;
+  border: 0px;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}		
+body {
+  background-color: #F2F2F2;
+  -webkit-font-smoothing: antialiased;
+}
+.top {
+  height: 11dp;
+}
+.page {
+  position: absolute;
+  width: 320dp;
+  top: 0px;
+  left:0px;
+  padding-top: 6dp;
+  padding-bottom:6dp;
+}
+
+/******************气泡动画********************/
+/*******使用transition而不使用animation，是因为在某些android手机上animation动画结束时会出现闪烁********************/
+.css_dialog_opacity_anim{
+  -webkit-backface-visibility: hidden;
+  -webkit-transition: opacity 0.3s ease;
+}
+.css_dialog_translate_anim{
+  -webkit-backface-visibility: hidden;
+  -webkit-transition: -webkit-transform 0.15s ease-in-out;
+}
+
+.box_out {
+    margin-top:4dp|720:10px;
+    margin-right:8dp|320:9px;
+    margin-bottom:6dp;
+    margin-left:8dp|320:9px;
+	padding: 1px;
+	background-color: #DCDDE0;
+	border-radius: 10px;
+}
+.box_inner {
+	padding: 1px;
+	background-color: #C7C8CB;
+	border-radius: 9px;
+}
+.box_content_white {
+  position: relative;
+  background-color: white;
+  border-radius: 8px;
+}
+.box_content_yellow {
+  position: relative;
+  background-color: #fef4e8;
+  border-radius: 8px;
+}
+/**************************/
+.show_div {
+  margin-top:4dp|720:10px;  
+}
+.css_dialog_question_text {
+  word-break:break-word;
+  color: #515151;
+  padding: 14dp 15dp;
+  font-size: 16dp;
+  
+  outline: none;
+  border-radius: 8px 8px 0 8px;
+}
+.css_dialog_answer_text {
+  font-size: 16dp;
+  word-break:break-word;
+  color: #515151;
+}
+.css_answer_text_whith_share{
+  word-break:break-word;
+  width:272dp;
+  padding: 14dp 15dp;
+}
+.css_dialog_answer_sharePlayDiv {
+  border-top: solid 1px #e5e5e5;
+  text-align: right;
+  padding: 5dp 14dp;
+  color: #515151;
+  font-size: 12dp;
+}
+/*底部按钮文本所用样式*/
+.btn_text{
+    color: #515151;
+    text-align: center;
+    padding: 3px;
+    height: 44dp|720:100px;
+    line-height: 44dp|720:100px;
+    font-size: 17dp|720:38px;
+}
+/**************************/
+.chat_corner_left {
+	position: absolute;
+	left: -12px;
+	bottom: -3px;
+}
+.chat_corner_right {
+	position: absolute;
+	right: -12px;
+	bottom: -3px;
+}
+.css_dilaog_out_div {
+  position: relative;
+  margin-top: 0;
+  margin-bottom: 6dp;
+  margin-left: 8dp;
+  margin-right: 8dp;
+}
+
+
+/**
+ * 	天气业务相关样式文件
+ */
+.weather_inner_div {
+	position: relative;
+}
+.weater_top_title_div {
+	position: absolute;
+	top:0;
+	height:25dp;
+	margin-top: 13dp;
+	padding-left: 12dp;	
+	z-index: 1000;
+}
+.weather_location_img {
+	height:12dp;
+	width: 15dp;
+	vertical-align: middle;
+}
+.weather_location_label {
+	font-size: 12.5dp;
+	color: #ffffff;
+	vertical-align: middle;
+}
+.weather_content_div {
+	height: 308dp;
+}
+.weather_empty_div {
+	display: inline-block;
+	width: 15dp;
+}
+.weather_load_div {
+	width:100%;
+	height: 100%;
+	/*background-color: #6ED4FF;*/
+	border-radius: 8px;
+	position: relative;
+}
+.weather_load_fail_div {
+	position: absolute;
+	top:50%;
+	left:50%;
+	-webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
+}
+.weather_load_fail_tip {
+	color:#616161;
+	font-size: 12.4dp;
+}
+.weather_retry_button_div {
+	padding-top: 13.5dp;
+	text-align: center;
+}
+.weather_retry_button {
+	width: 61.3dp;
+	height: 23.1dp;
+	color: #616161;
+	border-radius: 6px;
+	font-size: 12.4dp;
+	background-color: #ffffff;
+	border:1px solid #B0B0B0;
+}
+.weather_loading_out_div {
+	position: absolute;
+	top:50%;
+	left:50%;
+	-webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    display: none;
+    width: 100%;
+    text-align: center;
+}
+.weather_loading_div {
+	position: absolute;
+	top:0;
+	left:50%;
+	-webkit-transform: translate(-50%, 0%);
+    transform: translate(-50%, 0%);
+    width: 28.5dp;
+	height: 28.5dp;
+}
+.weather_loading_canvas {
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+.weather_loading_text_tip {
+	padding-top: 38dp;
+	color:#616161;
+	font-size: 12.4dp;
+}
+.css_dialog_weather_top_div {
+  color: #ffffff;
+  background-color: #6ED4FF;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+.css_dialog_weather_top_main_div{
+  padding-left: 14.7dp;
+  padding-right: 14.7dp;
+  padding-top: 38dp;
+  padding-bottom: 13.3dp;
+  position: relative;
+}
+.css_dialog_weather_top_main_top_div{
+  position: relative;
+}
+.css_dialog_weather_empty_div{
+  position: relative;
+  text-align:center;
+  background-color: #6ED4FF;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+.css_dialog_weather_top_main_top_left_div{
+  position: absolute;
+  z-index: 5;
+}
+.css_dialog_weather_top_main_top_right_div{
+  margin-left: 195dp;
+}
+.css_weather_target_image{
+  width: 78dp;
+  height: 87dp;
+}
+.css_weather_target_image_bg{
+  width: 302dp;
+  height: 142dp;
+  z-index: 0;
+  position: absolute;
+  right: -2dp;
+}
+.css_weather_guide_image{
+  width: 52dp;
+  height: 53dp;
+  z-index: 2;
+  position: absolute;
+  right: 0;
+  margin-top: 1.5dp;
+  margin-right: 1.5dp;
+}
+.css_weather_target_day{
+  font-size: 11.7dp;
+  display: inline-block;
+  vertical-align:middle;
+  margin-left: 28dp;
+  color: #FFFFFF;
+}
+.css_weather_target_tempArea{
+  height: 34.7dp;
+  /*margin-top: 4dp;*/
+}
+.css_weather_target_pm25{
+  font-size: 10.7dp;
+  /*margin-top: 1.8dp;*/
+  height:16.4dp;
+  margin-left:2.2dp;
+}
+.css_weather_target_temperature{
+  font-size: 40dp;
+}
+.css_weather_target_temperature_symbol{
+  font-size: 28dp;
+  margin-left: -6dp;
+}
+.css_weather_target_lowTemp_highTemp{
+  font-size: 16dp;
+  display: inline-block;
+  margin-left:6dp;
+}
+.css_weather_target_lowTemp_highTemp2{
+  font-size: 32dp;
+}
+.css_weather_target_temperature_biasLine{
+  margin-left: 0;
+}
+.css_weather_target_description{
+  font-size: 12.5dp;
+  height: 30dp;
+  margin-left:2.2dp;
+}
+.css_dialog_weather_top_main_bottom_div{
+  margin-top: 17.7dp;
+  font-size: 12dp;
+}
+.css_weather_target_wind_humidity_area{
+  /*float: right;*/
+  font-size: 10.7dp;
+  color:#FFFFFF;
+  margin-left: 2.2dp;
+}
+.css_weather_target_humidity_image{
+  width: 12dp;
+  height: 12dp;
+  margin-right: 6dp;
+  margin-left: 6dp;
+  vertical-align: text-top;
+}
+.css_weather_target_wind_image{
+  width: 14dp;
+  height: 11dp;
+  margin-right: 6dp;
+  margin-top: 2dp;
+  /*margin-left: 6dp;
+  vertical-align: text-top;*/
+}
+.css_weather_target_location_image{
+  width: 14dp;
+  height: 11dp;
+  margin-right: 5dp;
+  margin-top: 2dp;
+  /**vertical-align: text-top;*/
+}
+.css_weather_favorite_div {
+    width: 57dp;
+    height: 26.7dp;
+    position: absolute;
+    right: -5.8dp;
+    top: 0;
+    margin-top: 6.3dp;
+    z-index: 6;
+}
+.css_dialog_weather_canvas{
+  position: absolute;
+  z-index: -1;
+}
+.css_dialog_future_weathers_panel{
+  position: relative;
+  z-index: 5;
+  color: #515151;
+}
+.css_dialog_weather_future_item {
+  padding-top: 8dp;
+  font-size: 12dp;
+  text-align: center;
+  display: inline-block;
+}
+.css_dialog_weather_target_future_item {
+  color: #51abe9;
+}
+.css_dialog_weather_future_item_week_text {
+  font-size: 12dp;
+}
+.css_dialog_weather_futureImg {
+  margin-top: 3dp;
+  width: 49dp;
+  height: 54dp;
+}
+.css_weather_future_tempArea{
+  margin-left:-12dp;
+}
+.css_weather_tilt_divider{
+  width:14dp;
+  height: 16dp;
+  position: relative;
+  top: -8dp;
+  left:4dp;
+}
+.css_weather_future_highTemp{
+  margin-left: 12dp;
+  margin-top: 7dp;
+  margin-bottom: 6dp;
+}
+.css_dialog_weather_future_item_condition_text {
+  margin-top: 1dp;
+  font-size: 12dp;
+  margin-bottom: 4dp;
+/* 过长时显示省略号*/
+  text-overflow:ellipsis;
+  white-space:nowrap;
+  overflow:hidden;
+}
+.css_weather_future_item_divier {
+  width: 1px;
+  height: 105dp;
+  position: absolute;
+  top: 8.5dp;
+}
+.css_dialog_weather_updateTime {
+  font-size: 12dp;
+  padding-top: 16dp;
+  padding-bottom: 14dp;
+  vertical-align: middle;
+  display: inline-block;
+  color: #717171;
+  width:70%;
+}
+.css_dialog_weather_sharePlayDiv{
+  display: inline-block;
+  width: 30%;
+  text-align: right;
+}
+.css_dialog_weather_sharePlay_img{
+  padding: 10dp 0;
+}
+.css_weather_top_bg_canvas{
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+}
+.css_weather_foot_bg_canvas{
+    position: absolute;
+    z-index: -1;
+    bottom: 0;
+    left: 0;
+}
+.css_dialog_weather_footer {
+    border-top: solid 1px #e5e5e5;
+    padding-left: 14dp;
+    padding-right: 14dp;
+}
+.css_weather_mid_bg_canvas{
+    position: absolute;
+    z-index: -1;
+    bottom: 0;
+    left: 0;
+} 
+.css_weather_empty_text{
+    font-size: 15dp;
+    padding-bottom: 6dp;
+    color: white;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+} 
+.css_weather_share_btn{
+  vertical-align: middle;  
+  padding-right: 1dp;
+  width: 28dp|720:64px;
+  height: 28dp|720:64px;
+}

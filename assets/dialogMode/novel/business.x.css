@@ -1,0 +1,337 @@
+html, body {
+  width: 320dp|720:720px;
+  height: 100%;
+  padding: 0px;
+  margin: 0px;
+  border: 0px;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}		
+body {
+  background-color: #F2F2F2;
+  -webkit-font-smoothing: antialiased;
+}
+.top {
+  height: 11dp;
+}
+.page {
+  position: absolute;
+  width: 320dp;
+  top: 0px;
+  left:0px;
+  padding-top: 6dp;
+  padding-bottom:6dp;
+}
+
+/******************气泡动画********************/
+/*******使用transition而不使用animation，是因为在某些android手机上animation动画结束时会出现闪烁********************/
+.css_dialog_opacity_anim{
+  -webkit-backface-visibility: hidden;
+  -webkit-transition: opacity 0.3s ease;
+}
+.css_dialog_translate_anim{
+  -webkit-backface-visibility: hidden;
+  -webkit-transition: -webkit-transform 0.15s ease-in-out;
+}
+
+.box_out {
+    margin-top:0;
+    margin-right:8dp|320:9px;
+    margin-bottom:6dp;
+    margin-left:8dp|320:9px;
+	padding: 1px;
+	background-color: #DCDDE0;
+	border-radius: 10px;
+}
+.box_inner {
+	padding: 1px;
+	background-color: #C7C8CB;
+	border-radius: 9px;
+}
+.box_content_white {
+  position: relative;
+  background-color: white;
+  border-radius: 8px;
+}
+.box_content_yellow {
+  position: relative;
+  background-color: #fef4e8;
+  border-radius: 8px;
+}
+/**************************/
+.show_div {
+  margin-top:4dp|720:10px;  
+}
+.css_dialog_question_text {
+  word-break:break-word;
+  color: #515151;
+  padding: 14dp 15dp;
+  font-size: 16dp;
+  
+  outline: none;
+  border-radius: 8px 8px 0 8px;
+}
+.css_dialog_answer_text {
+  font-size: 16dp;
+  word-break:break-word;
+  color: #515151;
+}
+.css_answer_text_whith_share{
+  word-break:break-word;
+  width:272dp;
+  padding: 14dp 15dp;
+}
+.css_dialog_answer_sharePlayDiv {
+  border-top: solid 1px #e5e5e5;
+  text-align: right;
+  padding: 5dp 14dp;
+  color: #515151;
+  font-size: 12dp;
+}
+/*底部按钮文本所用样式*/
+.btn_text{
+    color: #515151;
+    text-align: center;
+    padding: 3px;
+    height: 44dp|720:100px;
+    line-height: 44dp|720:100px;
+    font-size: 17dp|720:38px;
+}
+/**************************/
+.chat_corner_left {
+	position: absolute;
+	left: -12px;
+	bottom: -3px;
+}
+.chat_corner_right {
+	position: absolute;
+	right: -12px;
+	bottom: -3px;
+}
+.css_dilaog_out_div {
+  position: relative;
+  margin-top: 0;
+  margin-bottom: 6dp;
+  margin-left: 8dp;
+  margin-right: 8dp;
+}
+
+
+/**
+ * 	小说业务相关样式文件
+ */
+.css_novel_top_title_div {
+    color: #515151;
+    padding-left: 8dp;
+    padding-right: 15dp|720:33px;
+    font-size: 21dp;
+    height: 59dp;
+    background: #F8F8F8;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+.css_novel_top_icon_img {
+    width: 53dp|720:120px;
+    height: 53dp|720:120px;
+    margin-right: 5dp;
+    display: inline-block;
+    vertical-align: middle;
+}
+.css_novel_title_label {
+    display: inline-block;
+    line-height: 59dp;
+    vertical-align: middle;
+    color: #515151;
+    font-size: 17dp|720:38px;
+}
+.css_novel_item_div {
+    position: relative;
+    /*height: 62dp;*/
+    padding: 11dp 12dp 11dp 15dp|720:33px;
+    border-bottom: 1px solid #e0e0e0;
+    font-size: 0;
+}
+.css_item_left_div {
+    margin-right: 8dp;
+    /*margin-right: 12dp;*/
+    display: inline-block;
+    vertical-align: top;
+}
+.css_novel_item_cover_img {
+    width: 44dp|720:98px;
+    height: 58dp;
+    vertical-align: middle;
+}
+.css_item_middle_div {
+    width: 74%;
+    /*height: 60dp;*/
+    display: inline-block;
+    vertical-align: middle;
+}
+.css_item_novel_name_author_div {
+    width: 66%;
+    text-align: left;
+    display: inline-block;
+    vertical-align: middle;
+}
+.css_item_novel_name_label {
+    display: block;
+    color: #515151;
+    font-size: 17dp|720:38px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.css_novel_brief_label {
+    display: block;
+    color: #717171;
+    font-size: 11dp|720:24px;
+    /*text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;*/
+}
+.css_item_novel_author_label {
+    /*margin-top: 1dp;*/
+    display: block;
+    color: #717171;
+    font-size: 11dp|720:24px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.css_item_start_read_div {
+    position: relative;
+    width: 30%;
+    height: 100%;
+    text-align: right;
+    display: inline-block;
+    vertical-align: top;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+}
+.css_item_start_read_label {
+    color: #515151;
+    font-size: 12dp|720:28px;
+}
+.css_item_start_read_absolute_div {
+    text-align: left;
+    padding: 3dp 5dp;
+    color: #515151;
+    font-size: 12dp|720:28px;
+}
+.css_item_start_read_list_bg{
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    left: 0;
+}
+.css_itme_right_div {
+    width:7%;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: right;
+}
+.css_item_right_arrow_img {
+    width: 16dp;
+    height: 16dp;
+}
+.css_novel_bottom_more_div {
+    position: relative;
+    line-height: 46dp|720:103px;
+    font-size: 0;
+    padding: 0 15dp|720:33px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+.css_more_novel_label {
+    width: 30%;
+    display: inline-block;
+    vertical-align: middle;
+    color: #515151;
+    font-size: 17dp|720:38px;
+}
+.css_more_novel_div {
+    width: 70%;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: right;
+}
+.css_more_novel_arrow_img {
+    width: 16dp;
+    height: 16dp;
+    vertical-align: middle;
+}
+
+.css_channel_novel_empty_div {
+  position: relative;
+  text-align:center;
+  padding-top: 10dp;
+  padding-bottom: 10dp;
+}
+.css_channel_novel_loading_request_canvas {
+  width: 29dp;
+  height: 29dp;
+}
+.css_channel_novel_loading_request_div {
+    width: 30dp;
+    height: 30dp;
+    display: inline-block;
+    vertical-align: middle;  
+}
+.css_channel_novel_empty_div_text {
+    font-size: 16dp;
+    color: #515151;
+    /*display: inline-block;*/
+    margin-top: 5dp;
+    vertical-align: middle;  
+}
+
+/** 上拉加载更多的样式*/
+/**
+ *  动画
+ */
+.up_down{
+    width:100%;
+    height:27dp;
+    position:relative;
+}
+.up_down_arrow{
+    width:18dp;
+    height:18dp;
+    position:absolute;
+    top:4dp;
+    left:31dp;
+    -webkit-transform-style: preserve-3d;
+    -webkit-transition: 300ms;
+    /*background-image:url(img/up_arrow.png);*/
+    background-size: 18dp 36dp;
+    background-repeat: no-repeat;
+    -webkit-transform: rotate(-180deg)
+
+}
+.loading{
+    background-position: center -18dp;
+    -webkit-transform:rotate(0deg) translateZ(0);
+    -webkit-animation-name:loading;
+    -webkit-animation-duration:2s;
+    -webkit-animation-iteration-count:infinite;
+    -webkit-animation-timing-function:linear;
+}
+@-webkit-keyframes loading {
+    from { -webkit-transform:rotate(0deg) translateZ(0); }
+    to { -webkit-transform:rotate(360deg) translateZ(0); }
+}
+.up_down_text{
+    width:100dp;
+    position:absolute;
+    height:27dp;
+    line-height:27dp;
+    text-align:center;
+    top:50%;
+    left:50%;
+    margin-top:-13dp;
+    margin-left:-33dp;
+    font-size: 16dp;
+    color:#878787;
+}
+
+

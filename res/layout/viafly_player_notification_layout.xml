@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ImageView android:id="@id/image_view_album" android:layout_width="@dimen/book_notification_image_size" android:layout_height="@dimen/book_notification_image_size" android:layout_marginLeft="@dimen/book_notification_image_margin" android:layout_marginRight="@dimen/book_notification_image_margin" android:src="@drawable/ic_book_notify" android:scaleType="centerCrop" />
+        <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <TextView android:textSize="@dimen/text_standard_size_t3" android:textColor="@color/color_standard_c1_v5" android:ellipsize="end" android:id="@id/audio_name" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="4.0dip" android:text="audio" android:singleLine="true" />
+            <TextView android:textSize="@dimen/text_standard_size_t5" android:textColor="@color/color_standard_c3_v5" android:ellipsize="end" android:id="@id/text_view_artist" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="" android:singleLine="true" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/layout_play_controls" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ImageView android:id="@id/image_view_last" android:paddingLeft="@dimen/book_notification_image_padding" android:paddingTop="@dimen/book_notification_image_padding" android:paddingRight="@dimen/book_notification_image_padding" android:paddingBottom="@dimen/book_notification_image_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ico_book_last" />
+            <ImageView android:id="@id/image_view_play_toggle" android:paddingLeft="@dimen/book_notification_image_padding" android:paddingRight="@dimen/book_notification_image_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ico_book_start" />
+            <ImageView android:id="@id/image_view_next" android:paddingLeft="@dimen/book_notification_image_padding" android:paddingTop="@dimen/book_notification_image_padding" android:paddingRight="@dimen/book_notification_image_padding" android:paddingBottom="@dimen/book_notification_image_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ico_book_next" />
+            <ImageView android:id="@id/image_view_close" android:paddingLeft="@dimen/book_notification_image_padding" android:paddingTop="@dimen/book_notification_image_padding" android:paddingRight="@dimen/book_notification_image_margin" android:paddingBottom="@dimen/book_notification_image_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ico_book_close" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

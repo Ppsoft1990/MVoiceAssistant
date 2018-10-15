@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.iflytek.base.skin.customView.XLinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" skin:background="image.mainpage_list_btm"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:skin="http://schemas.android.com/apk/res-auto">
+    <com.iflytek.base.skin.customView.XLinearLayout android:orientation="horizontal" android:id="@id/content_panel" android:layout_width="fill_parent" android:layout_height="118.0dip">
+        <com.iflytek.base.skin.customView.XTextView android:gravity="center" android:id="@id/dialog_content" android:fadingEdge="horizontal" android:fadingEdgeLength="0.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" skin:style="style_dialog_content_text" />
+    </com.iflytek.base.skin.customView.XLinearLayout>
+    <com.iflytek.base.skin.customView.XLinearLayout android:orientation="horizontal" android:id="@id/bottom_two_btn_panel" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.iflytek.base.skin.customView.XButton android:gravity="center" android:id="@id/left_btn" android:layout_width="0.0dip" android:layout_height="45.0dip" android:layout_marginLeft="18.0dip" android:layout_marginBottom="26.0dip" android:text="取消" android:singleLine="true" android:layout_weight="1.0" skin:background="stateList.dialog_btn_cancel_status" skin:style="style_dialog_cancle_text" />
+        <com.iflytek.base.skin.customView.XButton android:gravity="center" android:id="@id/right_btn" android:layout_width="0.0dip" android:layout_height="45.0dip" android:layout_marginLeft="10.0dip" android:layout_marginRight="18.0dip" android:layout_marginBottom="26.0dip" android:text="删除" android:singleLine="true" android:layout_weight="1.0" skin:background="stateList.dialog_btn_warn_status" skin:style="style_dialog_cancle_text" />
+    </com.iflytek.base.skin.customView.XLinearLayout>
+</com.iflytek.base.skin.customView.XLinearLayout>

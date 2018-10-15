@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/activity_weather_main" android:background="@drawable/bg_city_weather" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="@dimen/home_titlebar_layout_height">
+        <ImageView android:id="@id/weather_title_back" android:background="@drawable/icon_weather_title_back" android:layout_width="@dimen/title_image_size" android:layout_height="@dimen/title_image_size" android:layout_marginLeft="14.0dip" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+        <TextView android:textSize="@dimen/title_size" android:textColor="@color/title_text_color" android:id="@id/weather_title_city" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:layout_centerInParent="true" android:layout_centerHorizontal="true" android:layout_centerVertical="true" />
+        <TextView android:textSize="@dimen/title_size" android:textColor="@color/title_text_color" android:id="@id/weather_title_text" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="添加城市" android:layout_centerInParent="true" android:layout_centerHorizontal="true" android:layout_centerVertical="true" />
+        <TextView android:id="@id/weather_city_add" android:background="@drawable/icon_weather_title_city_add" android:layout_width="@dimen/title_image_size" android:layout_height="@dimen/title_image_size" android:layout_marginRight="15.0dip" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        <TextView android:id="@id/weather_city_list_show" android:background="@drawable/icon_weather_title_city_manage" android:layout_width="@dimen/title_image_size" android:layout_height="@dimen/title_image_size" android:layout_marginRight="15.0dip" android:layout_toLeftOf="@id/weather_city_add" android:layout_centerVertical="true" />
+        <TextView android:textSize="14.0sp" android:textColor="#ffffffff" android:id="@id/weather_title_finish" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10.0dip" android:text="完成" android:layout_alignParentRight="true" android:layout_centerHorizontal="true" android:layout_centerVertical="true" />
+        <TextView android:textSize="14.0sp" android:textColor="#ffffffff" android:id="@id/weather_title_cancel" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10.0dip" android:text="取消" android:layout_alignParentRight="true" android:layout_centerHorizontal="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/weather_city_layout" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <android.support.v4.view.ViewPager android:id="@id/vp_city_weather" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+        <LinearLayout android:gravity="center" android:layout_gravity="bottom" android:background="@color/color_standard_c4_v5" android:layout_width="fill_parent" android:layout_height="15.0dip">
+            <com.iflytek.viafly.homepage.cityweather.ui.WeatherCirclePageIndicator android:id="@id/city_weather_indicator" android:paddingLeft="1.0dip" android:paddingRight="1.0dip" android:layout_width="fill_parent" android:layout_height="15.0dip" />
+        </LinearLayout>
+    </LinearLayout>
+    <com.iflytek.viafly.homepage.cityweather.ui.CitySearchLayout android:orientation="vertical" android:id="@id/city_search_layout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <com.iflytek.viafly.homepage.cityweather.ui.CityManageLayout android:orientation="vertical" android:id="@id/city_manage_layout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</LinearLayout>

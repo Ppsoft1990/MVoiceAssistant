@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:skin="http://schemas.android.com/apk/res-auto">
+    <com.iflytek.base.skin.customView.XTextView android:linksClickable="false" android:id="@id/sms_gallery_content" android:layout_width="@dimen/sms_gallery_width" android:layout_height="fill_parent" android:maxLines="6" android:singleLine="false" skin:style="style_sms_edit_receive_content" />
+</LinearLayout>

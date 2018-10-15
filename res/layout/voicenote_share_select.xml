@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_gravity="center" android:orientation="vertical" android:background="@drawable/code_input_bg" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="24.0dip" android:layout_marginRight="24.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/text_standard_size_t1" android:textColor="@color/color_standard_c1" android:padding="10.0dip" android:paddingLeft="26.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="分享" />
+    <TextView android:textSize="@dimen/text_standard_size_t2" android:textColor="@color/color_standard_c1" android:id="@id/voicenote_share_txt" android:background="@drawable/dialog_share_bg" android:padding="10.0dip" android:paddingLeft="26.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="以文字形式分享" />
+    <TextView android:textSize="@dimen/text_standard_size_t2" android:textColor="@color/color_standard_c1" android:id="@id/voicenote_share_img" android:background="@drawable/dialog_share_bg" android:padding="10.0dip" android:paddingLeft="26.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="以图片形式分享" />
+</LinearLayout>

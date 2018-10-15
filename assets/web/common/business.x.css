@@ -1,0 +1,38 @@
+html, body {
+	padding: 0px;
+	margin: 0px;
+	border: 0px;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+.error_tip {
+	margin-top: 67dp;
+	height: 23dp;
+	line-height: 23dp;
+	text-align: center;
+	font-size: 23dp;
+	color: #515151;
+}
+.speech_example_title {
+	margin-top: 53dp;
+	height: 14dp;
+	line-height: 14dp;
+	font-size: 14dp;
+	text-align: center;
+	color: #515151;
+}
+.speech_example {
+	margin-top: 27dp;
+	height: 14dp;
+	line-height: 14dp;
+	font-size: 14dp;
+	text-align: center;
+	color: #515151;
+}
+.more_speech_button {
+	margin-top: 27dp;
+	height: 14dp;
+	line-height: 14dp;
+	font-size: 14dp;
+	text-align: center;
+	color: #5e84e5;
+}
