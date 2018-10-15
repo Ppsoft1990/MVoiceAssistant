@@ -88,7 +88,7 @@
 
     move-result v7
 
-    if-nez v7, :cond_0
+    if-eqz v7, :cond_0
 
     .line 314
     new-instance v0, Landroid/app/AlertDialog$Builder;

@@ -1375,7 +1375,7 @@
 
     .line 197
     :cond_0
-    const-string/jumbo v0, "\u54aa\u5495\u7075\u7280"
+    const-string/jumbo v0, "\u7075\u7280"
 
     .line 199
     :goto_0

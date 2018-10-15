@@ -24,7 +24,7 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 24
-    const-string/jumbo v0, "\u201c\u628a\u67d0\u67d0\u7684\u53f7\u7801\u53d1\u7ed9\u67d0\u67d0\u201d\u5c31\u80fd\u8bed\u97f3\u8f6c\u53d1\u8054\u7cfb\u4eba\u4e86\uff0c\u4e0b\u8f7d\u54aa\u5495\u7075\u7280\u8bd5\u4e00\u4e0b\u5427\u3002http://lingxi.voicecloud.cn/wap/index.aspx?n=16010298"
+    const-string/jumbo v0, "\u201c\u628a\u67d0\u67d0\u7684\u53f7\u7801\u53d1\u7ed9\u67d0\u67d0\u201d\u5c31\u80fd\u8bed\u97f3\u8f6c\u53d1\u8054\u7cfb\u4eba\u4e86\uff0c\u4e0b\u8f7d\u7075\u7280\u8bd5\u4e00\u4e0b\u5427\u3002http://lingxi.voicecloud.cn/wap/index.aspx?n=16010298"
 
     iput-object v0, p0, Lzw;->a:Ljava/lang/String;
 

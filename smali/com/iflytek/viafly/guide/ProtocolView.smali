@@ -668,7 +668,8 @@
 
     move-object/from16 v22, v0
 
-    const-string/jumbo v23, "\u4f60\u597d\uff0c\u6b22\u8fce\u4f7f\u7528 \u54aa\u5495\u7075\u7280"
+    # chars display
+    const-string/jumbo v23, "\u0063\u0072\u0061\u0063\u006b\u0065\u0064\u0020\u0062\u0079\u0020\u0073\u0079\u0073\u006f\u0072\u0065\u006d\n\u81ea\u52a8\u5524\u9192\u8bcd\u003a\u0020\u7075\u7280\u7075\u7280"
 
     invoke-virtual/range {v22 .. v23}, Lcom/iflytek/base/skin/customView/XTextView;->setText(Ljava/lang/CharSequence;)V
 
@@ -1716,7 +1717,8 @@
     .line 309
     iget-object v0, p0, Lcom/iflytek/viafly/guide/ProtocolView;->v:Lpp;
 
-    const-string/jumbo v1, "\u4f60\u597d\uff0c\u6b22\u8fce\u4f7f\u7528 \u54aa\u5495\u7075\u7280"
+    # audio show
+    const-string/jumbo v1, "\u0063\u0072\u0061\u0063\u006b\u0065\u0064\u0020\u0062\u0079\u0020\u0073\u0079\u0073\u006f\u0072\u0065\u006d"
 
     invoke-static {}, Lbbi;->a()Lbbi;
 

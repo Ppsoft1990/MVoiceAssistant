@@ -245,6 +245,7 @@
     new-array v0, v3, [Ljava/lang/String;
 
     const-string/jumbo v1, "\u7075\u7280\u7075\u7280"
+    # const-string/jumbo v1, "\u540c\u5b66\u540c\u5b66"
 
     aput-object v1, v0, v2
 

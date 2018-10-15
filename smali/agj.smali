@@ -1286,7 +1286,7 @@
 
     .line 334
     :cond_4
-    const-string/jumbo v3, "\u54aa\u5495\u7075\u7280"
+    const-string/jumbo v3, "\u7075\u7280"
 
     .line 338
     .local v3, "title":Ljava/lang/String;

@@ -51,7 +51,7 @@
 
     .line 85
     .restart local v4    # "weatherInfo":Lcom/iflytek/viafly/weather/Forecast;
-    const-string/jumbo v6, "\u54aa\u5495\u7075\u7280\u4e3a\u60a8\u64ad\u62a5\u4eca\u5929\u7684\u5929\u6c14\uff0c"
+    const-string/jumbo v6, "\u7075\u7280\u4e3a\u60a8\u64ad\u62a5\u4eca\u5929\u7684\u5929\u6c14\uff0c"
 
     invoke-virtual {v0, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

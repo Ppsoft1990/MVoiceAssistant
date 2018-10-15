@@ -1208,7 +1208,8 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lbbp;->d()V
+    # avoid stop recording
+    # invoke-virtual {v0}, Lbbp;->d()V
 
     .line 160
     invoke-virtual {p0}, Lahp;->u()Lqr;

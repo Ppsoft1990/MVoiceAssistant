@@ -295,7 +295,8 @@
     :try_start_0
     iget-object v7, p0, Lbaf;->c:Lcom/iflytek/viafly/ui/dialog/AutoCheckVersionDialog$Builder;
 
-    invoke-virtual {v7}, Lcom/iflytek/viafly/ui/dialog/AutoCheckVersionDialog$Builder;->show()Lcom/iflytek/viafly/ui/dialog/AutoCheckVersionDialog;
+    # hidden update dialog
+    # invoke-virtual {v7}, Lcom/iflytek/viafly/ui/dialog/AutoCheckVersionDialog$Builder;->show()Lcom/iflytek/viafly/ui/dialog/AutoCheckVersionDialog;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 

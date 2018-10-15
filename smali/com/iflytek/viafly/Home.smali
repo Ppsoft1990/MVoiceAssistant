@@ -10,6 +10,7 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
+        Lcom/iflytek/viafly/Home$c;,
         Lcom/iflytek/viafly/Home$b;,
         Lcom/iflytek/viafly/Home$a;
     }
@@ -2848,7 +2849,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_0
+    # if-eqz v0, :cond_0
 
     .line 522
     const-string/jumbo v0, "Home"
@@ -4918,6 +4919,16 @@
     .end local v1    # "intent":Landroid/content/Intent;
     .end local v5    # "uri":Landroid/net/Uri;
     :goto_0
+
+    .line 219
+    new-instance v0, Lcom/iflytek/viafly/Home$c;
+    invoke-direct {v0, p0}, Lcom/iflytek/viafly/Home$c;-><init>(Lcom/iflytek/viafly/Home;)V
+    invoke-static {p0, v0}, Lpf;->a(Landroid/content/Context;Lpf$a;)V
+    invoke-direct {p0}, Lcom/iflytek/viafly/Home;->d()V
+
+
+
+    .line 244
     return-void
 
     .line 439
@@ -5281,6 +5292,8 @@
     const-string/jumbo v9, "onCreate()"
 
     invoke-static {v8, v9, v0}, Lhj;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+
 
     goto/16 :goto_1
 .end method
@@ -6017,16 +6030,18 @@
 
     move-result-object v0
 
+
     invoke-static {v0}, Lbbp;->a(Landroid/content/Context;)Lbbp;
 
     move-result-object v0
-
-    invoke-virtual {v0, v2}, Lbbp;->a(Z)V
+    # avoid pause
+    # invoke-virtual {v0, v2}, Lbbp;->a(Z)V
 
     .line 722
     const-string/jumbo v0, "Home"
 
     const-string/jumbo v1, "Ivw|onPause()------false"
+
 
     invoke-static {v0, v1}, Lhj;->b(Ljava/lang/String;Ljava/lang/String;)I
 
@@ -6545,8 +6560,8 @@
     invoke-static {v0}, Lbbp;->a(Landroid/content/Context;)Lbbp;
 
     move-result-object v0
-
-    invoke-virtual {v0, v2}, Lbbp;->a(Z)V
+    # avoid stop
+    # invoke-virtual {v0, v2}, Lbbp;->a(Z)V
 
     .line 751
     const-string/jumbo v0, "Home"

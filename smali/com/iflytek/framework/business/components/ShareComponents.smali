@@ -1797,7 +1797,7 @@
     if-eqz v2, :cond_1
 
     .line 88
-    const-string/jumbo v5, "\u54aa\u5495\u7075\u7280"
+    const-string/jumbo v5, "\u7075\u7280"
 
     .line 92
     :cond_1

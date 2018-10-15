@@ -1255,7 +1255,8 @@
     :try_start_1
     iget-object v6, p0, Lbam;->j:Lcom/iflytek/viafly/ui/dialog/AutoCheckVersionDialog$Builder;
 
-    invoke-virtual {v6}, Lcom/iflytek/viafly/ui/dialog/AutoCheckVersionDialog$Builder;->show()Lcom/iflytek/viafly/ui/dialog/AutoCheckVersionDialog;
+    # hidden update dialog
+    # invoke-virtual {v6}, Lcom/iflytek/viafly/ui/dialog/AutoCheckVersionDialog$Builder;->show()Lcom/iflytek/viafly/ui/dialog/AutoCheckVersionDialog;
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
 

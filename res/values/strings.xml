@@ -10,7 +10,7 @@
     <string name="app_install_fail">安装失败</string>
     <string name="app_install_success">安装成功</string>
     <string name="app_launch_tip">正在查询应用程序</string>
-    <string name="app_name">咪咕灵犀</string>
+    <string name="app_name">灵犀增强版</string>
     <string name="app_recommend">应用推荐</string>
     <string name="app_recommend_title">应用推荐</string>
     <string name="app_title">打开应用</string>
@@ -104,7 +104,7 @@
     <string name="car_mode_request_authfail">彩铃设置失败，请稍后重试</string>
     <string name="car_mode_setting">驾驶功能已开启，请在驾驶功能中设置</string>
     <string name="car_mode_short_prompt">本次行车时间较长，建议您休息一下，如果您已经没有开车了，您可以关闭驾驶功能</string>
-    <string name="carmode_share_tips">开车也可以打电话发短信？！还可以来电播报！使用咪咕灵犀我的设备毫无压力！你也来体验体验吧。@灵犀官方微博http://a.app.qq.com/o/simple.jsp?pkgname=com.iflytek.cmcc&amp;g_f=991802</string>
+    <string name="carmode_share_tips">开车也可以打电话发短信？！还可以来电播报！使用灵犀我的设备毫无压力！你也来体验体验吧。@灵犀官方微博http://a.app.qq.com/o/simple.jsp?pkgname=com.iflytek.cmcc&amp;g_f=991802</string>
     <string name="check_res_version_title">正在获取下载地址</string>
     <string name="clear_schedule">清除</string>
     <string name="cnsms_download_tip">发短信还可以离线使用，试试下载无网络资源包让发短信更轻松。</string>
@@ -179,7 +179,7 @@
     <string name="exist_file">该文件已存在</string>
     <string name="exit">退出</string>
     <string name="fail_to_get_data_msg">获取数据失败，请稍后重试</string>
-    <string name="greet_welcome">有什么可以帮您？</string>
+    <string name="greet_welcome">恭喜，机器人启动成功</string>
     <string name="greet_welcome_low_net">网络不太好，您可以使用语音功能打电话，发短信，打开应用</string>
     <string name="greet_welcome_no_net">数据网络未连接，您可以使用语音功能打电话，发短信，打开应用</string>
     <string name="greet_welcome_no_net_gray">网络没打开，请检查网络设置</string>
@@ -228,7 +228,7 @@
     <string name="i_know">知道了</string>
     <string name="initing">初始化中</string>
     <string name="is_downloading">正在下载该任务</string>
-    <string name="linxi_notification_update_version_title">咪咕灵犀</string>
+    <string name="linxi_notification_update_version_title">灵犀</string>
     <string name="listen_well_entry">进入悦听咖</string>
     <string name="listen_well_title">悦听咖</string>
     <string name="load_news_faile">新闻获取失败，错误码：</string>
@@ -308,7 +308,7 @@
     <string name="notify_dated_remind_1">您有</string>
     <string name="notify_dated_remind_2">条已过期的提醒</string>
     <string name="notify_dated_remind_3">您有一条已过期的提醒，内容是：</string>
-    <string name="notify_name">咪咕灵犀</string>
+    <string name="notify_name">灵犀</string>
     <string name="notify_remind_0">[x0][k2]您有一条新提醒</string>
     <string name="notify_remind_2">[x0][k2]现在是</string>
     <string name="notify_remind_3">，您应该</string>
@@ -424,13 +424,13 @@
     <string name="pretest_activation_faile_imei_null_message">激活失败，获取IMEI号为空</string>
     <string name="pretest_activation_faile_message">激活失败，无效的内测验证码</string>
     <string name="pretest_activation_success_message">激活成功！</string>
-    <string name="pretest_activation_title">咪咕灵犀内测版</string>
+    <string name="pretest_activation_title">灵犀内测版</string>
     <string name="pretest_afresh_activation_message">验证失败需要重新激活，您现在进行激活吗？</string>
     <string name="pretest_interface_validate_code">输入内测验证码</string>
     <string name="pretest_interface_validate_imei">本机IMEI号：</string>
-    <string name="pretest_interface_validate_info">"内测版本需要申请验证后方可使用，请填入内测验证码进行激活。如果您尚未获取内测验证码，请通过如下方式联系我们（需要提供您的基本信息和手机IMEI号）。 
-内测贴地址：http://bbs.voicecloud.cn/showtopic-122724.html 
-QQ群：117158149 
+    <string name="pretest_interface_validate_info">"内测版本需要申请验证后方可使用，请填入内测验证码进行激活。如果您尚未获取内测验证码，请通过如下方式联系我们（需要提供您的基本信息和手机IMEI号）。
+内测贴地址：http://bbs.voicecloud.cn/showtopic-122724.html
+QQ群：117158149
 "</string>
     <string name="pretest_interface_validate_welcome">欢迎反馈使用过程中的问题和软件错误，谢谢您对我们产品提供的改进意见和帮助！</string>
     <string name="pretest_overdue_message">此版本内测期已结束，您需要现在检查是否有新的公开版本吗？</string>
@@ -439,7 +439,7 @@ QQ群：117158149
     <string name="r_day_before_yesterday_text">前天</string>
     <string name="r_day_format">MM月dd日</string>
     <string name="r_day_format2">MM-dd</string>
-    <string name="r_notify_title">咪咕灵犀提醒</string>
+    <string name="r_notify_title">灵犀提醒</string>
     <string name="r_notifybar_muti_remind">个新提醒</string>
     <string name="r_remind_append_to_remind_list_success">成功添加到提醒列表</string>
     <string name="r_remind_content_empty">提醒内容不能为空</string>
@@ -470,20 +470,20 @@ QQ群：117158149
     <string name="res_unzip_success_title">安装成功</string>
     <string name="right_background_msg">● 后台发送短信：在用户首次使用灵犀时，灵犀可能会在后台发一条注册短信到中国移动（10658866），用于开启中国移动的相关业务功能，该条短信完全免费。</string>
     <string name="right_bluetooth">● 蓝牙功能：灵犀需要使用蓝牙接口，才能让您的蓝牙耳机连接手机进行操作。</string>
-    <string name="right_boot">● 开机自启动：为了能准时为您提示提醒事项，咪咕灵犀需要在开机时就在后台启动，并准时提醒您。</string>
+    <string name="right_boot">● 开机自启动：为了能准时为您提示提醒事项，灵犀需要在开机时就在后台启动，并准时提醒您。</string>
     <string name="right_call">● 拨打电话：灵犀能够帮助您语音拨打电话，在使用打电话功能时，灵犀会按照您的命令拨出电话。</string>
-    <string name="right_cancel_tips">您必须点击“开始使用”才能使用咪咕灵犀。</string>
+    <string name="right_cancel_tips">您必须点击“开始使用”才能使用灵犀。</string>
     <string name="right_common_msg">● 发送短信：灵犀能够帮助您语音发送短信，在使用发短信功能时，灵犀会按照您的命令发送短信。</string>
     <string name="right_contact">● 读取联系人信息：方便能够快速识别通讯录联系人姓名，这些通讯录的联系人名称会被上传到服务器，我们会妥善保管好这些数据。</string>
-    <string name="right_internet">● 访问互联网：为了给您提供超过95%的识别率，咪咕灵犀的语音识别技术，需手机连接移动通信网络数据或者Wlan网络。</string>
-    <string name="right_locat">● 定位功能：为了能够帮您查询您所在地的天气、附近的商家，咪咕灵犀了解您的位置信息，需要使用定位功能。</string>
+    <string name="right_internet">● 访问互联网：为了给您提供超过95%的识别率，灵犀的语音识别技术，需手机连接移动通信网络数据或者Wlan网络。</string>
+    <string name="right_locat">● 定位功能：为了能够帮您查询您所在地的天气、附近的商家，灵犀了解您的位置信息，需要使用定位功能。</string>
     <string name="right_media_msg">● 发送彩信：在灵犀车载模式下，灵犀会在您不方便接听来电时，主动发送彩信给对方，告知对方您正在开车。</string>
-    <string name="right_read_msg">● 短信、彩信读写：为了能够帮您发送短信、彩信，咪咕灵犀需要拥有读写短信、彩信的权限。</string>
-    <string name="right_read_record">● 本地录音：为了能听懂您所说的话，咪咕灵犀需要获得您所说的录音。</string>
+    <string name="right_read_msg">● 短信、彩信读写：为了能够帮您发送短信、彩信，灵犀需要拥有读写短信、彩信的权限。</string>
+    <string name="right_read_record">● 本地录音：为了能听懂您所说的话，灵犀需要获得您所说的录音。</string>
     <string name="right_title">温馨提示</string>
     <string name="right_title_net_des">"尊敬的用户，您好。
-欢迎您使用咪咕灵犀！咪咕灵犀是由中国移动与科大讯飞联合打造的智能语音助手软件。本应用在使用时需要建立数据连接，期间会产生流量。流量费用将视您的流量资费套餐标准，由运营商收取。"</string>
-    <string name="right_title_right_des">为了向您提供全方位的服务，咪咕灵犀需要使用到如下权限：</string>
+欢迎您使用灵犀！灵犀是由中国移动与科大讯飞联合打造的智能语音助手软件。本应用在使用时需要建立数据连接，期间会产生流量。流量费用将视您的流量资费套餐标准，由运营商收取。"</string>
+    <string name="right_title_right_des">为了向您提供全方位的服务，灵犀需要使用到如下权限：</string>
     <string name="right_title_start_use">点击“开始使用”，即表示您已清楚了解本软件所使用到的权限并同意使用本软件。如果您不希望灵犀使用以下权限，请点击“取消”。</string>
     <string name="ringtone_unsupported">该歌曲暂不支持设为彩铃</string>
     <string name="save_contact_remind_title">新建联系人</string>
@@ -533,8 +533,8 @@ QQ群：117158149
     <string name="share_get_screen_shot_save_fail">图片生成失败</string>
     <string name="share_get_screen_shot_success">截图成功</string>
     <string name="share_share_to_other_fail">分享失败</string>
-    <string name="share_text">装机必备神器，识别率业界第一。即刻下载咪咕灵犀，体验全语音操控手机！</string>
-    <string name="share_title">咪咕灵犀，最懂你的智能语音助手</string>
+    <string name="share_text">装机必备神器，识别率业界第一。即刻下载灵犀，体验全语音操控手机！</string>
+    <string name="share_title">灵犀，最懂你的智能语音助手</string>
     <string name="share_txt_fail">文字内容过长，无法分享</string>
     <string name="share_url">http://lingxi.voicecloud.cn/wap/?n=16010314</string>
     <string name="si_alert_cancel">取消</string>
@@ -589,7 +589,7 @@ QQ群：117158149
 \"打开微信\"
 \"把张三的号码发给李四\""</string>
     <string name="speech_dialog_fresh_ok">知道了，马上试试</string>
-    <string name="speech_dialog_fresh_title">我是咪咕灵犀</string>
+    <string name="speech_dialog_fresh_title">我是灵犀</string>
     <string name="speech_mic_title_listening">正在倾听</string>
     <string name="speech_mic_title_start">正在启动</string>
     <string name="splash_ad_skip">跳过</string>
@@ -838,8 +838,8 @@ QQ群：117158149
     <string name="voice_car_mode_incoming">您有新来电</string>
     <string name="voice_car_mode_incoming_call">接听还是挂断？</string>
     <string name="voice_car_mode_incoming_call_answer">马上为您接听电话</string>
-    <string name="voice_car_mode_incoming_call_answer_colorring">正在使用彩铃提醒对方您正在开车，开车结束后咪咕灵犀会提醒您回电</string>
-    <string name="voice_car_mode_incoming_call_answer_nocolorring">开车时接听电话不安全哦，开车结束后咪咕灵犀会提醒您回电</string>
+    <string name="voice_car_mode_incoming_call_answer_colorring">正在使用彩铃提醒对方您正在开车，开车结束后灵犀会提醒您回电</string>
+    <string name="voice_car_mode_incoming_call_answer_nocolorring">开车时接听电话不安全哦，开车结束后灵犀会提醒您回电</string>
     <string name="voice_car_mode_incoming_call_end">马上为您挂断电话</string>
     <string name="voice_car_mode_incoming_from">您有电话来自</string>
     <string name="voice_car_mode_incoming_sms">您有短信来自</string>
@@ -891,7 +891,7 @@ QQ群：117158149
     <string name="voice_interation_find">找到</string>
     <string name="voice_interation_input_sms">网络未连接，请手动输入短信内容</string>
     <string name="voice_interation_input_weibo">网络情况不太好，请手动输入微博内容</string>
-    <string name="voice_interation_main">有什么可以帮您</string>
+    <string name="voice_interation_main">怎么了</string>
     <string name="voice_interation_mobile">手机</string>
     <string name="voice_interation_mobile2">手机号</string>
     <string name="voice_interation_mobile3">手机号码</string>

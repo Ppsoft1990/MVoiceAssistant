@@ -735,6 +735,11 @@
     .line 108
     invoke-direct {p0, v0}, Lcom/iflytek/viafly/settings/ui/VoiceWakeActivity;->enableSensitySetting(Z)V
 
+    # auto switch
+
+    # iget-object v0, p0, Lcom/iflytek/viafly/settings/ui/VoiceWakeActivity;->mCheckBoxOpenSwitch:Lcom/iflytek/base/skin/customView/XCheckBox2;
+    # invoke-direct {p0, v0}, Lcom/iflytek/viafly/settings/ui/VoiceWakeActivity;->setWakeLaunch(Lcom/iflytek/base/skin/customView/XCheckBox2;)V
+
     .line 109
     return-void
 .end method

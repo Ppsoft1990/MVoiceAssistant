@@ -76,7 +76,7 @@
     .local v3, "message":Landroid/widget/TextView;
     new-instance v4, Landroid/text/SpannableString;
 
-    const-string/jumbo v7, "\u8981\u5141\u8bb8\u54aa\u5495\u7075\u7280\u4f7f\u7528\u60ac\u6d6e\u7a97\u5417\uff1f\u5141\u8bb8\u540e\u80fd\u6b63\u5e38\u4f7f\u7528\u3002"
+    const-string/jumbo v7, "\u8981\u5141\u8bb8\u7075\u7280\u4f7f\u7528\u60ac\u6d6e\u7a97\u5417\uff1f\u5141\u8bb8\u540e\u80fd\u6b63\u5e38\u4f7f\u7528\u3002"
 
     invoke-direct {v4, v7}, Landroid/text/SpannableString;-><init>(Ljava/lang/CharSequence;)V
 

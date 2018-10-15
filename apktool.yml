@@ -3,10 +3,59 @@ apkFileName: pconline1524099677630.apk
 compressionType: false
 doNotCompress:
 - arsc
+- png
 - properties
 - json
-- assets/channel/cid_L6010003
+- ogg
+- mp3
+- jpg
+- assets/skin/theme_new/720/res/mainpage_btm_bg.9.png
+- gif
+- res/drawable-hdpi-v4/btn_dlg_l_nor.9.png
+- res/drawable-hdpi-v4/btn_dlg_l_press.9.png
+- res/drawable-hdpi-v4/btn_dlg_nor.9.png
+- res/drawable-hdpi-v4/btn_dlg_press.9.png
+- res/drawable-hdpi-v4/btn_dlg_r_nor.9.png
+- res/drawable-hdpi-v4/btn_dlg_r_press.9.png
+- res/drawable-hdpi-v4/dlg_list_mid.9.png
+- res/drawable-hdpi-v4/dlg_list_top.9.png
+- res/drawable-hdpi-v4/main_speech_mic_bubbles.9.png
+- res/drawable-hdpi-v4/mic_offline_usage_bubbles.9.png
+- res/drawable-hdpi-v4/note_mic_tip_bg.9.png
+- res/drawable-hdpi-v4/note_share_bg1.9.png
+- res/drawable-hdpi-v4/note_share_bg2.9.png
+- res/drawable-hdpi-v4/note_share_bg3.9.png
+- res/drawable-hdpi-v4/note_share_bg4.9.png
+- res/drawable-hdpi-v4/notification_bg.9.png
+- res/drawable-hdpi-v4/notify_bar_btn_nor.9.png
+- res/drawable-hdpi-v4/notify_bar_btn_press.9.png
+- res/drawable-hdpi-v4/right_btn_activate_nor.9.png
+- res/drawable-hdpi-v4/right_btn_activate_press.9.png
+- res/drawable-hdpi-v4/right_btn_cancel_off_nor.9.png
+- res/drawable-hdpi-v4/right_btn_cancel_press.9.png
+- res/drawable-hdpi-v4/setting_app_recommend_list_item_btn_disable_bg.9.png
+- res/drawable-hdpi-v4/setting_app_recommend_list_item_btn_hl_bg.9.png
+- res/drawable-hdpi-v4/setting_app_recommend_list_item_btn_nor_bg.9.png
+- res/drawable-hdpi-v4/setting_app_recommend_list_item_tag_red_bg.9.png
+- res/drawable-hdpi-v4/setting_mian_tab_pressed_bg.9.png
+- res/drawable-hdpi-v4/setting_sub_tab_bg.9.png
+- res/drawable-hdpi-v4/translate_result_left_bg.9.png
+- res/drawable-hdpi-v4/translate_result_right_bg.9.png
+- res/drawable-hdpi-v4/viafly_widget_bg.9.png
+- res/drawable-hdpi-v4/vpi__tab_checked.9.png
+- res/drawable-xhdpi-v4/bg_dialog_blue.9.png
+- res/drawable-xhdpi-v4/bg_dialog_grey.9.png
+- res/drawable-xhdpi-v4/bg_translate_text.9.png
+- res/drawable-xhdpi-v4/box_history_nor.9.png
+- res/drawable-xhdpi-v4/box_history_sel.9.png
+- res/drawable-xhdpi-v4/box_state02.9.png
+- res/drawable-xhdpi-v4/home_cursor.9.png
+- res/drawable-xhdpi-v4/icon_pop_background.9.png
+- res/drawable-xhdpi-v4/mainpage_btm_bg.9.png
+- res/drawable-xhdpi-v4/translate_tip_bg.9.png
+- res/drawable/plugin_activity_loading_bitmap.9.png
 - a
+- jet
 isFrameworkApk: false
 packageInfo:
   forcedPackageId: '127'
@@ -15,6 +64,7 @@ sdkInfo:
   minSdkVersion: '14'
   targetSdkVersion: '23'
 sharedLibrary: false
+sparseResources: false
 unknownFiles:
   com/iflytek/common/lbs/XAddress.aidl: '8'
   com/iflytek/framework/plugin/interfaces/lockscreen/ILockScreen.aidl: '8'
@@ -31,7 +81,7 @@ usesFramework:
   ids:
   - 1
   tag: null
-version: 2.3.0
+version: 2.3.4
 versionInfo:
   versionCode: '3586'
   versionName: 6.0.3586
